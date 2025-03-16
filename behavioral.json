@@ -1,0 +1,1585 @@
+[
+    {
+      "question": "Explain your experience and describe one problem you have solved.",
+      "expected_star_response": {
+        "situation": "In my last role as a junior developer, I encountered a situation where our API response time was slowing down significantly due to inefficient database queries.",
+        "task": "I needed to optimize the API to improve performance without breaking existing functionality.",
+        "action": "I analyzed the slow queries, added indexing where necessary, and refactored some database calls to use more efficient joins.",
+        "result": "The response time improved by 40%, reducing user complaints and making the application more scalable."
+      },
+      "follow_up_questions": [
+        "How did you identify the root cause of the issue?",
+        "What tools did you use to analyze and optimize the performance?",
+        "What was the biggest challenge you faced while solving this problem?"
+      ],
+      "interview_type": "Behavioral",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Problem-Solving", "Technical Knowledge", "Communication"],
+      "difficulty_level": "Medium"
+    },
+    {
+      "question": "Can you explain a project from your resume?",
+      "expected_star_response": {
+        "situation": "During my last role, I built a task management web app for internal use in our company.",
+        "task": "I was responsible for developing the frontend using React and integrating it with a Node.js backend.",
+        "action": "I designed reusable UI components, optimized state management using Redux, and ensured smooth API communication.",
+        "result": "The app improved team collaboration, reduced email dependency, and increased task tracking efficiency by 30%."
+      },
+      "follow_up_questions": [
+        "What were the main technologies you used?",
+        "What challenges did you face during development?",
+        "How did this project benefit the company?"
+      ],
+      "interview_type": "Behavioral",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Technical Skills", "Project Management", "Communication"],
+      "difficulty_level": "Medium"
+    },
+    {
+      "question": "How did you contribute in your previous workplace?",
+      "expected_star_response": {
+        "situation": "As a junior developer at my previous company, I worked on automating a repetitive data entry process that took hours to complete manually.",
+        "task": "My responsibility was to develop a script to automate data extraction and input, reducing manual effort.",
+        "action": "I wrote a Python script using Selenium and Pandas to extract data from various sources and populate the database automatically.",
+        "result": "The process time was reduced by 85%, saving the team 20+ hours per week and improving accuracy."
+      },
+      "follow_up_questions": [
+        "How did you identify this inefficiency?",
+        "What specific technologies or tools did you use?",
+        "Did you face any resistance when introducing automation?"
+      ],
+      "interview_type": "Behavioral",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Efficiency", "Automation", "Problem-Solving"],
+      "difficulty_level": "Medium"
+    },
+    {
+      "question": "What was your past experience in your previous company?",
+      "expected_star_response": {
+        "situation": "In my last company, I primarily worked on maintaining and improving our customer dashboard.",
+        "task": "I was responsible for debugging issues, implementing feature requests, and improving performance.",
+        "action": "I implemented lazy loading for large data tables, optimized API calls, and enhanced UI responsiveness.",
+        "result": "The dashboard's performance improved significantly, reducing load times by 60% and increasing customer satisfaction."
+      },
+      "follow_up_questions": [
+        "What was the most valuable skill you learned there?",
+        "How did your work impact the company's success?",
+        "What were some of the biggest challenges you faced?"
+      ],
+      "interview_type": "Behavioral",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Technical Skills", "Adaptability", "Communication"],
+      "difficulty_level": "Medium"
+    },
+    {
+      "question": "What is your name and qualification?",
+      "expected_star_response": {
+        "situation": "I am [Your Name], and I have a degree in Computer Science.",
+        "task": "I have been developing web applications for over two years, focusing on frontend and backend technologies.",
+        "action": "I have worked with JavaScript, React, Node.js, and cloud platforms like AWS.",
+        "result": "With my technical skills and experience, I am confident in my ability to contribute to this role."
+      },
+      "follow_up_questions": [
+        "What motivated you to pursue this career?",
+        "Do you have any certifications related to this field?",
+        "What areas of development are you most interested in?"
+      ],
+      "interview_type": "General",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Self-Presentation", "Confidence", "Communication"],
+      "difficulty_level": "Easy"
+    },
+    {
+      "question": "What is the most challenging project you've worked on recently?",
+      "expected_star_response": {
+        "situation": "I recently worked on a high-traffic e-commerce site that required real-time order processing.",
+        "task": "I needed to ensure that the system could handle thousands of concurrent users without slowdowns.",
+        "action": "I optimized database queries, implemented caching strategies, and introduced a message queue for order processing.",
+        "result": "The site handled peak traffic without performance degradation, improving user retention and reducing server costs."
+      },
+      "follow_up_questions": [
+        "How did you approach solving the scalability challenge?",
+        "What were the biggest technical hurdles you faced?",
+        "What performance improvements did you measure?"
+      ],
+      "interview_type": "Technical",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Scalability", "Problem-Solving", "Performance Optimization"],
+      "difficulty_level": "Hard"
+    },
+    {
+      "question": "What project are you currently working on?",
+      "expected_star_response": {
+        "situation": "I am currently developing a personal finance tracking application.",
+        "task": "My goal is to help users track their income and expenses with an intuitive UI and automated insights.",
+        "action": "I built the frontend using Next.js and Tailwind CSS, while the backend is powered by a PostgreSQL database and Prisma ORM.",
+        "result": "The app has helped me and beta users better manage finances and has potential for further development."
+      },
+      "follow_up_questions": [
+        "What inspired you to build this project?",
+        "What challenges have you faced so far?",
+        "How do you plan to improve it in the future?"
+      ],
+      "interview_type": "General",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Initiative", "Project Management", "Technical Knowledge"],
+      "difficulty_level": "Medium"
+    },
+    {
+      "question": "Explain a project that you worked on recently.",
+      "expected_star_response": {
+        "situation": "I worked on a feature that allowed users to export reports from our SaaS platform.",
+        "task": "The challenge was to generate large reports efficiently without slowing down the application.",
+        "action": "I implemented asynchronous report generation with background processing using AWS Lambda.",
+        "result": "The new feature reduced report generation time by 70% and improved system responsiveness."
+      },
+      "follow_up_questions": [
+        "What was the hardest part of implementing this feature?",
+        "How did you test for performance issues?",
+        "What would you improve if given more time?"
+      ],
+      "interview_type": "Technical",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Performance Optimization", "Problem-Solving", "Technical Skills"],
+      "difficulty_level": "Medium"
+    },
+    {
+      "question": "What are the most interesting projects you have worked on and how might they be relevant to this company's environment?",
+      "expected_star_response": {
+        "situation": "I worked on an AI-powered chatbot for customer service.",
+        "task": "My role was to improve natural language understanding and integrate it with our CRM.",
+        "action": "I trained custom NLP models and optimized API response handling.",
+        "result": "The chatbot reduced support response time by 50% and improved customer satisfaction."
+      },
+      "follow_up_questions": [
+        "How did this project challenge you?",
+        "What was the most innovative solution you implemented?",
+        "How could similar technology be used at this company?"
+      ],
+      "interview_type": "Technical",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Innovation", "Machine Learning", "Problem-Solving"],
+      "difficulty_level": "Hard"
+    },
+    {
+        "question": "State an experience about how you solved a technical problem.",
+        "expected_star_response": {
+          "situation": "In a past role, we faced an issue where our application's database queries were causing severe slowdowns.",
+          "task": "I was responsible for identifying and optimizing the slowest queries.",
+          "action": "I used performance profiling tools to analyze query execution times, added proper indexing, and refactored some queries.",
+          "result": "The average response time was reduced by 50%, leading to a smoother user experience."
+        },
+        "follow_up_questions": [
+          "How did you diagnose the root cause of the problem?",
+          "What tools did you use for optimization?",
+          "What key lessons did you take away from this experience?"
+        ],
+        "interview_type": "Technical",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Problem-Solving", "Database Optimization", "Performance Tuning"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "What is the hardest technical problem you have run into? How did you solve it?",
+        "expected_star_response": {
+          "situation": "I once worked on a project where an API was frequently failing under high traffic conditions.",
+          "task": "I needed to ensure the API could handle peak traffic without downtime.",
+          "action": "I implemented caching with Redis, optimized database queries, and introduced rate limiting.",
+          "result": "The API's reliability improved significantly, handling 5x more traffic without failures."
+        },
+        "follow_up_questions": [
+          "What debugging techniques did you use?",
+          "Did you work alone or as part of a team?",
+          "How would you prevent a similar issue in the future?"
+        ],
+        "interview_type": "Technical",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Scalability", "Performance Optimization", "Troubleshooting"],
+        "difficulty_level": "Hard"
+      },
+      {
+        "question": "Talk about your favorite project.",
+        "expected_star_response": {
+          "situation": "I built a personal finance tracking app to help users manage their expenses efficiently.",
+          "task": "I wanted to create a user-friendly interface with real-time insights on spending habits.",
+          "action": "I developed the frontend using Next.js, integrated a PostgreSQL database, and implemented real-time updates with WebSockets.",
+          "result": "The app gained 1,000+ users and helped people track their finances more effectively."
+        },
+        "follow_up_questions": [
+          "What made this project your favorite?",
+          "What were the biggest technical challenges?",
+          "How did users respond to the app?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Creativity", "Problem-Solving", "User Experience"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "Explain your toughest project and its working architecture.",
+        "expected_star_response": {
+          "situation": "I worked on a large-scale e-commerce platform that required real-time inventory updates.",
+          "task": "I needed to ensure that inventory data remained consistent across multiple warehouses and sales channels.",
+          "action": "I implemented an event-driven architecture using Kafka and optimized database consistency with distributed transactions.",
+          "result": "The system handled thousands of concurrent orders without data inconsistency issues."
+        },
+        "follow_up_questions": [
+          "What architectural challenges did you face?",
+          "What technologies did you use to handle scalability?",
+          "How did you ensure data consistency in real-time?"
+        ],
+        "interview_type": "Technical",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["System Architecture", "Scalability", "Concurrency"],
+        "difficulty_level": "Hard"
+      },
+      {
+        "question": "Why do you think you are suitable for this job?",
+        "expected_star_response": {
+          "situation": "I have a strong background in full-stack development and a passion for problem-solving.",
+          "task": "I need to showcase how my skills align with this company's needs.",
+          "action": "I have worked on multiple projects using React, Node.js, and AWS, demonstrating my ability to build scalable applications.",
+          "result": "With my technical expertise and enthusiasm, I believe I can contribute effectively to your team."
+        },
+        "follow_up_questions": [
+          "What specific skills make you a great fit?",
+          "Can you provide examples of past work that align with this role?",
+          "What do you hope to achieve in this position?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Self-Presentation", "Confidence", "Communication"],
+        "difficulty_level": "Easy"
+      },
+      {
+        "question": "Why do you want to work here?",
+        "expected_star_response": {
+          "situation": "I have been following this company’s work in the tech industry and admire its innovative approach.",
+          "task": "I want to highlight why I am excited about this role and how I align with the company’s vision.",
+          "action": "I researched the company's recent projects and culture, and I believe my skills in full-stack development would be valuable here.",
+          "result": "I see this as an opportunity to grow while contributing to meaningful projects."
+        },
+        "follow_up_questions": [
+          "What aspects of our company culture appeal to you?",
+          "How does this role align with your career goals?",
+          "What do you know about our company’s recent projects?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Company Knowledge", "Motivation", "Cultural Fit"],
+        "difficulty_level": "Easy"
+      },
+      {
+        "question": "Why should we hire you?",
+        "expected_star_response": {
+          "situation": "I bring a combination of technical skills and a problem-solving mindset.",
+          "task": "I want to demonstrate why my experience makes me an ideal candidate.",
+          "action": "I have built multiple web applications, optimized APIs for performance, and worked with cloud technologies.",
+          "result": "My experience and adaptability will allow me to contribute effectively to your team."
+        },
+        "follow_up_questions": [
+          "What unique skills do you bring to this role?",
+          "How do you handle challenges in a new work environment?",
+          "What past achievements make you stand out?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Confidence", "Technical Skills", "Adaptability"],
+        "difficulty_level": "Easy"
+      },
+      {
+        "question": "What makes you a good fit for this position?",
+        "expected_star_response": {
+          "situation": "I have a strong background in software development and experience with the required tech stack.",
+          "task": "I want to demonstrate how my skills align with the job requirements.",
+          "action": "I have worked on full-stack projects using React, Node.js, and AWS, solving real-world problems.",
+          "result": "My ability to quickly learn and adapt makes me a strong candidate for this position."
+        },
+        "follow_up_questions": [
+          "What specific experiences make you confident about this role?",
+          "How do you approach learning new technologies?",
+          "What strengths do you bring to the team?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Technical Fit", "Problem-Solving", "Adaptability"],
+        "difficulty_level": "Easy"
+      },
+      {
+        "question": "Tell me why you will be a good fit for the position.",
+        "expected_star_response": {
+          "situation": "I have hands-on experience building scalable applications and working in team environments.",
+          "task": "I need to showcase my relevant experience and strengths.",
+          "action": "I have worked on projects that required collaboration, problem-solving, and technical proficiency in modern frameworks.",
+          "result": "I believe my skills and approach to teamwork make me an excellent fit for this role."
+        },
+        "follow_up_questions": [
+          "What past projects best showcase your skills?",
+          "How do you handle working under pressure?",
+          "What do you hope to bring to our team?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Teamwork", "Technical Proficiency", "Communication"],
+        "difficulty_level": "Easy"
+      },{
+        "question": "What are you looking for in your next role?",
+        "expected_star_response": {
+          "situation": "I am looking for a role where I can work on impactful projects while growing my technical skills.",
+          "task": "I want to join a team where I can contribute meaningfully and continue learning.",
+          "action": "I focus on environments that encourage collaboration, mentorship, and hands-on problem-solving.",
+          "result": "This allows me to grow professionally while delivering high-quality work."
+        },
+        "follow_up_questions": [
+          "What specific skills do you want to develop in your next role?",
+          "What kind of projects excite you the most?",
+          "How does this role align with your long-term career goals?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Career Growth", "Self-Motivation", "Alignment with Role"],
+        "difficulty_level": "Easy"
+      },
+      {
+        "question": "What would you hope to achieve in the first six months after being hired?",
+        "expected_star_response": {
+          "situation": "In my previous role, I set clear goals for myself when joining a new team.",
+          "task": "I aim to quickly onboard, understand the codebase, and start contributing within the first few weeks.",
+          "action": "I prioritize learning the team's best practices, collaborating with peers, and identifying ways to optimize existing workflows.",
+          "result": "By the six-month mark, I hope to have delivered multiple features and be a fully integrated team member."
+        },
+        "follow_up_questions": [
+          "How do you approach onboarding in a new job?",
+          "What steps would you take to integrate into a new team?",
+          "How do you measure success in a new role?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Goal Setting", "Team Integration", "Proactiveness"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "If you were hired here, what would you do?",
+        "expected_star_response": {
+          "situation": "Whenever I join a new company, I focus on understanding the business and technical environment.",
+          "task": "My first priority would be to get up to speed with the codebase and workflows.",
+          "action": "I would shadow senior developers, ask questions, and start tackling small tasks before moving on to larger responsibilities.",
+          "result": "Within a few months, I would aim to contribute effectively and suggest optimizations where needed."
+        },
+        "follow_up_questions": [
+          "How do you ensure a smooth transition when starting a new job?",
+          "What steps do you take to become productive in a new role?",
+          "How do you identify areas for improvement in an existing system?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Adaptability", "Learning Ability", "Problem-Solving"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "Are you able to perform these tasks and achieve these project outcomes?",
+        "expected_star_response": {
+          "situation": "In my previous roles, I have successfully delivered projects under tight deadlines.",
+          "task": "I ensure that I fully understand project requirements and align my work with the expected outcomes.",
+          "action": "I break down tasks, prioritize efficiently, and communicate effectively with my team.",
+          "result": "This approach allows me to consistently meet project goals while maintaining code quality."
+        },
+        "follow_up_questions": [
+          "How do you manage workload and deadlines?",
+          "What steps do you take to ensure quality in your work?",
+          "How do you handle unexpected project changes?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Accountability", "Task Management", "Execution"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "What is your five-year plan?",
+        "expected_star_response": {
+          "situation": "I have a structured approach to career growth and skill development.",
+          "task": "Over the next five years, I aim to deepen my expertise in full-stack development and take on more leadership responsibilities.",
+          "action": "I plan to continuously learn new technologies, mentor junior developers, and contribute to open-source projects.",
+          "result": "This will prepare me for a senior developer or tech lead role."
+        },
+        "follow_up_questions": [
+          "How do you plan to grow technically over the next few years?",
+          "Do you see yourself taking on leadership responsibilities?",
+          "What challenges do you anticipate in your career path?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Long-Term Planning", "Growth Mindset", "Technical Development"],
+        "difficulty_level": "Easy"
+      },
+      {
+        "question": "What is your dream job?",
+        "expected_star_response": {
+          "situation": "My dream job involves working on innovative technologies and solving meaningful problems.",
+          "task": "I want to be in a role where I can continuously learn, build scalable applications, and contribute to impactful projects.",
+          "action": "I enjoy collaborating with talented engineers, working on open-source, and staying up-to-date with industry trends.",
+          "result": "My ideal role would allow me to grow both as a developer and as a problem-solver."
+        },
+        "follow_up_questions": [
+          "What aspects of software development excite you the most?",
+          "How do you stay motivated in your career?",
+          "What steps are you taking to achieve your dream job?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Passion for Tech", "Career Motivation", "Self-Improvement"],
+        "difficulty_level": "Easy"
+      },
+      {
+        "question": "Where do you see yourself in five years?",
+        "expected_star_response": {
+          "situation": "I have a clear roadmap for my career growth.",
+          "task": "In five years, I aim to be in a senior developer or technical lead position.",
+          "action": "I plan to build expertise in scalable architectures, mentor junior developers, and contribute to high-impact projects.",
+          "result": "This will help me become a valuable asset to any engineering team."
+        },
+        "follow_up_questions": [
+          "What specific technical skills do you want to develop?",
+          "How do you plan to grow into a leadership role?",
+          "What challenges do you anticipate in reaching your goals?"
+        ],
+        "interview_type": "General",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Career Planning", "Technical Growth", "Leadership Potential"],
+        "difficulty_level": "Easy"
+      },
+      {
+        "question": "How do you collaborate with developers?",
+        "expected_star_response": {
+          "situation": "I have experience working in agile teams where collaboration is key.",
+          "task": "I prioritize clear communication and alignment with team goals.",
+          "action": "I use code reviews, pair programming, and regular stand-ups to ensure smooth collaboration.",
+          "result": "This has led to fewer misunderstandings, faster problem resolution, and better overall productivity."
+        },
+        "follow_up_questions": [
+          "How do you handle disagreements in code reviews?",
+          "What tools do you use for collaboration?",
+          "How do you ensure alignment in a remote team?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Teamwork", "Communication", "Collaboration"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "How did you work with senior management on large projects as well as multiple internal teams?",
+        "expected_star_response": {
+          "situation": "I worked on a project where I had to coordinate with both developers and senior management.",
+          "task": "My role was to communicate technical constraints while ensuring business goals were met.",
+          "action": "I scheduled regular sync meetings, provided clear technical documentation, and translated technical details into business language.",
+          "result": "This ensured all stakeholders were aligned, and the project was delivered successfully."
+        },
+        "follow_up_questions": [
+          "How do you adapt your communication when speaking to non-technical stakeholders?",
+          "What challenges have you faced when working with senior management?",
+          "How do you manage expectations in a project?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Communication", "Stakeholder Management", "Adaptability"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "Tell me about a time you had a conflict with a co-worker.",
+        "expected_star_response": {
+          "situation": "While working on a team project, a co-worker and I disagreed on the best approach to implementing a feature.",
+          "task": "I needed to ensure that the project moved forward while maintaining a collaborative team environment.",
+          "action": "I initiated a discussion where we both explained our viewpoints, analyzed pros and cons, and ultimately agreed on a compromise that combined our ideas.",
+          "result": "The project was completed successfully, and we maintained a strong working relationship."
+        },
+        "follow_up_questions": [
+          "How did you ensure the conflict remained professional?",
+          "What did you learn from this experience?",
+          "How do you prevent conflicts from escalating?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Conflict Resolution", "Teamwork", "Communication"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "Tell me about a time in which you had a conflict and needed to influence somebody else.",
+        "expected_star_response": {
+          "situation": "During a sprint planning session, a senior developer preferred an approach I believed would lead to technical debt.",
+          "task": "I had to convince the team to consider an alternative approach that balanced scalability and maintainability.",
+          "action": "I presented my case with data, demonstrated potential pitfalls, and proposed a compromise that met both short-term and long-term goals.",
+          "result": "The team adopted the improved approach, which saved time on refactoring in future iterations."
+        },
+        "follow_up_questions": [
+          "How do you influence others without being confrontational?",
+          "What techniques do you use to persuade technical teams?",
+          "What did you learn from this experience about leadership?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Influence", "Negotiation", "Technical Decision-Making"],
+        "difficulty_level": "Hard"
+      },
+      {
+        "question": "Tell me about a time you had a disagreement with your manager.",
+        "expected_star_response": {
+          "situation": "My manager wanted to push a feature release despite some unresolved performance issues.",
+          "task": "I had to communicate the potential risks while respecting my manager's priorities.",
+          "action": "I gathered performance metrics, provided alternative solutions, and suggested a phased rollout to mitigate risks.",
+          "result": "My manager agreed to delay the release for further testing, ensuring a smoother deployment."
+        },
+        "follow_up_questions": [
+          "How do you approach disagreements with authority figures?",
+          "What was the biggest challenge in handling this situation?",
+          "How do you balance advocating for technical quality while meeting business deadlines?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Communication", "Risk Management", "Leadership"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "How do you deal with difficult coworkers?",
+        "expected_star_response": {
+          "situation": "I worked with a colleague who often rejected feedback and resisted collaboration.",
+          "task": "I needed to find a way to work effectively with them while maintaining team morale.",
+          "action": "I focused on clear, objective communication, listened to their concerns, and found common ground.",
+          "result": "Over time, our working relationship improved, leading to smoother project execution."
+        },
+        "follow_up_questions": [
+          "What strategies do you use to handle difficult personalities?",
+          "Have you ever had to escalate a conflict to management?",
+          "How do you maintain professionalism in tough situations?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Patience", "Collaboration", "Professionalism"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "If someone has a different viewpoint on a project (e.g., different programming language), how would you handle the situation?",
+        "expected_star_response": {
+          "situation": "In a previous project, a teammate strongly advocated for using a different tech stack than the one we had agreed upon.",
+          "task": "I needed to evaluate their argument objectively while ensuring alignment with project goals.",
+          "action": "I encouraged an open discussion, weighed the trade-offs, and collaborated on a decision that best served the project.",
+          "result": "The team reached a consensus and avoided unnecessary friction, ensuring smooth development."
+        },
+        "follow_up_questions": [
+          "How do you ensure technical debates remain productive?",
+          "Have you ever changed your stance after a technical discussion?",
+          "How do you keep a team aligned on project decisions?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Technical Judgment", "Team Alignment", "Problem-Solving"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "How did you win over difficult employees?",
+        "expected_star_response": {
+          "situation": "I worked with a senior developer who was reluctant to accept ideas from junior team members.",
+          "task": "I wanted to earn their trust and ensure that my contributions were valued.",
+          "action": "I demonstrated my technical expertise through well-researched solutions, asked insightful questions, and engaged in constructive discussions.",
+          "result": "Over time, they became more receptive to my input, fostering a healthier team dynamic."
+        },
+        "follow_up_questions": [
+          "How do you handle skepticism from senior colleagues?",
+          "What steps do you take to build professional credibility?",
+          "Have you ever had to escalate issues with a difficult teammate?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Influence", "Respectful Communication", "Collaboration"],
+        "difficulty_level": "Hard"
+      },
+      {
+        "question": "How do you tackle challenges? Name a difficult challenge you faced, how you overcame it, and what you learned.",
+        "expected_star_response": {
+          "situation": "I had to fix a critical security vulnerability in a production system under tight deadlines.",
+          "task": "I needed to identify the root cause, implement a secure fix, and deploy without downtime.",
+          "action": "I analyzed logs, collaborated with security engineers, and patched the issue while ensuring minimal disruption.",
+          "result": "The vulnerability was resolved efficiently, and I learned the importance of proactive security monitoring."
+        },
+        "follow_up_questions": [
+          "How do you approach problem-solving under pressure?",
+          "What techniques do you use for debugging critical issues?",
+          "What lessons did you take away from handling this challenge?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Problem-Solving", "Resilience", "Technical Expertise"],
+        "difficulty_level": "Hard"
+      },
+      {
+        "question": "What is something 90% of people disagree with you about?",
+        "expected_star_response": {
+          "situation": "I believe that writing tests is just as important as writing production code, but many developers I worked with undervalued testing.",
+          "task": "I wanted to convince my team that investing in automated testing would save time in the long run.",
+          "action": "I demonstrated how test-driven development reduced debugging time and prevented regressions.",
+          "result": "Over time, the team adopted better testing practices, leading to fewer production issues."
+        },
+        "follow_up_questions": [
+          "How do you handle pushback when advocating for a best practice?",
+          "Can you give an example of a time your viewpoint changed?",
+          "What unpopular opinion do you hold about software development?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Critical Thinking", "Influence", "Decision-Making"],
+        "difficulty_level": "Hard"
+      },
+      {
+        "question": "What is broken around you?",
+        "expected_star_response": {
+          "situation": "I noticed inefficiencies in our CI/CD pipeline that caused deployment delays.",
+          "task": "I aimed to optimize the process to reduce build times and failures.",
+          "action": "I introduced parallel test execution, optimized Docker builds, and streamlined deployment scripts.",
+          "result": "Build times decreased by 40%, allowing for faster feature releases."
+        },
+        "follow_up_questions": [
+          "How do you identify areas for improvement in a system?",
+          "What steps do you take to implement process optimizations?",
+          "How do you balance fixing inefficiencies with delivering new features?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Continuous Improvement", "Optimization", "Problem-Solving"],
+        "difficulty_level": "Medium"
+      },
+      {
+    "question": "If you were in charge of picking projects, what problem would you try to solve?",
+    "expected_star_response": {
+      "situation": "I would prioritize projects that improve developer productivity and reduce repetitive tasks.",
+      "task": "For example, I would focus on automating infrastructure management for engineering teams.",
+      "action": "I would implement DevOps best practices, CI/CD pipelines, and monitoring tools to streamline deployments.",
+      "result": "This would save teams significant time, reduce human error, and increase overall efficiency."
+    },
+    "follow_up_questions": [
+      "What challenges do you foresee in solving this problem?",
+      "Have you ever worked on a project like this before?",
+      "How would you measure the success of such a project?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Problem-Solving", "Innovation", "Strategic Thinking"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Tell me about a time you had to persevere for multiple months.",
+    "expected_star_response": {
+      "situation": "I worked on a complex feature that required deep integration with third-party APIs, which had poor documentation.",
+      "task": "I needed to figure out how to integrate the service despite limited support.",
+      "action": "I systematically debugged issues, reached out to support forums, and reverse-engineered API behaviors.",
+      "result": "After months of persistence, the integration was successful, and it became a core feature of our product."
+    },
+    "follow_up_questions": [
+      "How do you stay motivated during long and difficult projects?",
+      "What did you learn from this experience?",
+      "How do you manage frustration when facing obstacles?"
+    ],
+    "interview_type": "Behavioral",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Perseverance", "Problem-Solving", "Resilience"],
+    "difficulty_level": "Hard"
+  },
+  {
+    "question": "What’s one thing you have done in your career that you’re proudest of?",
+    "expected_star_response": {
+      "situation": "I built an internal tool that automated a manual process, saving my team hours of work every week.",
+      "task": "I wanted to streamline repetitive data entry tasks using automation.",
+      "action": "I wrote a Python script that extracted, transformed, and loaded data automatically, reducing manual work.",
+      "result": "The tool was widely adopted and improved efficiency across multiple teams."
+    },
+    "follow_up_questions": [
+      "What impact did this achievement have on your team?",
+      "What were the biggest challenges you faced?",
+      "How did you come up with the idea for this project?"
+    ],
+    "interview_type": "Behavioral",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Innovation", "Efficiency", "Automation"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Tell me about an accomplishment you are most proud of.",
+    "expected_star_response": {
+      "situation": "I led a refactoring project to improve the maintainability of our legacy codebase.",
+      "task": "The challenge was to update the system without introducing regressions.",
+      "action": "I introduced modular design principles, wrote extensive tests, and documented the changes thoroughly.",
+      "result": "The refactored code reduced technical debt and improved development speed for future features."
+    },
+    "follow_up_questions": [
+      "What made this accomplishment significant to you?",
+      "How did you ensure quality while making these changes?",
+      "What feedback did you receive from your team?"
+    ],
+    "interview_type": "Behavioral",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Technical Excellence", "Leadership", "Attention to Detail"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "What is the biggest achievement in your previous projects?",
+    "expected_star_response": {
+      "situation": "I played a key role in scaling our system to handle 10x more traffic without downtime.",
+      "task": "The challenge was to optimize performance while keeping the system stable.",
+      "action": "I introduced caching mechanisms, optimized database queries, and refactored inefficient code.",
+      "result": "The system remained stable under high load, improving user experience and reducing infrastructure costs."
+    },
+    "follow_up_questions": [
+      "What strategies did you use to scale the system?",
+      "How did you measure the success of these optimizations?",
+      "What was the biggest challenge you faced in this process?"
+    ],
+    "interview_type": "Technical",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Scalability", "Performance Optimization", "Problem-Solving"],
+    "difficulty_level": "Hard"
+  },
+  {
+    "question": "What are your strengths?",
+    "expected_star_response": {
+      "situation": "One of my key strengths is problem-solving.",
+      "task": "I excel at breaking down complex issues into smaller, manageable parts.",
+      "action": "I use a structured approach to debugging and optimizing code, ensuring efficiency in my work.",
+      "result": "This allows me to consistently deliver high-quality solutions and contribute effectively to my team."
+    },
+    "follow_up_questions": [
+      "How do your strengths help you in your daily work?",
+      "Can you give an example of a time when your strengths made a difference?",
+      "What steps are you taking to further improve your strengths?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Self-Awareness", "Problem-Solving", "Efficiency"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "What words would your colleagues use to describe you?",
+    "expected_star_response": {
+      "situation": "In my previous roles, my colleagues often described me as reliable and detail-oriented.",
+      "task": "I always ensure that my work is well-tested and maintainable.",
+      "action": "I document my code thoroughly, provide constructive feedback in code reviews, and support my team whenever needed.",
+      "result": "This has helped foster a culture of collaboration and continuous improvement."
+    },
+    "follow_up_questions": [
+      "What specific behaviors contribute to this perception?",
+      "How do you ensure that you maintain a strong reputation in your workplace?",
+      "What feedback have you received that aligns with these descriptions?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Collaboration", "Attention to Detail", "Work Ethic"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "What would your manager say about you?",
+    "expected_star_response": {
+      "situation": "My manager would describe me as proactive and highly adaptable.",
+      "task": "I take initiative in solving problems and adapt quickly to changing requirements.",
+      "action": "I actively seek feedback, continuously improve my skills, and help my team stay aligned with business goals.",
+      "result": "This has allowed me to take on increasing responsibilities and contribute to key projects."
+    },
+    "follow_up_questions": [
+      "What specific feedback has your manager given you?",
+      "How have you improved based on your manager's feedback?",
+      "What qualities do you think make you a strong contributor to a team?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Adaptability", "Proactiveness", "Growth Mindset"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "What is the most constructive feedback you have received in your career?",
+    "expected_star_response": {
+      "situation": "Early in my career, I received feedback that I needed to improve my communication when explaining technical concepts.",
+      "task": "I had to work on articulating my thoughts more clearly to both technical and non-technical stakeholders.",
+      "action": "I practiced writing clearer documentation, participated in knowledge-sharing sessions, and refined my presentation skills.",
+      "result": "Over time, I became much more confident in communicating complex ideas effectively."
+    },
+    "follow_up_questions": [
+      "How did you implement the feedback you received?",
+      "What was the impact of improving this skill?",
+      "How do you continue to develop in this area?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Self-Improvement", "Communication", "Growth Mindset"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "If you were in charge of picking projects, what problem would you try to solve?",
+    "expected_star_response": {
+      "situation": "I would prioritize projects that improve developer productivity and reduce repetitive tasks.",
+      "task": "For example, I would focus on automating infrastructure management for engineering teams.",
+      "action": "I would implement DevOps best practices, CI/CD pipelines, and monitoring tools to streamline deployments.",
+      "result": "This would save teams significant time, reduce human error, and increase overall efficiency."
+    },
+    "follow_up_questions": [
+      "What challenges do you foresee in solving this problem?",
+      "Have you ever worked on a project like this before?",
+      "How would you measure the success of such a project?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Problem-Solving", "Innovation", "Strategic Thinking"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Tell me about a time you had to persevere for multiple months.",
+    "expected_star_response": {
+      "situation": "I worked on a complex feature that required deep integration with third-party APIs, which had poor documentation.",
+      "task": "I needed to figure out how to integrate the service despite limited support.",
+      "action": "I systematically debugged issues, reached out to support forums, and reverse-engineered API behaviors.",
+      "result": "After months of persistence, the integration was successful, and it became a core feature of our product."
+    },
+    "follow_up_questions": [
+      "How do you stay motivated during long and difficult projects?",
+      "What did you learn from this experience?",
+      "How do you manage frustration when facing obstacles?"
+    ],
+    "interview_type": "Behavioral",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Perseverance", "Problem-Solving", "Resilience"],
+    "difficulty_level": "Hard"
+  },
+  {
+    "question": "What’s one thing you have done in your career that you’re proudest of?",
+    "expected_star_response": {
+      "situation": "I built an internal tool that automated a manual process, saving my team hours of work every week.",
+      "task": "I wanted to streamline repetitive data entry tasks using automation.",
+      "action": "I wrote a Python script that extracted, transformed, and loaded data automatically, reducing manual work.",
+      "result": "The tool was widely adopted and improved efficiency across multiple teams."
+    },
+    "follow_up_questions": [
+      "What impact did this achievement have on your team?",
+      "What were the biggest challenges you faced?",
+      "How did you come up with the idea for this project?"
+    ],
+    "interview_type": "Behavioral",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Innovation", "Efficiency", "Automation"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Tell me about an accomplishment you are most proud of.",
+    "expected_star_response": {
+      "situation": "I led a refactoring project to improve the maintainability of our legacy codebase.",
+      "task": "The challenge was to update the system without introducing regressions.",
+      "action": "I introduced modular design principles, wrote extensive tests, and documented the changes thoroughly.",
+      "result": "The refactored code reduced technical debt and improved development speed for future features."
+    },
+    "follow_up_questions": [
+      "What made this accomplishment significant to you?",
+      "How did you ensure quality while making these changes?",
+      "What feedback did you receive from your team?"
+    ],
+    "interview_type": "Behavioral",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Technical Excellence", "Leadership", "Attention to Detail"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "What is the biggest achievement in your previous projects?",
+    "expected_star_response": {
+      "situation": "I played a key role in scaling our system to handle 10x more traffic without downtime.",
+      "task": "The challenge was to optimize performance while keeping the system stable.",
+      "action": "I introduced caching mechanisms, optimized database queries, and refactored inefficient code.",
+      "result": "The system remained stable under high load, improving user experience and reducing infrastructure costs."
+    },
+    "follow_up_questions": [
+      "What strategies did you use to scale the system?",
+      "How did you measure the success of these optimizations?",
+      "What was the biggest challenge you faced in this process?"
+    ],
+    "interview_type": "Technical",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Scalability", "Performance Optimization", "Problem-Solving"],
+    "difficulty_level": "Hard"
+  },
+  {
+    "question": "What are your strengths?",
+    "expected_star_response": {
+      "situation": "One of my key strengths is problem-solving.",
+      "task": "I excel at breaking down complex issues into smaller, manageable parts.",
+      "action": "I use a structured approach to debugging and optimizing code, ensuring efficiency in my work.",
+      "result": "This allows me to consistently deliver high-quality solutions and contribute effectively to my team."
+    },
+    "follow_up_questions": [
+      "How do your strengths help you in your daily work?",
+      "Can you give an example of a time when your strengths made a difference?",
+      "What steps are you taking to further improve your strengths?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Self-Awareness", "Problem-Solving", "Efficiency"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "What words would your colleagues use to describe you?",
+    "expected_star_response": {
+      "situation": "In my previous roles, my colleagues often described me as reliable and detail-oriented.",
+      "task": "I always ensure that my work is well-tested and maintainable.",
+      "action": "I document my code thoroughly, provide constructive feedback in code reviews, and support my team whenever needed.",
+      "result": "This has helped foster a culture of collaboration and continuous improvement."
+    },
+    "follow_up_questions": [
+      "What specific behaviors contribute to this perception?",
+      "How do you ensure that you maintain a strong reputation in your workplace?",
+      "What feedback have you received that aligns with these descriptions?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Collaboration", "Attention to Detail", "Work Ethic"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "What would your manager say about you?",
+    "expected_star_response": {
+      "situation": "My manager would describe me as proactive and highly adaptable.",
+      "task": "I take initiative in solving problems and adapt quickly to changing requirements.",
+      "action": "I actively seek feedback, continuously improve my skills, and help my team stay aligned with business goals.",
+      "result": "This has allowed me to take on increasing responsibilities and contribute to key projects."
+    },
+    "follow_up_questions": [
+      "What specific feedback has your manager given you?",
+      "How have you improved based on your manager's feedback?",
+      "What qualities do you think make you a strong contributor to a team?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Adaptability", "Proactiveness", "Growth Mindset"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "What is the most constructive feedback you have received in your career?",
+    "expected_star_response": {
+      "situation": "Early in my career, I received feedback that I needed to improve my communication when explaining technical concepts.",
+      "task": "I had to work on articulating my thoughts more clearly to both technical and non-technical stakeholders.",
+      "action": "I practiced writing clearer documentation, participated in knowledge-sharing sessions, and refined my presentation skills.",
+      "result": "Over time, I became much more confident in communicating complex ideas effectively."
+    },
+    "follow_up_questions": [
+      "How did you implement the feedback you received?",
+      "What was the impact of improving this skill?",
+      "How do you continue to develop in this area?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Self-Improvement", "Communication", "Growth Mindset"],
+    "difficulty_level": "Medium"
+  },  {
+    "question": "What does 'belong anywhere' mean to you?",
+    "expected_star_response": {
+      "situation": "To me, 'belong anywhere' represents inclusivity and the ability to feel at home no matter where you are.",
+      "task": "I strive to create environments—both in work and personal life—where people feel comfortable and included.",
+      "action": "I focus on open communication, collaboration, and adaptability in diverse teams.",
+      "result": "This mindset has helped me build strong professional relationships and contribute to positive team cultures."
+    },
+    "follow_up_questions": [
+      "How do you apply the concept of 'belong anywhere' in your daily life?",
+      "How would you foster inclusivity in a remote team?",
+      "What steps do you take to ensure new team members feel welcomed?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Inclusivity", "Collaboration", "Adaptability"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "Time management has become a necessary factor in productivity. Give an example of a time-management skill you've learned and applied at work.",
+    "expected_star_response": {
+      "situation": "I was working on a tight deadline to deliver a new feature while handling bug fixes.",
+      "task": "I needed to balance multiple priorities without compromising quality.",
+      "action": "I used time-blocking techniques, prioritized tasks using the Eisenhower Matrix, and scheduled deep-focus sessions to maximize productivity.",
+      "result": "I successfully delivered the feature on time while maintaining a high-quality standard for bug fixes."
+    },
+    "follow_up_questions": [
+      "What tools or methods do you use to manage time effectively?",
+      "How do you handle unexpected tasks that disrupt your schedule?",
+      "Can you give an example of when you had to adjust your priorities?"
+    ],
+    "interview_type": "Behavioral",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Time Management", "Productivity", "Prioritization"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Imagine it is your first day here. What do you want to work on? What features would you improve?",
+    "expected_star_response": {
+      "situation": "I always aim to add value as early as possible in a new role.",
+      "task": "I would start by understanding the codebase and identifying areas for optimization or improvement.",
+      "action": "I would focus on enhancing performance, reducing technical debt, or streamlining existing features based on business priorities.",
+      "result": "By the end of my first few weeks, I would aim to have contributed meaningful improvements while learning the team’s processes."
+    },
+    "follow_up_questions": [
+      "How do you approach onboarding in a new technical role?",
+      "What aspects of the product would you analyze first?",
+      "How do you balance learning with contributing early on?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Initiative", "Product Thinking", "Technical Analysis"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "If you were a gerbil, which gerbil would you be?",
+    "expected_star_response": {
+      "situation": "This is a creative question, but I would say I would be a curious and adaptable gerbil.",
+      "task": "I enjoy exploring new ideas, learning different technologies, and finding innovative solutions.",
+      "action": "I take on challenges head-on, continuously improve my skills, and collaborate effectively with others.",
+      "result": "These traits have helped me navigate new environments and contribute effectively in various teams."
+    },
+    "follow_up_questions": [
+      "How do you apply adaptability in your work?",
+      "What unexpected challenges have you faced, and how did you handle them?",
+      "What does curiosity mean to you in a professional setting?"
+    ],
+    "interview_type": "Creative",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Creativity", "Adaptability", "Problem-Solving"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "Why do you like Airbnb?",
+    "expected_star_response": {
+      "situation": "I appreciate Airbnb's focus on creating unique and personalized travel experiences.",
+      "task": "I enjoy the way Airbnb empowers both travelers and hosts to connect and share cultures.",
+      "action": "I value the platform's ability to blend technology with human connection and improve user experience.",
+      "result": "This makes Airbnb not just a booking service but a community-driven experience."
+    },
+    "follow_up_questions": [
+      "How does Airbnb differentiate itself from other travel platforms?",
+      "What Airbnb feature do you find most innovative?",
+      "How would you improve the user experience on Airbnb?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["User Experience", "Product Thinking", "Community Engagement"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "How does Airbnb impact guests and hosts?",
+    "expected_star_response": {
+      "situation": "Airbnb provides travelers with unique, affordable accommodations while enabling hosts to monetize their spaces.",
+      "task": "It creates a more personalized and immersive travel experience compared to traditional hotels.",
+      "action": "By facilitating trust, security, and seamless transactions, Airbnb fosters a global community.",
+      "result": "This impact has transformed the hospitality industry and empowered individuals to become entrepreneurs."
+    },
+    "follow_up_questions": [
+      "What are the biggest challenges Airbnb faces in serving both guests and hosts?",
+      "How does Airbnb ensure trust between guests and hosts?",
+      "What improvements would you suggest for Airbnb’s host experience?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["User Experience", "Business Impact", "Community Engagement"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "What part of our mission resonates the most with you?",
+    "expected_star_response": {
+      "situation": "I strongly connect with Airbnb’s mission of fostering a sense of belonging anywhere.",
+      "task": "I believe technology should enable meaningful human connections and accessibility.",
+      "action": "I strive to work on projects that enhance inclusivity and improve user experiences for diverse audiences.",
+      "result": "This mission aligns with my values, making Airbnb an inspiring company to work for."
+    },
+    "follow_up_questions": [
+      "How would you contribute to Airbnb’s mission?",
+      "What personal experiences align with Airbnb’s values?",
+      "What do you think is the most impactful aspect of Airbnb’s platform?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Company Alignment", "Mission-Driven Thinking", "User Empathy"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "Why do you want to work for Amazon?",
+    "expected_star_response": {
+      "situation": "I admire Amazon’s customer-centric innovation and large-scale impact.",
+      "task": "I want to contribute to building high-performance, scalable systems that improve customer experiences.",
+      "action": "I align with Amazon’s leadership principles, especially ownership and customer obsession.",
+      "result": "Working at Amazon would provide an opportunity to grow as a developer while solving complex technical challenges."
+    },
+    "follow_up_questions": [
+      "Which Amazon leadership principle do you relate to the most?",
+      "What Amazon product or service do you find most innovative?",
+      "How do you see yourself contributing to Amazon’s mission?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Company Alignment", "Problem-Solving", "Scalability"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "How would you improve Amazon's website?",
+    "expected_star_response": {
+      "situation": "Amazon’s website is highly functional, but it could improve in areas like personalization and accessibility.",
+      "task": "I would focus on making product discovery more intuitive and optimizing performance for mobile users.",
+      "action": "I would implement AI-driven recommendations, streamlined UI components, and accessibility enhancements.",
+      "result": "These improvements would create a more seamless and engaging shopping experience."
+    },
+    "follow_up_questions": [
+      "What specific user experience improvements would you suggest?",
+      "How would you test and validate your proposed changes?",
+      "What challenges do you think Amazon faces in optimizing its website?"
+    ],
+    "interview_type": "Technical",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["User Experience", "Optimization", "Technical Innovation"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "What is your favorite Slack feature and why?",
+    "expected_star_response": {
+      "situation": "One of my favorite features in Slack is the ability to create custom workflows using Slack bots and integrations.",
+      "task": "I needed to streamline our team's daily standups and automate repetitive notifications.",
+      "action": "I built a Slack bot that automatically collected standup updates and summarized them for the team.",
+      "result": "This reduced meeting time by 50% and improved visibility on team progress."
+    },
+    "follow_up_questions": [
+      "What other Slack features do you find useful?",
+      "How would you improve Slack’s user experience?",
+      "Have you ever built an integration with Slack?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Automation", "Product Thinking", "Efficiency"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Why do you want to work at ByteDance?",
+    "expected_star_response": {
+      "situation": "ByteDance is at the forefront of AI-driven content recommendations, which aligns with my interests in machine learning and software development.",
+      "task": "I want to contribute to scalable systems that enhance user engagement and improve content discovery.",
+      "action": "I have studied ByteDance’s recommendation algorithms and explored ways to optimize engagement strategies.",
+      "result": "Working at ByteDance would allow me to apply my skills in an innovative environment while continuing to learn from industry leaders."
+    },
+    "follow_up_questions": [
+      "What ByteDance products do you find most innovative?",
+      "How do you see yourself contributing to ByteDance’s mission?",
+      "What AI-related projects have you worked on?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Company Alignment", "AI & Machine Learning", "Scalability"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Why do you want to work for Lyft?",
+    "expected_star_response": {
+      "situation": "I appreciate Lyft’s focus on community-driven transportation and sustainability.",
+      "task": "I want to contribute to optimizing rideshare algorithms and improving driver-passenger experiences.",
+      "action": "I have explored ways to reduce wait times and enhance route optimization using real-time data processing.",
+      "result": "By working at Lyft, I would have the opportunity to develop technology that impacts millions of users daily."
+    },
+    "follow_up_questions": [
+      "How do you think Lyft differentiates itself from competitors?",
+      "What improvements would you suggest for Lyft’s platform?",
+      "How would you use data to improve rideshare experiences?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Data-Driven Decision Making", "Scalability", "Transportation Tech"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Why do you want to join Slack?",
+    "expected_star_response": {
+      "situation": "I believe Slack has transformed workplace communication by making collaboration more efficient and engaging.",
+      "task": "I want to contribute to enhancing Slack’s integrations and improving its real-time messaging capabilities.",
+      "action": "I have experience developing chat-based applications and working with APIs that streamline workflows.",
+      "result": "Joining Slack would allow me to work on impactful products that improve team productivity."
+    },
+    "follow_up_questions": [
+      "What do you think makes Slack different from other communication tools?",
+      "How would you improve Slack’s notification system?",
+      "What integrations do you think Slack should build next?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Product Thinking", "Automation", "Efficiency"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Describe Palantir to your grandmother. What large problems in the world would you solve today?",
+    "expected_star_response": {
+      "situation": "Palantir is a company that helps organizations make sense of large amounts of data to solve complex problems.",
+      "task": "If I were to solve a major global issue, I would focus on improving disaster response using AI-driven analytics.",
+      "action": "I would build predictive models that analyze climate patterns and detect early warning signs of natural disasters.",
+      "result": "This would help governments and organizations respond more effectively, saving lives and resources."
+    },
+    "follow_up_questions": [
+      "How do you explain complex technology to non-technical people?",
+      "What ethical considerations should companies like Palantir keep in mind?",
+      "What other global challenges could data analytics help solve?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Communication", "Problem-Solving", "Data Analytics"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Share one of your trips with us.",
+    "expected_star_response": {
+      "situation": "I took a solo trip to Japan to explore different cultures and improve my adaptability.",
+      "task": "My goal was to immerse myself in a new environment and navigate unfamiliar situations.",
+      "action": "I planned my itinerary carefully, learned basic Japanese phrases, and embraced spontaneous experiences.",
+      "result": "The trip helped me develop problem-solving skills, cultural awareness, and independence."
+    },
+    "follow_up_questions": [
+      "What was the most memorable experience from your trip?",
+      "How did this trip shape your personal or professional growth?",
+      "What challenges did you face while traveling, and how did you overcome them?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Adaptability", "Planning", "Problem-Solving"],
+    "difficulty_level": "Easy"
+  },
+  {
+    "question": "Give me an example of when you've been a good host.",
+    "expected_star_response": {
+      "situation": "I once hosted a knowledge-sharing session for new developers in my team.",
+      "task": "I wanted to ensure they felt welcomed and had a smooth onboarding experience.",
+      "action": "I created documentation, set up mentorship sessions, and answered questions proactively.",
+      "result": "The new developers integrated quickly and contributed effectively to the team."
+    },
+    "follow_up_questions": [
+      "How do you create a welcoming environment for new people?",
+      "What lessons did you learn from this experience?",
+      "How do you ensure ongoing support for new team members?"
+    ],
+    "interview_type": "Behavioral",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["Leadership", "Mentorship", "Collaboration"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "What's something you'd like to remove from the Airbnb experience?",
+    "expected_star_response": {
+      "situation": "I believe the booking experience on Airbnb could be further streamlined to reduce friction for users.",
+      "task": "I would focus on simplifying the checkout process and making cancellation policies more transparent.",
+      "action": "I would implement clearer UI elements and provide better upfront information for guests.",
+      "result": "This would enhance user trust and lead to higher customer satisfaction."
+    },
+    "follow_up_questions": [
+      "How would you improve Airbnb’s user experience?",
+      "What challenges do users face while booking on Airbnb?",
+      "What data-driven solutions would you suggest?"
+    ],
+    "interview_type": "Product",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["User Experience", "Product Thinking", "Problem-Solving"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "question": "Name a situation where you were impressed by a company's customer service.",
+    "expected_star_response": {
+      "situation": "I once had an issue with a delayed package, and the customer support team went above and beyond to resolve it.",
+      "task": "They proactively reached out, provided regular updates, and expedited the delivery.",
+      "action": "The level of empathy and transparency made a strong impression on me.",
+      "result": "This experience highlighted the importance of excellent customer service in building brand loyalty."
+    },
+    "follow_up_questions": [
+      "What lessons can companies learn from great customer service?",
+      "How would you design a customer support system for a product?",
+      "What was the best customer service interaction you've had?"
+    ],
+    "interview_type": "General",
+    "job_role": "Junior Developer",
+    "core_skill_assessed": ["User Experience", "Empathy", "Communication"],
+    "difficulty_level": "Easy"
+  },
+   {
+      "question": "What excites you about the company?",
+      "expected_star_response": {
+        "situation": "I have always been drawn to companies that push the boundaries of innovation and create meaningful products.",
+        "task": "I want to work in an environment where I can contribute to impactful projects and learn from talented engineers.",
+        "action": "I have researched the company’s recent initiatives and admire its focus on solving real-world problems.",
+        "result": "This motivates me to be part of a team that continuously innovates and improves people's lives."
+      },
+      "follow_up_questions": [
+        "What specific company values resonate with you?",
+        "How does this company align with your career goals?",
+        "What recent projects or initiatives of the company do you find most exciting?"
+      ],
+      "interview_type": "General",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Company Alignment", "Passion for Innovation", "Long-Term Fit"],
+      "difficulty_level": "Easy"
+    },
+    {
+      "question": "What is the best gift you have ever given or received?",
+      "expected_star_response": {
+        "situation": "One of the most memorable gifts I received was a book from a mentor that changed my perspective on software engineering.",
+        "task": "The book emphasized best practices and long-term thinking in coding.",
+        "action": "I applied its principles to my work, improving my ability to write clean and scalable code.",
+        "result": "This gift had a lasting impact on my career and helped me develop a deeper appreciation for software craftsmanship."
+      },
+      "follow_up_questions": [
+        "What made this gift so special to you?",
+        "Have you ever given a meaningful gift to someone?",
+        "How did this gift change your perspective or skills?"
+      ],
+      "interview_type": "General",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Reflection", "Personal Growth", "Empathy"],
+      "difficulty_level": "Easy"
+    },
+    {
+      "question": "If you had an unlimited budget, what gift would you buy and for whom?",
+      "expected_star_response": {
+        "situation": "If I had an unlimited budget, I would invest in education by funding scholarships for underprivileged students.",
+        "task": "I believe that access to quality education is one of the most powerful tools for change.",
+        "action": "I would create a foundation that provides learning resources, mentorship programs, and financial support.",
+        "result": "This would help talented individuals pursue careers they are passionate about, regardless of their financial background."
+      },
+      "follow_up_questions": [
+        "Why is this gift important to you?",
+        "Have you ever contributed to a cause you care about?",
+        "How do you think education impacts career growth?"
+      ],
+      "interview_type": "General",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Empathy", "Social Impact", "Long-Term Thinking"],
+      "difficulty_level": "Easy"
+    },
+    {
+      "question": "If you had an unlimited budget, where would you go?",
+      "expected_star_response": {
+        "situation": "With an unlimited budget, I would embark on a world tour focused on learning different cultures and technological advancements.",
+        "task": "My goal would be to explore innovative tech hubs, understand how different industries operate, and gain inspiration for future projects.",
+        "action": "I would visit Silicon Valley, Tokyo, Berlin, and emerging tech ecosystems, engaging with developers and entrepreneurs.",
+        "result": "This experience would broaden my perspective, enhance my technical knowledge, and help me build a global network."
+      },
+      "follow_up_questions": [
+        "What locations would be at the top of your list?",
+        "How would this trip impact your professional or personal growth?",
+        "What industries or cultures are you most interested in exploring?"
+      ],
+      "interview_type": "General",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Curiosity", "Global Perspective", "Personal Growth"],
+      "difficulty_level": "Easy"
+    },
+    {
+      "question": "What was the most fun thing you did recently?",
+      "expected_star_response": {
+        "situation": "Recently, I participated in a hackathon where my team built an AI-powered chatbot in 24 hours.",
+        "task": "The challenge was to develop a functional prototype under intense time constraints.",
+        "action": "I collaborated with my teammates, wrote efficient backend logic, and optimized API responses.",
+        "result": "We won second place, and the experience strengthened my problem-solving skills and teamwork abilities."
+      },
+      "follow_up_questions": [
+        "What made this experience enjoyable for you?",
+        "How did this event contribute to your personal or professional growth?",
+        "Would you participate in a similar event again?"
+      ],
+      "interview_type": "Behavioral",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Creativity", "Problem-Solving", "Collaboration"],
+      "difficulty_level": "Medium"
+    },
+    {
+      "question": "Tell me the story of how you became who you are today.",
+      "expected_star_response": {
+        "situation": "Growing up, I was always fascinated by technology and how things worked.",
+        "task": "I pursued a career in software development, driven by a passion for problem-solving.",
+        "action": "Through continuous learning, mentorship, and hands-on projects, I developed strong technical and analytical skills.",
+        "result": "Today, I am a motivated developer who thrives in solving challenges and building impactful products."
+      },
+      "follow_up_questions": [
+        "Who has influenced your career the most?",
+        "What was a pivotal moment in your journey?",
+        "How do you see yourself evolving in the future?"
+      ],
+      "interview_type": "General",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Self-Reflection", "Career Growth", "Resilience"],
+      "difficulty_level": "Medium"
+    },
+    {
+      "question": "What is something that you don’t want from your last internship/job?",
+      "expected_star_response": {
+        "situation": "In my last role, there was a lack of structured mentorship, which made onboarding more challenging.",
+        "task": "I realized how important it is to have proper guidance when learning new systems.",
+        "action": "I started actively seeking out feedback and taking initiative in clarifying tasks.",
+        "result": "This experience taught me the importance of clear documentation and strong communication in any team."
+      },
+      "follow_up_questions": [
+        "How did you overcome the challenges in your last role?",
+        "What improvements would you suggest for onboarding processes?",
+        "What do you look for in a strong team environment?"
+      ],
+      "interview_type": "Behavioral",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Adaptability", "Proactive Learning", "Team Collaboration"],
+      "difficulty_level": "Medium"
+    },
+    {
+      "question": "What did you learn during your internship apart from technical knowledge?",
+      "expected_star_response": {
+        "situation": "During my internship, I learned how to effectively communicate my ideas and collaborate with cross-functional teams.",
+        "task": "I realized that technical skills alone were not enough to succeed in a fast-paced environment.",
+        "action": "I focused on improving my ability to explain technical concepts to non-technical stakeholders and actively participated in team discussions.",
+        "result": "This experience helped me become a more well-rounded professional and strengthened my teamwork abilities."
+      },
+      "follow_up_questions": [
+        "What was the most valuable lesson from your internship?",
+        "How do you balance technical and soft skills in your career?",
+        "How did your internship shape your approach to teamwork?"
+      ],
+      "interview_type": "Behavioral",
+      "job_role": "Junior Developer",
+      "core_skill_assessed": ["Communication", "Teamwork", "Professional Growth"],
+      "difficulty_level": "Medium"
+    },
+    {
+        "question": "What is something you had to persevere at for multiple months?",
+        "expected_star_response": {
+          "situation": "I worked on optimizing a legacy system that had complex dependencies and lacked documentation.",
+          "task": "The goal was to refactor the codebase without disrupting existing functionality.",
+          "action": "I systematically documented the system, tested incremental changes, and collaborated with stakeholders to ensure a smooth transition.",
+          "result": "After several months of effort, the system became more maintainable, and performance improved by 40%."
+        },
+        "follow_up_questions": [
+          "How do you stay motivated when facing long-term challenges?",
+          "What strategies do you use to track progress over time?",
+          "What lessons did you learn from this experience?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Perseverance", "Problem-Solving", "Long-Term Planning"],
+        "difficulty_level": "Hard"
+      },
+      {
+        "question": "Take me through a product you launched from start to end.",
+        "expected_star_response": {
+          "situation": "I led the development of a customer feedback tool for our company’s web platform.",
+          "task": "The goal was to collect user feedback efficiently and integrate it into our product roadmap.",
+          "action": "I designed the UI/UX, built the backend using Node.js, and implemented analytics to track user responses.",
+          "result": "The tool launched successfully, gathering insights that improved our product offerings."
+        },
+        "follow_up_questions": [
+          "What were the biggest challenges you faced during development?",
+          "How did you prioritize features for the initial launch?",
+          "What would you improve if you had more time?"
+        ],
+        "interview_type": "Technical",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Project Management", "Technical Execution", "Product Thinking"],
+        "difficulty_level": "Hard"
+      },
+      {
+        "question": "Teach me something you've learned. In your opinion, what are some principles every software engineer should follow?",
+        "expected_star_response": {
+          "situation": "One principle I strongly believe in is writing clean, maintainable code.",
+          "task": "I strive to follow best practices such as DRY (Don’t Repeat Yourself) and SOLID principles.",
+          "action": "I use proper documentation, write meaningful commit messages, and encourage code reviews to ensure quality.",
+          "result": "By following these principles, I have built scalable and maintainable applications that benefit both current and future developers."
+        },
+        "follow_up_questions": [
+          "How do you ensure code maintainability in a fast-paced development environment?",
+          "Can you give an example of a time when following best practices helped you?",
+          "What principle do you think is most often overlooked in software engineering?"
+        ],
+        "interview_type": "Technical",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Software Best Practices", "Code Quality", "Knowledge Sharing"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "As a software engineer, you must be both predictable and innovative. How can these traits coexist in your work?",
+        "expected_star_response": {
+          "situation": "Balancing innovation and predictability is essential in software engineering.",
+          "task": "I ensure predictability by following structured development processes while leaving room for innovation.",
+          "action": "I adhere to agile methodologies, prioritize stability, but also experiment with new technologies through proof-of-concept projects.",
+          "result": "This approach helps deliver reliable software while fostering continuous improvement and creativity."
+        },
+        "follow_up_questions": [
+          "How do you handle risk when introducing new technologies?",
+          "Can you give an example of when you successfully balanced predictability and innovation?",
+          "How do you encourage innovation in a structured development environment?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Innovation", "Risk Management", "Technical Decision-Making"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "How do you respond when you disagree with a coworker?",
+        "expected_star_response": {
+          "situation": "I had a disagreement with a teammate over the best approach to structuring our API endpoints.",
+          "task": "The challenge was to align on a solution that balanced performance, readability, and maintainability.",
+          "action": "I presented data-backed arguments, listened to my teammate’s perspective, and worked towards a compromise.",
+          "result": "We implemented a hybrid approach that incorporated the best aspects of both viewpoints, improving API performance and maintainability."
+        },
+        "follow_up_questions": [
+          "How do you handle disagreements without escalating tension?",
+          "What techniques do you use to build consensus?",
+          "Can you share an example where you changed your mind after a disagreement?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Collaboration", "Conflict Resolution", "Decision-Making"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "Tell me about a time you needed information from someone who wasn’t responsive. How did you handle it?",
+        "expected_star_response": {
+          "situation": "While working on a feature, I needed input from a stakeholder who was unresponsive.",
+          "task": "I had to ensure that the project moved forward without unnecessary delays.",
+          "action": "I followed up through multiple channels, provided clear deadlines, and proposed alternative solutions to move forward.",
+          "result": "The stakeholder responded with the necessary input, and we avoided project bottlenecks."
+        },
+        "follow_up_questions": [
+          "What strategies do you use when someone is unresponsive?",
+          "How do you balance persistence with professionalism?",
+          "What would you do if you never received a response?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Communication", "Problem-Solving", "Proactiveness"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "Tell me about a time you had multiple responsibilities to manage. How did you respond to this situation?",
+        "expected_star_response": {
+          "situation": "I was responsible for developing a new feature while also fixing high-priority bugs in an ongoing sprint.",
+          "task": "I had to effectively balance my workload without compromising quality.",
+          "action": "I prioritized tasks using impact vs. urgency, delegated where possible, and communicated expectations with my team.",
+          "result": "I successfully completed all tasks on time while maintaining high code quality."
+        },
+        "follow_up_questions": [
+          "How do you manage competing priorities effectively?",
+          "Have you ever had to push back on a task due to workload?",
+          "What tools do you use for time and task management?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Time Management", "Task Prioritization", "Decision-Making"],
+        "difficulty_level": "Medium"
+      },
+      {
+        "question": "Can you give me an example of how you set goals for yourself?",
+        "expected_star_response": {
+          "situation": "I wanted to improve my knowledge of system design to prepare for senior-level responsibilities.",
+          "task": "I set a goal to complete a system design course and build a related project within three months.",
+          "action": "I broke down my learning into weekly milestones, applied concepts through real-world projects, and sought mentorship from senior engineers.",
+          "result": "By the end of three months, I had a solid grasp of system architecture and successfully built a scalable application."
+        },
+        "follow_up_questions": [
+          "How do you ensure that you stay on track with your goals?",
+          "What tools or methods do you use for goal setting?",
+          "How do you measure progress toward your goals?"
+        ],
+        "interview_type": "Behavioral",
+        "job_role": "Junior Developer",
+        "core_skill_assessed": ["Goal Setting", "Discipline", "Self-Motivation"],
+        "difficulty_level": "Easy"
+      }
+  ]
+  

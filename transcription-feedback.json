@@ -1,0 +1,669 @@
+[
+  {
+    "transcript": [
+      {
+        "interviewer": "Welcome to your interview! I'd like to start with a JavaScript question. Could you explain what the following function does?"
+      },
+      {
+        "interviewer": "Great explanation! Can you tell me about the time complexity of this function?"
+      },
+      {
+        "interviewer": "How would you improve this function?"
+      },
+      {
+        "interviewer": "What edge cases should we consider when testing this function?"
+      },
+      {
+        "interviewer": "Good work! Now, here's some feedback on your performance. You did a great job explaining the function's purpose and time complexity. Your improvements using reduce() show a good understanding of modern JavaScript techniques. I particularly liked how you added input validation, which demonstrates your attention to robust code."
+      }
+    ],
+    "evaluation": {
+      "clarity": "The explanation was clear and sequential, covering the main points effectively.",
+      "confidence": "The candidate spoke confidently and maintained a steady tone.",
+      "structure": "The answer followed a logical flow, addressing key points methodically."
+    },
+    "suggested_improvements": [
+      "Consider addressing potential edge cases early to show a thorough approach.",
+      "Mention time complexity if relevant to demonstrate awareness of performance considerations."
+    ]
+  },
+  {
+    "transcript": [
+      {
+        "interviewer": "Welcome to your interview! I'd like to start with a JavaScript question. Could you explain what the following function does?"
+      },
+      {
+        "interviewer": "Great! Can you tell me about the time complexity of this function?"
+      },
+      {
+        "interviewer": "How would you improve this function?"
+      },
+      {
+        "interviewer": "What edge cases should we consider when testing this function?"
+      },
+      {
+        "interviewer": "Good work! Now, here's some feedback on your performance. I appreciate your thought process, even when you were uncertain. You correctly identified the function's purpose and complexity, which shows a solid foundation in algorithmic thinking."
+      }
+    ],
+    "evaluation": {
+      "clarity": "The explanation was clear and sequential, covering the main points effectively.",
+      "confidence": "The candidate spoke confidently and maintained a steady tone.",
+      "structure": "The answer followed a logical flow, addressing key points methodically."
+    },
+    "suggested_improvements": [
+      "Consider addressing potential edge cases early to show a thorough approach.",
+      "Mention time complexity if relevant to demonstrate awareness of performance considerations."
+    ]
+  },
+  {
+    "transcript": [
+      {
+        "interviewer": "Welcome to your interview! I'd like to start with a JavaScript question. Could you explain what the following function does?"
+      },
+      {
+        "interviewer": "Great! Can you tell me about the time complexity of this function?"
+      },
+      {
+        "interviewer": "How would you improve this function?"
+      },
+      {
+        "interviewer": "What edge cases should we consider when testing this function?"
+      },
+      {
+        "interviewer": "Good work! Now, here's some feedback on your performance. You did well identifying that this is a frequency counter function, which shows good pattern recognition. Your analysis of the time and space complexity was accurate, and I liked that you explained your reasoning."
+      }
+    ],
+    "evaluation": {
+      "clarity": "The explanation was clear and sequential, covering the main points effectively.",
+      "confidence": "The candidate spoke confidently and maintained a steady tone.",
+      "structure": "The answer followed a logical flow, addressing key points methodically."
+    },
+    "suggested_improvements": [
+      "Consider addressing potential edge cases early to show a thorough approach.",
+      "Mention time complexity if relevant to demonstrate awareness of performance considerations."
+    ]
+  },
+  {
+    "transcript": [
+      {
+        "interviewer": "Welcome to your interview! I'd like to start with a JavaScript question. Could you explain what the following function does?"
+      },
+      {
+        "interviewer": "Great! Can you tell me about the time complexity of this function?"
+      },
+      {
+        "interviewer": "How would you improve this function?"
+      },
+      {
+        "interviewer": "What edge cases should we consider when testing this function?"
+      },
+      {
+        "interviewer": "Good work! Now, here's some feedback on your performance. I'm extremely impressed with your analysis. You clearly understood the function's purpose immediately and provided a concise, accurate explanation with a practical example."
+      }
+    ],
+    "evaluation": {
+      "clarity": "The explanation was clear and sequential, covering the main points effectively.",
+      "confidence": "The candidate spoke confidently and maintained a steady tone.",
+      "structure": "The answer followed a logical flow, addressing key points methodically."
+    },
+    "suggested_improvements": [
+      "Consider addressing potential edge cases early to show a thorough approach.",
+      "Mention time complexity if relevant to demonstrate awareness of performance considerations."
+    ]
+  },
+  {
+    "transcript": [
+      {
+        "interviewer": "Welcome to your interview! I'd like to start with a JavaScript question. Could you explain what the following function does?"
+      },
+      {
+        "interviewer": "Great! Can you tell me about the time complexity of this function?"
+      },
+      {
+        "interviewer": "How would you improve this function?"
+      },
+      {
+        "interviewer": "What edge cases should we consider when testing this function?"
+      },
+      {
+        "interviewer": "Good work! Now, here's some feedback on your performance. I'm extremely impressed with your analysis. You clearly understood the function's purpose immediately and provided a concise, accurate explanation with a practical example."
+      }
+    ],
+    "evaluation": {
+      "clarity": "The explanation was clear and sequential, covering the main points effectively.",
+      "confidence": "The candidate spoke confidently and maintained a steady tone.",
+      "structure": "The answer followed a logical flow, addressing key points methodically."
+    },
+    "suggested_improvements": [
+      "Consider addressing potential edge cases early to show a thorough approach.",
+      "Mention time complexity if relevant to demonstrate awareness of performance considerations."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Can you explain what a closure is in JavaScript?" },
+      { "candidate": "A closure is when a function remembers the scope in which it was created." },
+      { "interviewer": "Can you give a concrete example to illustrate that?" },
+      { "candidate": "Sure. If we have a function inside another function, the inner function can access the outer function’s variables, even after the outer function has finished executing." }
+    ],
+    "evaluation": {
+      "clarity": "Good explanation, but the initial answer was too vague. The example helped solidify the understanding.",
+      "confidence": "The candidate answered without hesitation but needed prompting to elaborate.",
+      "structure": "Started with a definition but only expanded when asked. Could improve by immediately giving an example."
+    },
+    "suggested_improvements": [
+      "Provide an example upfront when defining technical concepts.",
+      "Mention real-world use cases of closures to show deeper understanding."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "How does React’s virtual DOM improve performance?" },
+      { "candidate": "It makes rendering faster." },
+      { "interviewer": "Can you be more specific? How does it differ from the real DOM?" },
+      { "candidate": "The virtual DOM is a lightweight representation of the real DOM. React compares it with the previous version using diffing, then updates only the necessary parts in the real DOM." }
+    ],
+    "evaluation": {
+      "clarity": "The final answer was strong, but the initial response lacked depth.",
+      "confidence": "The candidate seemed unsure at first but improved with prompting.",
+      "structure": "The second answer was well-structured, outlining the problem, solution, and mechanism."
+    },
+    "suggested_improvements": [
+      "Avoid overly brief answers—anticipate the need for deeper explanations.",
+      "Include a real-world scenario where the virtual DOM significantly improves performance."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Can you walk me through the difference between SQL and NoSQL databases?" },
+      { "candidate": "SQL is structured, and NoSQL is flexible." },
+      { "interviewer": "That’s a bit broad. Can you elaborate on structure, scaling, and use cases?" },
+      { "candidate": "Sure! SQL databases use structured tables with predefined schemas, making them great for transactional applications. NoSQL databases store data in key-value pairs, documents, or graphs, making them better for scalability and flexibility in handling semi-structured data." }
+    ],
+    "evaluation": {
+      "clarity": "The final response covered key points, but the initial response was too vague.",
+      "confidence": "The candidate improved with a push for more details.",
+      "structure": "The refined answer clearly outlined differences and use cases."
+    },
+    "suggested_improvements": [
+      "Provide specific examples of SQL (PostgreSQL, MySQL) and NoSQL (MongoDB, Redis) in the first response.",
+      "Mention CAP theorem trade-offs when discussing NoSQL scalability."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "How would you optimize a slow SQL query?" },
+      { "candidate": "I would use indexes." },
+      { "interviewer": "Indexes help, but what if the query is still slow? What other optimizations exist?" },
+      { "candidate": "I could analyze the query execution plan, use proper joins, denormalize data if necessary, and consider caching frequently accessed results." }
+    ],
+    "evaluation": {
+      "clarity": "The initial answer was too narrow but improved when elaborated.",
+      "confidence": "The candidate answered well once pushed to think beyond a single solution.",
+      "structure": "Ended with a strong multi-step approach."
+    },
+    "suggested_improvements": [
+      "Mention query profiling tools like EXPLAIN ANALYZE immediately.",
+      "Discuss how query structure (e.g., avoiding SELECT *) can impact performance."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "What’s the difference between optimistic and pessimistic locking in databases?" },
+      { "candidate": "Optimistic locking assumes no conflicts, and pessimistic locking locks the data." },
+      { "interviewer": "That’s a high-level summary. Can you describe when to use each and their trade-offs?" },
+      { "candidate": "Optimistic locking works best in high-read, low-write environments because it reduces locking overhead. Pessimistic locking is better when contention is high, as it prevents conflicts but can lead to deadlocks and performance bottlenecks." }
+    ],
+    "evaluation": {
+      "clarity": "The first response was minimal, but the candidate improved after prompting.",
+      "confidence": "Started with a basic response but demonstrated strong knowledge when asked to elaborate.",
+      "structure": "Well-structured final answer that discussed trade-offs and scenarios."
+    },
+    "suggested_improvements": [
+      "Include an example of where optimistic locking is commonly used (e.g., versioning in ORMs).",
+      "Discuss alternative conflict resolution strategies in optimistic locking."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "This JavaScript function returns a new sorted array, right?" },
+      { "candidate": "Actually, if it’s using `sort()` without a compare function, it sorts elements as strings, which may not work correctly for numbers." },
+      { "interviewer": "Oh, so `sort()` always works fine for numbers?" },
+      { "candidate": "Not quite. Without a compare function, sorting `[10, 2, 5]` results in `[10, 2, 5]` because it sorts based on string order. Using `sort((a, b) => a - b)` ensures numerical sorting." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate provided a solid correction and gave an example to clarify the issue.",
+      "confidence": "They corrected the interviewer without hesitation and explained clearly.",
+      "structure": "Good structure: pointed out the mistake, explained why, and provided a solution."
+    },
+    "suggested_improvements": [
+      "Mention that `sort()` mutates the array unless `.slice()` is used to clone it.",
+      "Discuss performance: JavaScript engines use TimSort for sorting."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "This function will modify the original array and return a new one, correct?" },
+      { "candidate": "Not exactly. It depends on whether the function mutates the array or returns a new reference. Methods like `map()` and `filter()` return new arrays, while `push()` and `splice()` modify in place." },
+      { "interviewer": "So all array methods return a new array?" },
+      { "candidate": "No, some methods mutate the original array. If you want immutability, you need to be careful with methods like `sort()` or `reverse()` because they modify the existing array." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate gave clear explanations and corrected the interviewer precisely.",
+      "confidence": "They demonstrated a strong understanding of mutability in JavaScript.",
+      "structure": "Well-structured: corrected misunderstanding, explained with examples, and clarified exceptions."
+    },
+    "suggested_improvements": [
+      "Briefly mention functional programming concepts like immutability and pure functions.",
+      "Include a real-world example where mutation causes unintended bugs."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Since JavaScript is single-threaded, async functions block execution, right?" },
+      { "candidate": "No, async functions actually allow non-blocking execution by using the event loop to defer execution until a promise resolves." },
+      { "interviewer": "But doesn’t `await` stop everything until the promise is done?" },
+      { "candidate": "Inside an `async` function, `await` pauses execution of that function but doesn’t block the entire thread. The event loop continues running other tasks." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate clearly distinguished between single-threading and non-blocking behavior.",
+      "confidence": "They confidently corrected the interviewer and gave a precise explanation.",
+      "structure": "Strong response: corrected the mistake first, then clarified with accurate details."
+    },
+    "suggested_improvements": [
+      "Mention that `Promise.all()` can improve async execution efficiency.",
+      "Give an analogy, like a restaurant waiter handling multiple tables (event loop)."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Recursion is always faster than loops, right?" },
+      { "candidate": "Not necessarily. Recursion can cause stack overflow if not optimized, and iterative solutions are often more memory-efficient." },
+      { "interviewer": "But recursion is how JavaScript executes loops internally, isn’t it?" },
+      { "candidate": "JavaScript engines do optimize some recursive calls (tail call optimization), but standard loops are often more performant due to reduced function call overhead." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate provided a strong correction, explaining the trade-offs clearly.",
+      "confidence": "They handled the mistaken assumption well without overcomplicating the response.",
+      "structure": "Started by correcting the misunderstanding, then explained with supporting details."
+    },
+    "suggested_improvements": [
+      "Mention when recursion is preferable, such as for tree traversal.",
+      "Explain tail call optimization and its limitations in JavaScript."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "This function runs synchronously, so we don’t need to worry about callback execution order." },
+      { "candidate": "Actually, if the function uses something like `setTimeout()` or `fetch()`, it becomes asynchronous and won’t execute in the order we might expect." },
+      { "interviewer": "So, JavaScript can’t execute code in order if there’s async behavior?" },
+      { "candidate": "We can control execution order using `async/await` or promises. JavaScript runs code sequentially, but async operations defer execution based on the event loop." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate addressed the mistake and explained async execution clearly.",
+      "confidence": "They corrected the interviewer smoothly and demonstrated good knowledge of JavaScript’s execution model.",
+      "structure": "Well-structured: identified the issue, explained why, and gave a solution."
+    },
+    "suggested_improvements": [
+      "Include an example of promise chaining to demonstrate controlled execution.",
+      "Explain how the event loop processes async tasks in phases."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "What’s the difference between `==` and `===` in JavaScript?" },
+      { "candidate": "`==` compares values, and `===` compares both values and types." },
+      { "interviewer": "When would you use `==` instead of `===`?" },
+      { "candidate": "You might use `==` when you want to allow type coercion, like comparing a string '2' to a number 2." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate gave a concise explanation and a practical example.",
+      "confidence": "They answered confidently and provided a clear use case for type coercion.",
+      "structure": "Good structure: defined both operators, then explained when to use each."
+    },
+    "suggested_improvements": [
+      "Mention the potential pitfalls of type coercion with `==`.",
+      "Discuss the importance of strict equality (`===`) for avoiding unexpected behavior."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "What’s the difference between `let`, `const`, and `var` in JavaScript?" },
+      { "candidate": "`let` and `const` are block-scoped, while `var` is function-scoped." },
+      { "interviewer": "Can you explain the benefits of using `const` over `let`?" },
+      { "candidate": "`const` prevents reassignment, which can help avoid bugs and improve code readability by signaling that a variable won’t change." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate provided a clear distinction between the variable declarations.",
+      "confidence": "They answered confidently and explained the benefits of `const` effectively.",
+      "structure": "Well-structured: defined each declaration, then elaborated on the benefits of `const`."
+    },
+    "suggested_improvements": [
+      "Discuss the importance of immutability and avoiding accidental reassignments with `const`.",
+      "Mention that `const` doesn’t make objects immutable, only their reference."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "What’s the difference between `null` and `undefined` in JavaScript?" },
+      { "candidate": "null represents an intentional absence of value, while undefined indicates an uninitialized or missing value."},
+      { "interviewer": "Can you give an example where you’d use `null` instead of `undefined`?" },
+      { "candidate": "You might use `null` to explicitly clear a variable that previously held a value, signaling that it’s intentionally empty." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate clearly defined both terms and provided a practical example.",
+      "confidence": "They answered confidently and demonstrated a good understanding of the difference.",
+      "structure": "Strong structure: defined `null` and `undefined`, then gave a use case for `null`."
+    },
+    "suggested_improvements": [
+      "Discuss the potential pitfalls of using `undefined` instead of `null` for intentional absence.",
+      "Mention that `null` is a primitive value, while `undefined` is a type and a value."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Can you explain what a Python list is and how it's different from a tuple?" },
+      { "candidate": "Sure! A list is a mutable collection, meaning you can change its elements, while a tuple is immutable, so once it's created, you can't modify it." },
+      { "interviewer": "Right, so tuples are just lists that can’t be changed?" },
+      { "candidate": "Not exactly. Tuples are also typically used when we want to ensure data integrity, and they can be slightly more performant because they require less memory than lists." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate provided a good answer, though the interviewer's framing of tuples as 'lists that can’t be changed' was misleading.",
+      "confidence": "The candidate responded with clarity and corrected the interviewer's misconception well.",
+      "structure": "The answer followed a logical structure, first stating the mutability difference and then adding performance and use-case insights."
+    },
+    "suggested_improvements": [
+      "The interviewer could ask about practical use cases for tuples versus lists instead of oversimplifying the distinction.",
+      "They should also mention that tuples support hashing, making them usable as dictionary keys."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "What’s the difference between Python’s `deepcopy` and `copy`?" },
+      { "candidate": "A shallow copy (`copy.copy()`) creates a new object but keeps references to the original nested objects, while a deep copy (`copy.deepcopy()`) creates entirely new copies of everything, including nested structures." },
+      { "interviewer": "So a shallow copy is basically the same as referencing the original object?" },
+      { "candidate": "Not exactly. A shallow copy creates a new outer object, but the inner objects remain references to the originals. Modifications to nested elements affect both copies." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate explained the difference well, but the interviewer oversimplified the concept of shallow copies.",
+      "confidence": "The candidate corrected the interviewer politely and with technical accuracy.",
+      "structure": "Good progression: defining both types of copies, addressing the misconception, and reinforcing the key difference."
+    },
+    "suggested_improvements": [
+      "The interviewer could ask for an example to ensure deeper understanding.",
+      "They should clarify that a shallow copy is still a separate object, just not fully independent at the nested level."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Can you describe what Python’s garbage collector does and why it’s useful?" },
+      { "candidate": "Sure! Python’s garbage collector automatically manages memory by removing objects that are no longer in use. It mainly works through reference counting and a cyclic garbage collector for handling reference cycles." },
+      { "interviewer": "So it just deletes unused objects whenever Python feels like it?" },
+      { "candidate": "Not quite. The reference counter decreases as references to an object are removed, and once it reaches zero, the object is deleted. The cyclic garbage collector helps with objects that reference each other but aren’t used anymore." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate explained garbage collection well, correcting the interviewer’s vague phrasing.",
+      "confidence": "They demonstrated a solid understanding of memory management.",
+      "structure": "The explanation was structured well, covering both reference counting and cyclic garbage collection."
+    },
+    "suggested_improvements": [
+      "The interviewer could ask about practical situations where garbage collection might impact performance.",
+      "It would be good to discuss manual garbage collection control (`gc.collect()`) and when it might be needed."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Does Python support multithreading for parallel execution?" },
+      { "candidate": "Python has a Global Interpreter Lock (GIL), which means only one thread can execute Python bytecode at a time. So while Python supports multithreading, it’s not truly parallel for CPU-bound tasks." },
+      { "interviewer": "Oh, so multithreading is useless in Python?" },
+      { "candidate": "Not at all! Multithreading is great for I/O-bound tasks like file handling or network requests. For CPU-bound tasks, multiprocessing is usually a better option." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate effectively explained the GIL and when multithreading is useful.",
+      "confidence": "They handled the interviewer's overly broad conclusion well, giving a nuanced answer.",
+      "structure": "The answer was well-organized: stating the GIL’s effect, clarifying multithreading’s usefulness, and mentioning multiprocessing as an alternative."
+    },
+    "suggested_improvements": [
+      "The interviewer should phrase questions more carefully to avoid implying incorrect conclusions.",
+      "They could ask follow-ups on real-world use cases for multithreading vs. multiprocessing."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "What’s the difference between `is` and `==` in Python?" },
+      { "candidate": "`is` checks if two variables reference the same object in memory, while `==` checks if their values are equal." },
+      { "interviewer": "So they usually work the same way, right?" },
+      { "candidate": "Not necessarily. For example, `[] is []` returns `False` because they are different objects, but `[] == []` returns `True` because their values are the same." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate provided a strong distinction between `is` and `==`, correcting the interviewer's vague statement.",
+      "confidence": "They demonstrated a strong understanding and backed it up with an example.",
+      "structure": "The answer was structured well: defining both, explaining the key difference, and giving a practical example."
+    },
+    "suggested_improvements": [
+      "The interviewer could ask about cases where `is` might seem to work, such as with small integers and string interning.",
+      "They should avoid leading questions that imply a misunderstanding."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Uh... so, in PHP, how do, um, sessions work? Like... they store data, right?" },
+      { "candidate": "Yes, sessions store data across multiple page requests. PHP sessions are managed using a unique session ID stored in a cookie or URL, and the session data itself is stored on the server." },
+      { "interviewer": "Right… and… um, they’re kinda like cookies?" },
+      { "candidate": "Sort of, but cookies store data on the client-side, while sessions store data on the server, making them more secure." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate provided a solid answer, clarifying the differences between sessions and cookies.",
+      "confidence": "The interviewer appeared uncertain, but the candidate answered with confidence.",
+      "structure": "The response was well-structured, addressing session mechanics first, then differentiating from cookies."
+    },
+    "suggested_improvements": [
+      "The interviewer could frame the question more clearly to avoid appearing uncertain.",
+      "They could ask about session security concerns, such as session hijacking and mitigation strategies."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Uh, so, PHP is like... dynamically typed? Or... wait, does it have types?" },
+      { "candidate": "Yes, PHP is dynamically typed, meaning variables don’t require explicit type declarations. However, newer versions of PHP support type hinting and strict types." },
+      { "interviewer": "Oh, um… so does that mean… you can, like, change a variable’s type on the fly?" },
+      { "candidate": "Yes, PHP allows type juggling, meaning a variable can change types based on the operation performed. This flexibility is powerful but can also lead to unexpected behavior." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate explained dynamic typing well, correcting the interviewer's hesitation.",
+      "confidence": "The interviewer seemed unsure, but the candidate answered smoothly and thoroughly.",
+      "structure": "The response flowed well, starting with dynamic typing and expanding to type juggling."
+    },
+    "suggested_improvements": [
+      "The interviewer could phrase the question more definitively, such as 'Can you explain PHP’s type system?'",
+      "It would be useful to ask about the benefits and pitfalls of type juggling."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Um… so, in PHP, uh… how does… er… error handling work? Like… try-catch?" },
+      { "candidate": "Yes, PHP supports `try-catch` blocks for handling exceptions. When an exception is thrown, the catch block allows you to handle it gracefully instead of crashing the script." },
+      { "interviewer": "Oh… okay. So… uh, do all errors go through try-catch?" },
+      { "candidate": "No, only exceptions do. Traditional PHP errors, like warnings or notices, don’t trigger exceptions unless error handling is configured to do so, such as using `set_error_handler()`." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate clearly distinguished between exceptions and regular errors.",
+      "confidence": "The candidate was well-prepared, while the interviewer lacked clarity.",
+      "structure": "The answer was structured well, introducing `try-catch` before discussing other error handling approaches."
+    },
+    "suggested_improvements": [
+      "The interviewer could ask a follow-up about custom exception handling and logging strategies.",
+      "They could reframe the question to be more direct, like 'How does PHP handle different types of errors?'"
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Uh… so… PHP and databases… um… how do they, like… connect?" },
+      { "candidate": "PHP connects to databases using extensions like MySQLi or PDO. PDO is preferred for security and flexibility, as it supports multiple database systems and prepared statements." },
+      { "interviewer": "Ah, right… so… um… is PDO better than… um… MySQLi?" },
+      { "candidate": "It depends on the use case. PDO supports multiple databases, while MySQLi is optimized specifically for MySQL. PDO also offers better security practices with named placeholders in queries." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate provided a precise and informative response despite the interviewer's hesitation.",
+      "confidence": "The interviewer’s uncertainty was evident, but the candidate responded with confidence.",
+      "structure": "The answer flowed logically from basic connection methods to a comparison between PDO and MySQLi."
+    },
+    "suggested_improvements": [
+      "The interviewer should ask a more structured question, such as 'What are the differences between PDO and MySQLi?'",
+      "They could follow up by asking about common security issues like SQL injection."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Uh… um… what’s the deal with PHP frameworks? Like… are they, uh… useful?" },
+      { "candidate": "Yes, PHP frameworks like Laravel, Symfony, and CodeIgniter provide structured ways to build web applications, enforcing best practices and reducing boilerplate code." },
+      { "interviewer": "Oh… so… do you, uh, always need a framework?" },
+      { "candidate": "Not necessarily. Frameworks help for large projects, but for small scripts or highly customized solutions, writing raw PHP might be more efficient." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate answered well, explaining frameworks clearly and when they are useful.",
+      "confidence": "The interviewer seemed uncertain, while the candidate answered concisely and confidently.",
+      "structure": "Good structure: introduced frameworks, their benefits, and when they might not be necessary."
+    },
+    "suggested_improvements": [
+      "The interviewer should ask a more focused question, such as 'What are the advantages of using a PHP framework?'",
+      "They could follow up by asking for specific Laravel or Symfony features."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Can you explain what SOLID principles are and why they are important?" },
+      { "candidate": "Sure! SOLID is a set of five design principles that help make software more maintainable and scalable. They stand for Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion." },
+      { "interviewer": "Can you give an example of a violation of the Single Responsibility Principle?" },
+      { "candidate": "Yes, if a class handles both database access and business logic, it’s doing too much. Splitting responsibilities into separate classes ensures better maintainability and testing." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate clearly explained SOLID and provided a good example for Single Responsibility.",
+      "confidence": "The response was structured and delivered without hesitation.",
+      "structure": "Started with an overview, then expanded into details with a concrete example."
+    },
+    "suggested_improvements": [
+      "They could mention how SOLID principles apply in real-world projects.",
+      "A brief mention of how these principles support design patterns would strengthen the answer."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "So, uh… how does Docker work? Like, what exactly does it do?" },
+      { "candidate": "Docker allows you to package applications and their dependencies into containers, ensuring they run consistently across different environments." },
+      { "interviewer": "Oh, so… is it like a virtual machine?" },
+      { "candidate": "Not exactly. Docker uses containerization, which shares the host OS kernel instead of running a full OS like VMs. This makes containers lightweight and faster to start." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate provided a clear explanation of Docker and its difference from VMs.",
+      "confidence": "They confidently clarified misconceptions.",
+      "structure": "Defined Docker first, then differentiated it from VMs."
+    },
+    "suggested_improvements": [
+      "They could briefly touch on how orchestration tools like Kubernetes extend Docker's capabilities.",
+      "Mentioning a common use case (CI/CD, microservices) would make the answer more practical."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "Can you explain how caching works in web applications?" },
+      { "candidate": "Sure! Caching stores frequently accessed data in a faster storage medium, like memory, to reduce load times and server stress." },
+      { "interviewer": "Right. So… is database caching the only kind of caching?" },
+      { "candidate": "No, there are multiple types: database caching, HTTP caching (using headers), and application-level caching (like Redis or Memcached)." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate gave a solid overview and categorized different caching techniques well.",
+      "confidence": "They confidently expanded beyond the initial question.",
+      "structure": "Started with a definition, then broke caching down into different types."
+    },
+    "suggested_improvements": [
+      "A real-world example (e.g., caching API responses in a RESTful app) would add depth.",
+      "They could mention potential pitfalls, like cache invalidation issues."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "What’s the difference between microservices and monolithic architecture?" },
+      { "candidate": "Monolithic architecture means the entire application is built as a single unit, while microservices break it into smaller, independent services that communicate via APIs." },
+      { "interviewer": "Do microservices always improve scalability?" },
+      { "candidate": "Not always. While microservices allow horizontal scaling, they add complexity in terms of deployment, inter-service communication, and data consistency." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate provided a strong comparison and pointed out trade-offs.",
+      "confidence": "They showed a solid understanding beyond basic definitions.",
+      "structure": "Defined both concepts first, then discussed scalability nuances."
+    },
+    "suggested_improvements": [
+      "A mention of containerization’s role in microservices would add context.",
+      "They could discuss patterns like API gateways and service discovery."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "How would you handle rate limiting in an API?" },
+      { "candidate": "I would use a token bucket or leaky bucket algorithm to limit requests per user within a timeframe, often implemented using middleware or API gateways." },
+      { "interviewer": "Okay… but wouldn’t that block some users?" },
+      { "candidate": "Yes, if they exceed the limit. However, APIs often return `429 Too Many Requests`, and we can implement exponential backoff to handle retries more gracefully." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate explained the concept well and addressed potential issues.",
+      "confidence": "They provided a detailed and technically accurate answer.",
+      "structure": "Explained the main approach first, then covered handling blocked users."
+    },
+    "suggested_improvements": [
+      "Mentioning how CDN-based rate limiting works could be valuable.",
+      "They could discuss dynamic rate limiting based on user roles."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "What is SQL injection, and how do you prevent it?" },
+      { "candidate": "SQL injection happens when unsanitized user input is executed as a SQL query. The best way to prevent it is by using prepared statements and parameterized queries." },
+      { "interviewer": "So escaping input isn’t enough?" },
+      { "candidate": "No, escaping can help, but it's not foolproof. Prepared statements are more secure because they separate data from SQL logic." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate gave a strong explanation and correctly dismissed escaping as a full solution.",
+      "confidence": "They provided a confident and direct response.",
+      "structure": "Clearly defined the problem, then covered solutions."
+    },
+    "suggested_improvements": [
+      "Mentioning ORM frameworks like SQLAlchemy or Prisma would provide a modern perspective.",
+      "They could discuss blind SQL injection and other advanced attack techniques."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "What’s the difference between a stack and a queue?" },
+      { "candidate": "A stack follows LIFO (Last-In, First-Out), while a queue follows FIFO (First-In, First-Out)." },
+      { "interviewer": "Right. And… um, where do we use stacks?" },
+      { "candidate": "Stacks are used in function call management, undo mechanisms, and depth-first search algorithms." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate provided a correct answer with relevant use cases.",
+      "confidence": "They answered without hesitation.",
+      "structure": "Defined both data structures first, then provided real-world applications."
+    },
+    "suggested_improvements": [
+      "Discussing variations like double-ended queues (deque) could add depth.",
+      "They could mention Python’s built-in `collections.deque` for queue implementations."
+    ]
+  },
+  {
+    "transcript": [
+      { "interviewer": "What’s the difference between horizontal and vertical scaling?" },
+      { "candidate": "Horizontal scaling adds more machines, while vertical scaling increases a single machine’s resources." },
+      { "interviewer": "Does horizontal scaling always improve performance?" },
+      { "candidate": "Not always. Some workloads require shared state, making horizontal scaling difficult without techniques like sharding or distributed caching." }
+    ],
+    "evaluation": {
+      "clarity": "The candidate made a clear distinction and addressed limitations of horizontal scaling.",
+      "confidence": "They answered thoroughly and concisely.",
+      "structure": "Defined both approaches first, then discussed trade-offs."
+    },
+    "suggested_improvements": [
+      "Mentioning containerized scaling with Kubernetes could add value.",
+      "They could discuss auto-scaling strategies in cloud environments."
+    ]
+  }
+]

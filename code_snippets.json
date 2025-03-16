@@ -1,0 +1,1421 @@
+[
+    {
+      "programming_language": "JavaScript",
+      "question_type": "unexpected behavior",
+      "question": "What will be logged by the following code, and why?",
+      "code_snippet": "let a = {};\nlet b = { key: \"b\" };\nlet c = { key: \"c\" };\n\na[b] = 123;\na[c] = 456;\n\nconsole.log(a[b]);",
+      "expected_explanation": "In JavaScript, object keys are always converted to strings when used as property names. When `b` and `c` are used as keys, they both get converted to `\"[object Object]\"`, causing the second assignment (`a[c] = 456`) to overwrite the first (`a[b] = 123`). As a result, `console.log(a[b])` prints `456`.",
+      "follow_up_questions": [
+        "How can you avoid object keys being converted to strings?",
+        "What data structures can be used instead of an object to handle this case?",
+        "How would this behave differently in a `Map`?"
+      ]
+    },
+    {
+      "programming_language": "JavaScript",
+      "question_type": "reference vs value",
+      "question": "What will be logged by the following code, and why?",
+      "code_snippet": "let obj1 = { key: \"value\" };\nlet obj2 = obj1;\nlet obj3 = obj2;\n\nobj1.key = \"new value\";\nobj2 = { key: \"another value\" };\n\nconsole.log(obj1.key, obj2.key, obj3.key);",
+      "expected_explanation": "`obj1`, `obj2`, and `obj3` originally reference the same object. When `obj1.key` is updated, it also updates `obj3.key` since both reference the same object. However, `obj2 = { key: \"another value\" };` reassigns `obj2` to a new object, breaking the reference. The output is `\"new value another value new value\"`.",
+      "follow_up_questions": [
+        "How does JavaScript handle object assignment?",
+        "What would happen if `obj2.key = 'another value'` instead of reassigning `obj2`?",
+        "How can you create a deep copy of an object to avoid reference issues?"
+      ]
+    },
+    {
+      "programming_language": "JavaScript",
+      "question_type": "function behavior",
+      "question": "What will be logged by the following code?",
+      "code_snippet": "const x = { foo: 1 };\nconst y = { foo: 2 };\n\nfunction addFoo(obj) {\n  return obj.foo + 1;\n}\n\nconsole.log(addFoo(x));\nconsole.log(addFoo(y));",
+      "expected_explanation": "The function `addFoo` takes an object with a `foo` property and returns `foo + 1`. Since `x.foo` is `1` and `y.foo` is `2`, `addFoo(x)` returns `2`, and `addFoo(y)` returns `3`. The output is:\n```\n2\n3\n```",
+      "follow_up_questions": [
+        "What happens if an object without a `foo` property is passed?",
+        "How can you prevent potential runtime errors in this function?",
+        "Can you rewrite this function using arrow function syntax?"
+      ]
+    },
+    {
+      "programming_language": "JavaScript",
+      "question_type": "async behavior",
+      "question": "What will be logged by the following code, and why?",
+      "code_snippet": "const arr = [1, 2, 3, 4, 5];\n\nfor (var i = 0; i < arr.length; i++) {\n  setTimeout(function () {\n    console.log(i);\n  }, 1000);\n}",
+      "expected_explanation": "Because `var` does not have block scope, all `setTimeout` functions share the same `i` reference. By the time they execute after 1 second, `i` is already `5`. As a result, `5` is logged five times.",
+      "follow_up_questions": [
+        "How can you fix this to log `1, 2, 3, 4, 5` instead?",
+        "What would happen if `let` was used instead of `var`?",
+        "How does JavaScript’s event loop affect this behavior?"
+      ]
+    },
+    {
+      "programming_language": "JavaScript",
+      "question_type": "array iteration",
+      "question": "What will be logged by the following code?",
+      "code_snippet": "const arr = [1, 2, 3, 4, 5];\n\narr.forEach(function (element) {\n  console.log(element);\n});",
+      "expected_explanation": "The `forEach` method iterates over the array and executes the provided callback for each element. The output is:\n```\n1\n2\n3\n4\n5\n```",
+      "follow_up_questions": [
+        "How does `forEach` differ from a `for` loop?",
+        "What happens if you return a value inside `forEach`?",
+        "How would you modify this to stop iteration early?"
+      ]
+    },
+    {
+      "programming_language": "JavaScript",
+      "question_type": "sorting",
+      "question": "What will be logged by the following code?",
+      "code_snippet": "let a = [9, 3, 5, 1];\na.sort((x, y) => x - y); // Ascending\nconsole.log(a);\n\na.sort((x, y) => y - x); // Descending\nconsole.log(a);",
+      "expected_explanation": "The `.sort()` method sorts the array **in place** using the provided comparison function. The first `sort` sorts it in ascending order: `[1, 3, 5, 9]`. The second sorts it in descending order: `[9, 5, 3, 1]`. The output is:\n```\n[1, 3, 5, 9]\n[9, 5, 3, 1]\n```",
+      "follow_up_questions": [
+        "What happens if no comparison function is provided?",
+        "Why does JavaScript sort `[10, 2]` as `[10, 2]` instead of `[2, 10]`?",
+        "How would you sort an array of objects by a numeric property?"
+      ]
+    },
+    {
+      "programming_language": "JavaScript",
+      "question_type": "fetch API",
+      "question": "What does the following fetch request do?",
+      "code_snippet": "fetch('https://jsonplaceholder.typicode.com/users/1')\n    .then(res => res.json())\n    .then(data => console.log(data))\n    .catch(err => console.error('Error:', err));",
+      "expected_explanation": "This code performs an HTTP GET request to fetch user data from `jsonplaceholder.typicode.com`. It converts the response to JSON and logs it to the console. If an error occurs, it is caught and logged as `'Error: <message>'`.",
+      "follow_up_questions": [
+        "What happens if the network request fails?",
+        "How can this be converted to an `async/await` function?",
+        "How would you handle a non-200 response more gracefully?"
+      ]
+    },
+    {
+        "programming_language": "JavaScript",
+        "question_type": "concept explanation",
+        "question": "Explain what a callback function is and provide a simple example.",
+        "code_snippet": "function fetchData(callback) {\n  setTimeout(() => {\n    const data = { name: 'John', age: 30 };\n    callback(data);\n  }, 1000);\n}\n\nfunction handleData(data) {\n  console.log(`Name: ${data.name}, Age: ${data.age}`);\n}\n\nfetchData(handleData);",
+        "expected_explanation": "A callback function is a function that is passed as an argument to another function and is executed at a later time. In this example, `fetchData` simulates a data retrieval and calls the provided `callback` function once the data is ready.",
+        "follow_up_questions": [
+          "How do callbacks help with asynchronous programming?",
+          "What are potential issues with using callbacks excessively?",
+          "How can you rewrite this function using Promises?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "string manipulation",
+        "question": "Given a string, reverse each word in the sentence while keeping the word order the same.",
+        "code_snippet": "function reverseWords(sentence) {\n  return sentence\n    .split(' ')\n    .map(word => word.split('').reverse().join(''))\n    .join(' ');\n}\n\nconst sentence = \"Hello World\";\nconst result = reverseWords(sentence);\nconsole.log(result); // Output: \"olleH dlroW\"",
+        "expected_explanation": "This function splits the sentence into words, reverses each word individually, and then joins them back into a sentence.",
+        "follow_up_questions": [
+          "How would you modify this function to also reverse the word order?",
+          "What happens if the input contains multiple spaces between words?",
+          "Can you achieve the same result without using `map()`?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "number validation",
+        "question": "How would you check if a number is an integer?",
+        "code_snippet": "function isInteger(num) {\n  return Number.isInteger(num);\n}\n\nconsole.log(isInteger(4));    // Output: true\nconsole.log(isInteger(4.5));  // Output: false",
+        "expected_explanation": "The function uses `Number.isInteger()` to check if a given number is an integer.",
+        "follow_up_questions": [
+          "How does `Number.isInteger()` differ from `typeof num === 'number'`?",
+          "What will `Number.isInteger(Infinity)` return and why?",
+          "How can you check if a number is an integer without using `Number.isInteger()`?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "closures",
+        "question": "Explain the concept of closures in JavaScript.",
+        "code_snippet": "function outerFunction(outerVariable) {\n  return function innerFunction(innerVariable) {\n    console.log('Outer Variable: ' + outerVariable);\n    console.log('Inner Variable: ' + innerVariable);\n  };\n}\n\nconst newFunction = outerFunction('outside');\nnewFunction('inside');",
+        "expected_explanation": "A closure is a function that retains access to its outer function's variables even after the outer function has finished executing.",
+        "follow_up_questions": [
+          "Why are closures useful in JavaScript?",
+          "How do closures impact memory management?",
+          "Can you create a closure that keeps track of how many times a function has been called?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "array manipulation",
+        "question": "Write a function to flatten a nested array.",
+        "code_snippet": "function flattenArray(arr) {\n  return arr.reduce((flat, toFlatten) => {\n    return flat.concat(Array.isArray(toFlatten) ? flattenArray(toFlatten) : toFlatten);\n  }, []);\n}\n\nconst nestedArray = [1, [2, [3, [4]], 5]];\nconst flatArray = flattenArray(nestedArray);\nconsole.log(flatArray); // Output: [1, 2, 3, 4, 5]",
+        "expected_explanation": "The function recursively flattens a nested array by using `reduce()` and checking if an element is an array before flattening it further.",
+        "follow_up_questions": [
+          "How would you flatten the array using `.flat()`?",
+          "What is the time complexity of this function?",
+          "Can you rewrite this function iteratively instead of recursively?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "comparison operators",
+        "question": "Explain the difference between `==` and `===` operators in JavaScript.",
+        "code_snippet": "console.log(5 == '5');   // Output: true\nconsole.log(5 === '5');  // Output: false",
+        "expected_explanation": "`==` performs type coercion, converting operands to a common type before comparison, whereas `===` checks both value and type strictly.",
+        "follow_up_questions": [
+          "What happens if you compare `null` and `undefined` using `==` and `===`?",
+          "Why should you prefer `===` over `==` in most cases?",
+          "Can you think of a scenario where using `==` is beneficial?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "encapsulation",
+        "question": "How can you create a private variable in JavaScript?",
+        "code_snippet": "function secretVariable() {\n  var private = 'secret';\n  return function() {\n    return private;\n  };\n}\n\nconst getPrivate = secretVariable();\nconsole.log(getPrivate()); // Output: secret",
+        "expected_explanation": "Private variables can be created using closures, where a function retains access to its outer scope variables without exposing them directly.",
+        "follow_up_questions": [
+          "How can ES6 classes implement private variables?",
+          "What are the advantages of using private variables?",
+          "How does JavaScript’s module pattern utilize private variables?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "scope",
+        "question": "What will be the output of the following code, and why?",
+        "code_snippet": "(function() {\n  var a = b = 5;\n})();\n\nconsole.log(b);",
+        "expected_explanation": "The line `var a = b = 5;` is interpreted as `b = 5; var a = b;`, making `b` a global variable. The output is `5`.",
+        "follow_up_questions": [
+          "How can you modify the code to prevent `b` from becoming global?",
+          "What happens if `use strict` is enabled?",
+          "How does variable hoisting affect this code?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "prototypes",
+        "question": "How would you add your own method to the Array object so that the following code would work?",
+        "code_snippet": "var arr = [1, 2, 3, 4, 5];\nvar avg = arr.average();\nconsole.log(avg); // Output: 3",
+        "expected_explanation": "By adding a method to `Array.prototype`, all arrays can access it. The method calculates the sum of array elements and divides by the length.",
+        "follow_up_questions": [
+          "What are the risks of modifying `Array.prototype`?",
+          "How can you add a method without affecting all arrays globally?",
+          "Can you write the method using an ES6 class?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "floating-point precision",
+        "question": "What will be the output of the following code?",
+        "code_snippet": "console.log(0.1 + 0.2 == 0.3);",
+        "expected_explanation": "The output is `false` due to floating-point precision issues in JavaScript, where `0.1 + 0.2` does not exactly equal `0.3`.",
+        "follow_up_questions": [
+          "Why do floating-point precision errors occur?",
+          "How can you accurately compare floating-point numbers?",
+          "Would using `toFixed(1)` solve the issue?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "event bubbling",
+        "question": "Explain what event bubbling is and how it works in JavaScript.",
+        "code_snippet": "document.querySelector('#inner').addEventListener('click', function() {\n  console.log('Inner clicked');\n}, false);\n\ndocument.querySelector('#outer').addEventListener('click', function() {\n  console.log('Outer clicked');\n}, false);",
+        "expected_explanation": "Event bubbling is the process where an event triggered on the innermost target element propagates to its parent elements in the DOM hierarchy.",
+        "follow_up_questions": [
+          "How does event bubbling differ from event capturing?",
+          "How can you stop event bubbling?",
+          "What are the benefits of using event delegation?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "hoisting",
+        "question": "What will be the output of the following code?",
+        "code_snippet": "console.log(a); // Output: undefined\nvar a = 5;",
+        "expected_explanation": "In JavaScript, variable declarations are hoisted to the top of their scope, but not their initializations. This means `a` is declared before the `console.log` statement but is `undefined` until the assignment `a = 5`.",
+        "follow_up_questions": [
+          "How does hoisting differ for `var`, `let`, and `const`?",
+          "What would happen if `console.log(a)` was inside a function?",
+          "How can you avoid issues related to hoisting?"
+        ]
+      },
+      {
+        "programming_language": "JavaScript",
+        "question_type": "promises",
+        "question": "How would you convert the following callback-based function to use Promises?",
+        "code_snippet": "function getData(callback) {\n  setTimeout(() => {\n    const data = 'Data from the server';\n    callback(data);\n  }, 1000);\n}\n\ngetData(function(data) {\n  console.log(data);\n});",
+        "expected_explanation": "Promises provide a cleaner way to handle asynchronous operations and avoid callback hell. The function `getData` is modified to return a Promise that resolves with the data.",
+        "follow_up_questions": [
+          "What are the states of a Promise?", 
+          "How can you handle errors in a Promise chain?",
+          "How would you rewrite this using async/await?"
+        ]
+    },
+    {
+        "programming_language": "Python",
+        "question_type": "exception handling",
+        "question": "How do you handle exceptions in Python?",
+        "code_snippet": "try:\n    # code that may raise an exception\nexcept SomeException as e:\n    # code to handle the exception",
+        "expected_explanation": "Python handles exceptions using the `try-except` block. The code inside `try` executes first, and if an exception occurs, the `except` block catches and handles the error.",
+        "follow_up_questions": [
+          "What happens if an exception is raised but not caught?",
+          "Can you catch multiple exceptions in a single `except` block?",
+          "How does the `finally` block work in exception handling?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "data type conversion",
+        "question": "How do you convert an integer into a decimal in Python?",
+        "code_snippet": "import decimal\ninteger = 10\nprint(decimal.Decimal(integer))\nprint(type(decimal.Decimal(integer)))",
+        "expected_explanation": "The `decimal.Decimal()` function converts an integer into a `Decimal` type, which is useful for precise arithmetic calculations.",
+        "follow_up_questions": [
+          "Why would you use `Decimal` instead of floating-point numbers?",
+          "What happens if you pass a non-numeric string to `Decimal`?",
+          "Can `Decimal` handle very large or very small numbers?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "data type conversion",
+        "question": "How do you convert a string of integers into a decimal in Python?",
+        "code_snippet": "import decimal\nstring = '12345'\nprint(decimal.Decimal(string))\nprint(type(decimal.Decimal(string)))",
+        "expected_explanation": "The `decimal.Decimal()` function can also convert a string containing numeric values into a `Decimal` type.",
+        "follow_up_questions": [
+          "What happens if the string contains non-numeric characters?",
+          "How does `Decimal` handle scientific notation (e.g., '1.23e5')?",
+          "What is the difference between `float()` and `Decimal()`?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "string manipulation",
+        "question": "How do you reverse a string using slicing in Python?",
+        "code_snippet": "string = \"Python Programming\"\nprint(string[::-1])",
+        "expected_explanation": "The slicing technique `[::-1]` reverses a string by starting from the end and moving backwards with a step of `-1`.",
+        "follow_up_questions": [
+          "How would you reverse a string without using slicing?",
+          "What happens if the string contains spaces or special characters?",
+          "Can you reverse a string using recursion?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "string analysis",
+        "question": "How do you count the number of vowels in a given word?",
+        "code_snippet": "vowel = ['a', 'e', 'i', 'o', 'u']\nword = \"programming\"\ncount = 0\nfor character in word:\n    if character in vowel:\n        count += 1\nprint(count)",
+        "expected_explanation": "The code iterates through each character in `word`, checks if it's in the list of vowels, and increments `count` accordingly.",
+        "follow_up_questions": [
+          "How would you modify the function to ignore case (uppercase/lowercase)?",
+          "How can you count vowels using list comprehensions?",
+          "What would happen if the input is an empty string?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "string analysis",
+        "question": "How do you count the number of consonants in a given word?",
+        "code_snippet": "vowel = ['a', 'e', 'i', 'o', 'u']\nword = \"programming\"\ncount = 0\nfor character in word:\n    if character not in vowel:\n        count += 1\nprint(count)",
+        "expected_explanation": "The code iterates through each character in `word`, checks if it's **not** a vowel, and increments `count` accordingly.",
+        "follow_up_questions": [
+          "How can you modify this function to also ignore spaces and special characters?",
+          "How would you implement this using regular expressions?",
+          "Can you rewrite this function using the `filter()` function?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "string analysis",
+        "question": "How do you count the number of occurrences of a specific character in a string?",
+        "code_snippet": "word = \"python\"\ncharacter = \"p\"\ncount = 0\nfor letter in word:\n    if letter == character:\n        count += 1\nprint(count)",
+        "expected_explanation": "The function iterates through the string and increments `count` each time it finds the specified character.",
+        "follow_up_questions": [
+          "How can you count occurrences of a character using the `.count()` method?",
+          "What happens if the character is not found in the string?",
+          "Can this be optimized using a dictionary for counting multiple characters at once?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "recursion",
+        "question": "How do you generate a Fibonacci series using a loop?",
+        "code_snippet": "fib = [0,1]\nfor i in range(5):  \n    fib.append(fib[-1] + fib[-2])\nprint(', '.join(str(e) for e in fib))",
+        "expected_explanation": "The Fibonacci series is generated iteratively by appending the sum of the last two elements to the list.",
+        "follow_up_questions": [
+          "How can you generate a Fibonacci series using recursion?",
+          "What is the time complexity of this approach?",
+          "How would you modify the function to return the nth Fibonacci number?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "list operations",
+        "question": "How do you find the maximum number in a list?",
+        "code_snippet": "numberList = [15, 85, 35, 89, 125]\n\nmaxNum = numberList[0]\nfor num in numberList:\n    if maxNum < num:\n        maxNum = num\nprint(maxNum)",
+        "expected_explanation": "The function initializes `maxNum` with the first element and iterates through the list, updating `maxNum` if a larger number is found.",
+        "follow_up_questions": [
+          "How can you find the maximum number using the `max()` function?",
+          "What happens if the list is empty?",
+          "Can this be implemented using recursion?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "list operations",
+        "question": "How do you find the middle element in a list?",
+        "code_snippet": "numList = [1, 2, 3, 4, 5]\nmidElement = int((len(numList)/2))\nprint(numList[midElement])",
+        "expected_explanation": "The function calculates the middle index by dividing the length by 2 and retrieves the corresponding element.",
+        "follow_up_questions": [
+          "What happens if the list has an even number of elements?",
+          "How can you find the middle element using list slicing?",
+          "Can you write a function that returns both middle elements if the list length is even?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "list manipulation",
+        "question": "How do you convert a list into a string in Python?",
+        "code_snippet": "lst = [\"P\", \"Y\", \"T\", \"H\", \"O\", \"N\"]\nstring = ''.join(lst)\nprint(string)\nprint(type(string))",
+        "expected_explanation": "The `.join()` method concatenates the elements of `lst` into a single string without spaces. The result is `'PYTHON'`, and its type is `<class 'str'>`.",
+        "follow_up_questions": [
+          "What happens if the list contains integers instead of strings?",
+          "How would you modify this to insert spaces between characters?",
+          "Can you achieve the same result using list comprehensions?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "list operations",
+        "question": "How do you add corresponding elements from two lists together?",
+        "code_snippet": "lst1 = [1, 2, 3]\nlst2 = [4, 5, 6] \n\nres_lst = [] \nfor i in range(0, len(lst1)):\n    res_lst.append(lst1[i] + lst2[i]) \nprint(res_lst)",
+        "expected_explanation": "This loop iterates over `lst1` and `lst2`, adding corresponding elements together and storing them in `res_lst`. The result is `[5, 7, 9]`.",
+        "follow_up_questions": [
+          "How can you rewrite this using list comprehensions?",
+          "What happens if the two lists are of different lengths?",
+          "Can you achieve the same result using `zip()`?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "string manipulation",
+        "question": "How can you check if two strings are anagrams?",
+        "code_snippet": "str1 = \"Listen\"\nstr2 = \"Silent\"\n\nstr1 = list(str1.upper())\nstr2 = list(str2.upper())\nstr1.sort(), str2.sort()\n\nif(str1 == str2):\n    print(\"True\")\nelse:\n    print(\"False\")",
+        "expected_explanation": "The function converts both strings to uppercase, converts them into lists, sorts them, and compares them. If they are equal, the strings are anagrams.",
+        "follow_up_questions": [
+          "How can you improve this function to handle spaces and special characters?",
+          "Can you implement this check using `Counter` from `collections`?",
+          "What is the time complexity of this approach?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "string analysis",
+        "question": "How do you check if a string is a palindrome using slicing?",
+        "code_snippet": "str1 = \"Kayak\".lower()\nstr2 = \"kayak\".lower()\n\nif(str1 == str2[::-1]):\n    print(\"True\")\nelse:\n    print(\"False\")",
+        "expected_explanation": "The function converts the string to lowercase and checks if it is equal to its reversed version using slicing.",
+        "follow_up_questions": [
+          "How can you check for palindromes without using slicing?",
+          "What happens if the input contains spaces or punctuation?",
+          "Can you implement this using recursion?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "string analysis",
+        "question": "How do you count the number of whitespace characters in a string?",
+        "code_snippet": "string = \"P r ogramm in g \"\nprint(string.count(' '))",
+        "expected_explanation": "The `.count(' ')` method counts occurrences of the space character in the given string, returning `5`.",
+        "follow_up_questions": [
+          "How can you count all whitespace characters, including newlines and tabs?",
+          "How would you achieve this using regular expressions?",
+          "What happens if the string is empty?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "regular expressions",
+        "question": "How do you count digits, letters, and spaces in a string using regular expressions?",
+        "code_snippet": "import re\nname = 'Python is 1'\n\ndigitCount = re.sub(\"[^0-9]\", \"\", name)\nletterCount = re.sub(\"[^a-zA-Z]\", \"\", name)\nspaceCount = re.findall(\"[ \\n]\", name)\n\nprint(len(digitCount))\nprint(len(letterCount))\nprint(len(spaceCount))",
+        "expected_explanation": "The function uses regular expressions to remove non-digits, non-letters, and count spaces separately, returning the count of each.",
+        "follow_up_questions": [
+          "What happens if the input string contains special characters?",
+          "How can you modify this function to count punctuation?",
+          "How would you achieve the same result without using `re`?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "regular expressions",
+        "question": "How do you count special characters in a string using regular expressions?",
+        "code_snippet": "import re\nspChar = \"!@#$%^&*()\"\ncount = re.sub('[\\w]+', '', spChar)\nprint(len(count))",
+        "expected_explanation": "The function removes all word characters (`\\w` includes letters, digits, and underscores), leaving only special characters to be counted.",
+        "follow_up_questions": [
+          "How can you modify the function to count special characters in a longer string?",
+          "What happens if the input string contains spaces?",
+          "How can you use `string.punctuation` from the `string` module to achieve the same result?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "string manipulation",
+        "question": "How do you remove all whitespace from a string using regular expressions?",
+        "code_snippet": "import re\nstring = \"C O D E\"\nspaces = re.compile(r'\\s+')\nresult = re.sub(spaces, '', string)\nprint(result)",
+        "expected_explanation": "The function uses `re.sub()` to replace all whitespace characters (`\\s+`) with an empty string, removing all spaces.",
+        "follow_up_questions": [
+          "How would you achieve the same result without using regular expressions?",
+          "What happens if the input string contains tabs or newlines?",
+          "How can you modify this function to replace multiple spaces with a single space instead of removing them?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "pattern printing",
+        "question": "How do you build a pyramid pattern in Python?",
+        "code_snippet": "floors = 3\nh = 2*floors-1\nfor i in range(1, 2*floors, 2):\n    print('{:^{}}'.format('*'*i, h))",
+        "expected_explanation": "This function prints a pyramid of `*` symbols, aligning each row to the center using `.format()`.",
+        "follow_up_questions": [
+          "How can you modify the function to print an inverted pyramid?",
+          "What happens if `floors` is set to `0`?",
+          "Can you achieve the same output using recursion?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "list operations",
+        "question": "How do you shuffle the elements of a list in Python?",
+        "code_snippet": "from random import shuffle\nlst = ['Python', 'is', 'Easy']\nshuffle(lst)\nprint(lst)",
+        "expected_explanation": "The `shuffle()` function randomly rearranges the elements in the list.",
+        "follow_up_questions": [
+          "What happens if the list contains numbers instead of strings?",
+          "Can you shuffle a string the same way?",
+          "How would you implement a manual shuffle function?"
+        ]
+      },
+      {
+        "programming_language": "Python",
+        "question_type": "list operations",
+        "question": "How do you find the largest element in a list?",
+        "code_snippet": "def find_largest_element(lst):\n    return max(lst)\n\nprint(find_largest_element([1, 2, 3, 4, 5]))",
+        "expected_explanation": "The function uses the built-in `max()` function to find and return the largest element in the list.",
+        "follow_up_questions": [
+          "What happens if the list is empty?",
+          "How would you find the largest element manually without using `max()`?",
+          "Can this function handle a list of strings?"
+        ]
+      },
+      {
+        "programming_language": "Java",
+        "question_type": "string manipulation",
+        "question": "How do you reverse a string in Java?",
+        "code_snippet": "public class StringPrograms {\n\n    public static void main(String[] args) {\n        String str = \"123\";\n        System.out.println(reverse(str));\n    }\n\n    public static String reverse(String in) {\n        if (in == null)\n            throw new IllegalArgumentException(\"Null is not valid input\");\n\n        StringBuilder out = new StringBuilder();\n        char[] chars = in.toCharArray();\n\n        for (int i = chars.length - 1; i >= 0; i--)\n            out.append(chars[i]);\n\n        return out.toString();\n    }\n}",
+        "expected_explanation": "This method reverses a string by converting it into a character array and iterating from the last element to the first. The reversed characters are stored in a `StringBuilder` and returned.",
+        "follow_up_questions": [
+          "How can you optimize this using `StringBuilder.reverse()`?",
+          "What happens if the input is `null`?",
+          "Can you achieve the same result using recursion?"
+        ]
+      },
+      {
+        "programming_language": "Java",
+        "question_type": "mathematical operations",
+        "question": "How do you swap two numbers without using a third variable in Java?",
+        "code_snippet": "public class SwapNumbers {\n\n    public static void main(String[] args) {\n        int a = 10;\n        int b = 20;\n\n        System.out.println(\"a is \" + a + \" and b is \" + b);\n\n        a = a + b;\n        b = a - b;\n        a = a - b;\n\n        System.out.println(\"After swapping, a is \" + a + \" and b is \" + b);\n    }\n}",
+        "expected_explanation": "The values are swapped using arithmetic operations without needing a temporary variable.",
+        "follow_up_questions": [
+          "How would you swap two numbers using bitwise XOR?",
+          "What happens if `a` and `b` are negative numbers?",
+          "Can you implement this logic for floating-point numbers?"
+        ]
+      },
+      {
+        "programming_language": "Java",
+        "question_type": "string validation",
+        "question": "Write a Java program to check if a vowel is present in a string.",
+        "code_snippet": "public class StringContainsVowels {\n\n    public static void main(String[] args) {\n        System.out.println(stringContainsVowels(\"Hello\")); // true\n        System.out.println(stringContainsVowels(\"TV\")); // false\n    }\n\n    public static boolean stringContainsVowels(String input) {\n        return input.toLowerCase().matches(\".*[aeiou].*\");\n    }\n}",
+        "expected_explanation": "This function converts the input string to lowercase and uses a regular expression to check if it contains any vowels.",
+        "follow_up_questions": [
+          "How would you modify this function to be case-insensitive?",
+          "Can you implement this without using regular expressions?",
+          "What happens if the input string is empty?"
+        ]
+      },
+      {
+        "programming_language": "Java",
+        "question_type": "number theory",
+        "question": "Write a Java program to check if the given number is a prime number.",
+        "code_snippet": "public class PrimeNumberCheck {\n\n    public static void main(String[] args) {\n        System.out.println(isPrime(19)); // true\n        System.out.println(isPrime(49)); // false\n    }\n\n    public static boolean isPrime(int n) {\n        if (n == 0 || n == 1) {\n            return false;\n        }\n        if (n == 2) {\n            return true;\n        }\n        for (int i = 2; i <= n / 2; i++) {\n            if (n % i == 0) {\n                return false;\n            }\n        }\n        return true;\n    }\n}",
+        "expected_explanation": "The function checks if `n` is divisible by any number from `2` to `n/2`. If it is, then it's not a prime number.",
+        "follow_up_questions": [
+          "How can you optimize this using `√N` instead of `n/2`?",
+          "What is the time complexity of this approach?",
+          "How would you modify this function to handle large numbers efficiently?"
+        ]
+      },
+      {
+        "programming_language": "Java",
+        "question_type": "recursion",
+        "question": "Write a Java program to print a Fibonacci sequence using recursion.",
+        "code_snippet": "public class PrintFibonacciRecursive {\n\n    public static int fibonacci(int count) {\n        if (count <= 1)\n            return count;\n\n        return fibonacci(count - 1) + fibonacci(count - 2);\n    }\n\n    public static void main(String args[]) {\n        int seqLength = 10;\n        System.out.print(\"A Fibonacci sequence of \" + seqLength + \" numbers: \");\n\n        for (int i = 0; i < seqLength; i++) {\n            System.out.print(fibonacci(i) + \" \");\n        }\n    }\n}",
+        "expected_explanation": "The function calculates Fibonacci numbers recursively by summing the previous two numbers in the sequence.",
+        "follow_up_questions": [
+          "What is the time complexity of this recursive approach?",
+          "How can you optimize this using memoization?",
+          "Can you implement Fibonacci using an iterative approach?"
+        ]
+      },
+      {
+        "programming_language": "Java",
+        "question_type": "list operations",
+        "question": "How do you check if a list of integers contains only odd numbers in Java?",
+        "code_snippet": "public static boolean onlyOddNumbers(List<Integer> list) {\n    return list\n        .parallelStream()\n        .anyMatch(x -> x % 2 != 0);\n}",
+        "expected_explanation": "This function uses a parallel stream to check if all numbers in the list are odd.",
+        "follow_up_questions": [
+          "How does `anyMatch` differ from `allMatch` in Java Streams?",
+          "What happens if the list is empty?",
+          "Can you implement this function without using streams?"
+        ]
+      },
+      {
+        "programming_language": "Java",
+        "question_type": "string validation",
+        "question": "How do you check whether a string is a palindrome in Java?",
+        "code_snippet": "boolean checkPalindromeString(String input) {\n    boolean result = true;\n    int length = input.length();\n\n    for (int i = 0; i < length/2; i++) {\n        if (input.charAt(i) != input.charAt(length - i - 1)) {\n            result = false;\n            break;\n        }\n    }\n    return result;\n}",
+        "expected_explanation": "The function compares characters from the beginning and end, moving toward the center, to check if the string is a palindrome.",
+        "follow_up_questions": [
+          "How can you modify this function to ignore spaces and special characters?",
+          "Can you implement this using recursion?",
+          "How does using `StringBuilder.reverse()` compare in terms of performance?"
+        ]
+      },
+      {
+        "programming_language": "Java",
+        "question_type": "string manipulation",
+        "question": "How do you remove spaces from a string in Java?",
+        "code_snippet": "String removeWhiteSpaces(String input) {\n    StringBuilder output = new StringBuilder();\n    char[] charArray = input.toCharArray();\n\n    for (char c : charArray) {\n        if (!Character.isWhitespace(c))\n            output.append(c);\n    }\n    return output.toString();\n}",
+        "expected_explanation": "This function removes spaces by iterating through characters and appending only non-whitespace characters to a `StringBuilder`.",
+        "follow_up_questions": [
+          "How does `strip()` differ from `trim()` in Java?",
+          "How can you use `replaceAll()` to remove spaces more efficiently?",
+          "What is the time complexity of this approach?"
+        ]
+      },
+    {
+          "programming_language": "Java",
+          "question_type": "concurrency",
+          "question": "How do you create a deadlock scenario programmatically in Java?",
+          "code_snippet": "public class ThreadDeadlock {\n\n    public static void main(String[] args) throws InterruptedException {\n        Object obj1 = new Object();\n        Object obj2 = new Object();\n        Object obj3 = new Object();\n    \n        Thread t1 = new Thread(new SyncThread(obj1, obj2), \"t1\");\n        Thread t2 = new Thread(new SyncThread(obj2, obj3), \"t2\");\n        Thread t3 = new Thread(new SyncThread(obj3, obj1), \"t3\");\n        \n        t1.start();\n        Thread.sleep(5000);\n        t2.start();\n        Thread.sleep(5000);\n        t3.start();\n    }\n}\n\nclass SyncThread implements Runnable {\n    private Object obj1;\n    private Object obj2;\n\n    public SyncThread(Object o1, Object o2) {\n        this.obj1 = o1;\n        this.obj2 = o2;\n    }\n\n    @Override\n    public void run() {\n        String name = Thread.currentThread().getName();\n        System.out.println(name + \" acquiring lock on \" + obj1);\n        synchronized (obj1) {\n            System.out.println(name + \" acquired lock on \" + obj1);\n            work();\n            System.out.println(name + \" acquiring lock on \" + obj2);\n            synchronized (obj2) {\n                System.out.println(name + \" acquired lock on \" + obj2);\n                work();\n            }\n            System.out.println(name + \" released lock on \" + obj2);\n        }\n        System.out.println(name + \" released lock on \" + obj1);\n        System.out.println(name + \" finished execution.\");\n    }\n\n    private void work() {\n        try {\n            Thread.sleep(30000);\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+          "expected_explanation": "This code creates a deadlock by having three threads acquire locks on shared objects in a cyclic dependency. Each thread acquires one lock but waits indefinitely for another lock held by a different thread.",
+          "follow_up_questions": [
+            "How can you avoid deadlocks in Java?",
+            "What tools can you use to detect deadlocks?",
+            "Can you implement a timeout mechanism to break a deadlock?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "recursion",
+          "question": "How can you find the factorial of an integer in Java?",
+          "code_snippet": "public static long factorial(long n) {\n    if (n == 1)\n        return 1;\n    else\n        return (n * factorial(n - 1));\n}",
+          "expected_explanation": "This function calculates the factorial of `n` recursively by multiplying it with the factorial of `n-1` until it reaches `1`.",
+          "follow_up_questions": [
+            "What happens if `n` is `0`?",
+            "How can you implement this using iteration instead of recursion?",
+            "What are the drawbacks of using recursion for large `n`?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "linked list",
+          "question": "How do you reverse a linked list in Java?",
+          "code_snippet": "LinkedList<Integer> ll = new LinkedList<>();\nll.add(1);\nll.add(2);\nll.add(3);\nSystem.out.println(ll);\nLinkedList<Integer> ll1 = new LinkedList<>();\nll.descendingIterator().forEachRemaining(ll1::add);\nSystem.out.println(ll1);",
+          "expected_explanation": "This approach uses `descendingIterator()` to iterate through the linked list in reverse order and adds the elements to a new linked list.",
+          "follow_up_questions": [
+            "How can you reverse a linked list without using an extra list?",
+            "What is the time complexity of this approach?",
+            "Can you implement an iterative reversal using pointers?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "searching algorithms",
+          "question": "How do you implement a binary search in Java?",
+          "code_snippet": "public static int binarySearch(int arr[], int low, int high, int key) {\n    int mid = (low + high) / 2;\n    while (low <= high) {\n        if (arr[mid] < key) {\n            low = mid + 1;\n        } else if (arr[mid] == key) {\n            return mid;\n        } else {\n            high = mid - 1;\n        }\n        mid = (low + high) / 2;\n    }\n    return -1;\n}",
+          "expected_explanation": "Binary search works by repeatedly dividing the search space in half until the target element is found or the search space is empty.",
+          "follow_up_questions": [
+            "What is the time complexity of binary search?",
+            "How can you implement binary search recursively?",
+            "Why does binary search require a sorted array?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "sorting algorithms",
+          "question": "Write a Java program that illustrates merge sort.",
+          "code_snippet": "public class MergeSort {\n    public static void main(String[] args) {\n        int[] arr = { 70, 50, 30, 10, 20, 40, 60 };\n        int[] merged = mergeSort(arr, 0, arr.length - 1);\n        for (int val : merged) {\n            System.out.print(val + \" \");\n        }\n    }\n    public static int[] mergeSort(int[] arr, int lo, int hi) {\n        if (lo == hi) {\n            return new int[]{arr[lo]};\n        }\n        int mid = (lo + hi) / 2;\n        int[] left = mergeSort(arr, lo, mid);\n        int[] right = mergeSort(arr, mid + 1, hi);\n        return mergeTwoSortedArrays(left, right);\n    }\n    public static int[] mergeTwoSortedArrays(int[] one, int[] two) {\n        int[] sorted = new int[one.length + two.length];\n        int i = 0, j = 0, k = 0;\n        while (i < one.length && j < two.length) {\n            sorted[k++] = (one[i] < two[j]) ? one[i++] : two[j++];\n        }\n        while (i < one.length) sorted[k++] = one[i++];\n        while (j < two.length) sorted[k++] = two[j++];\n        return sorted;\n    }\n}",
+          "expected_explanation": "Merge sort is a divide-and-conquer algorithm that recursively splits an array into smaller subarrays and then merges them in sorted order.",
+          "follow_up_questions": [
+            "What is the time complexity of merge sort?",
+            "How does merge sort compare to quicksort in practice?",
+            "Can merge sort be implemented iteratively?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "list operations",
+          "question": "How do you get the sum of all elements in an integer array in Java?",
+          "code_snippet": "int[] array = { 1, 2, 3, 4, 5 };\nint sum = 0;\nfor (int i : array)\n    sum += i;\nSystem.out.println(sum);",
+          "expected_explanation": "This function iterates through the array, accumulating the sum of all elements.",
+          "follow_up_questions": [
+            "How can you compute the sum using Java Streams?",
+            "What happens if the array is empty?",
+            "Can you implement this function using recursion?"
+          ]
+    },
+    
+    {
+          "programming_language": "Java",
+          "question_type": "randomization",
+          "question": "How do you shuffle an array in Java?",
+          "code_snippet": "import java.util.Random;\nimport java.util.Arrays;\n\npublic class ShuffleArray {\n    public static void main(String[] args) {\n        int[] array = {1, 2, 3, 4, 5, 6, 7};\n        Random rand = new Random();\n        for (int i = 0; i < array.length; i++) {\n            int randomIndexToSwap = rand.nextInt(array.length);\n            int temp = array[randomIndexToSwap];\n            array[randomIndexToSwap] = array[i];\n            array[i] = temp;\n        }\n        System.out.println(Arrays.toString(array));\n    }\n}",
+          "expected_explanation": "This function swaps random elements in the array using `Random.nextInt()`, effectively shuffling the array.",
+          "follow_up_questions": [
+            "How can you implement the Fisher-Yates shuffle algorithm?",
+            "What happens if the array contains duplicate elements?",
+            "Can you achieve the same result using `Collections.shuffle()`?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "file handling",
+          "question": "How can you find a string in a text file in Java?",
+          "code_snippet": "import java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FindStringInFile {\n    public static boolean findStringInFile(String filePath, String str) throws FileNotFoundException {\n        File file = new File(filePath);\n        Scanner scanner = new Scanner(file);\n        while (scanner.hasNextLine()) {\n            String line = scanner.nextLine();\n            if (line.contains(str)) {\n                scanner.close();\n                return true;\n            }\n        }\n        scanner.close();\n        return false;\n    }\n}",
+          "expected_explanation": "This function reads a file line by line using `Scanner` and checks for the presence of the target string using `contains()`.",
+          "follow_up_questions": [
+            "What happens if the file does not exist?",
+            "How can you modify this function to be case-insensitive?",
+            "What is an alternative approach using `Files.lines()`?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "date formatting",
+          "question": "How do you print a date in a specific format in Java?",
+          "code_snippet": "import java.text.SimpleDateFormat;\nimport java.util.Date;\n\npublic class FormatDate {\n    public static void main(String[] args) {\n        String pattern = \"MM-dd-yyyy\";\n        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);\n        String date = simpleDateFormat.format(new Date());\n        System.out.println(date);\n    }\n}",
+          "expected_explanation": "This code formats the current date in `MM-dd-yyyy` format using `SimpleDateFormat`.",
+          "follow_up_questions": [
+            "How would you format a date in `yyyy/MM/dd HH:mm:ss` format?",
+            "What are the advantages of using `DateTimeFormatter` over `SimpleDateFormat`?",
+            "How can you parse a date string into a `Date` object?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "collections",
+          "question": "How do you merge two lists in Java?",
+          "code_snippet": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class MergeLists {\n    public static void main(String[] args) {\n        List<String> list1 = new ArrayList<>();\n        list1.add(\"1\");\n        List<String> list2 = new ArrayList<>();\n        list2.add(\"2\");\n        List<String> mergedList = new ArrayList<>(list1);\n        mergedList.addAll(list2);\n        System.out.println(mergedList); // [1, 2]\n    }\n}",
+          "expected_explanation": "The function merges two lists using the `addAll()` method, combining elements into a new list.",
+          "follow_up_questions": [
+            "How would you merge two lists without duplicates?",
+            "Can you merge lists using Java Streams?",
+            "What happens if both lists contain `null` values?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "hashmap sorting",
+          "question": "Write a Java program that sorts a HashMap by value.",
+          "code_snippet": "import java.util.*;\npublic class SortHashMapByValue {\n    public static void main(String[] args) {\n        Map<String, Integer> scores = new HashMap<>();\n        scores.put(\"David\", 95);\n        scores.put(\"Jane\", 80);\n        scores.put(\"Mary\", 97);\n        scores.put(\"Lisa\", 78);\n        scores.put(\"Dino\", 65);\n        System.out.println(scores);\n        scores = sortByValue(scores);\n        System.out.println(scores);\n    }\n    private static Map<String, Integer> sortByValue(Map<String, Integer> scores) {\n        List<Map.Entry<String, Integer>> entryList = new ArrayList<>(scores.entrySet());\n        entryList.sort(Map.Entry.comparingByValue());\n        Map<String, Integer> sortedByValue = new LinkedHashMap<>();\n        for (Map.Entry<String, Integer> e : entryList)\n            sortedByValue.put(e.getKey(), e.getValue());\n        return sortedByValue;\n    }\n}",
+          "expected_explanation": "This function sorts a `HashMap` by values, stores the sorted entries in a `LinkedHashMap`, and maintains insertion order.",
+          "follow_up_questions": [
+            "How can you sort a `HashMap` in descending order?",
+            "What happens if two values are the same?",
+            "Can you sort a `HashMap` using Java Streams?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "string manipulation",
+          "question": "How do you remove all occurrences of a given character from an input string in Java?",
+          "code_snippet": "public class RemoveCharacter {\n    public static void main(String[] args) {\n        String str1 = \"abcdABCDabcdABCD\";\n        str1 = str1.replace(\"a\", \"\");\n        System.out.println(str1); // bcdABCDbcdABCD\n    }\n}",
+          "expected_explanation": "The function removes all occurrences of the character `a` using `replace()` since strings in Java are immutable.",
+          "follow_up_questions": [
+            "How would you remove multiple different characters?",
+            "What is an alternative using `StringBuilder`?",
+            "How does Java handle string immutability?"
+          ]
+        },
+        {
+          "programming_language": "Java",
+          "question_type": "inheritance",
+          "question": "Can you write some code to showcase inheritance in Java?",
+          "code_snippet": "class Animal {\n    String color;\n}\nclass Cat extends Animal {\n    void meow() {\n        System.out.println(\"Meow\");\n    }\n}",
+          "expected_explanation": "The `Cat` class inherits from `Animal` using `extends`, allowing it to access inherited properties while defining its own behavior.",
+          "follow_up_questions": [
+            "What happens if `Animal` has a constructor?",
+            "Can a subclass override a method from its parent class?",
+            "How does method overriding differ from method overloading?"
+          ]
+        },
+            {
+              "programming_language": "Java",
+              "question_type": "exception handling",
+              "question": "Write a Java program to show a NullPointerException.",
+              "code_snippet": "public static void main(String[] args) {\n    printString(null, 3);\n}\n\nstatic void printString(String s, int count) {\n    for (int i = 0; i < count; i++) {\n        System.out.println(s.toUpperCase()); // Exception in thread \"main\" java.lang.NullPointerException\n    }\n}",
+              "expected_explanation": "The function tries to call `toUpperCase()` on a `null` string, causing a `NullPointerException`. A null check should be added to avoid this exception.",
+              "follow_up_questions": [
+                "How can you avoid a NullPointerException in Java?",
+                "What are the best practices for handling null values?",
+                "How does Java 14+ handle `NullPointerExceptions` with `Objects.requireNonNull()`?"
+              ]
+            },
+            {
+              "programming_language": "Java",
+              "question_type": "features",
+              "question": "How do you create a record in Java?",
+              "code_snippet": "public record EmpRecord(int id, String name, long salary, Map<String, String> addresses) {}",
+              "expected_explanation": "Records in Java provide a concise way to create data-carrying classes. They automatically generate `hashCode()`, `equals()`, `getter` methods, and `toString()` for the class. Records are implicitly final.",
+              "follow_up_questions": [
+                "What are the benefits of using records over traditional POJOs?",
+                "How do records compare to data classes in other languages?",
+                "Can a record have methods and constructors?"
+              ]
+            },
+            {
+              "programming_language": "Java",
+              "question_type": "string manipulation",
+              "question": "How do you create text blocks in Java?",
+              "code_snippet": "String textBlock = \"\"\"\n    Hi\n    Hello\n    Yes\"\"\";",
+              "expected_explanation": "Text blocks, introduced in Java 15, allow you to define multi-line strings with improved readability and without needing escape sequences for newlines.",
+              "follow_up_questions": [
+                "What are the advantages of using text blocks over traditional string concatenation?",
+                "How can you remove leading and trailing spaces in text blocks?",
+                "Can you use variables inside a text block?"
+              ]
+            },
+            {
+              "programming_language": "Java",
+              "question_type": "control structures",
+              "question": "Show an example of switch expressions and multi-label case statements in Java.",
+              "code_snippet": "int choice = 2;\nint x = switch (choice) {\n    case 1, 2, 3:\n        yield choice;\n    default:\n        yield -1;\n};\n\nSystem.out.println(\"x = \" + x);",
+              "expected_explanation": "Switch expressions, introduced in Java 14, return a value with `yield` and allow multiple labels in a single case.",
+              "follow_up_questions": [
+                "How can you use lambda expressions in a switch expression?",
+                "What is the advantage of using switch expressions over traditional switch statements?",
+                "How do multi-label cases work in switch expressions?"
+              ]
+            },
+            {
+              "programming_language": "Java",
+              "question_type": "compilation",
+              "question": "How do you compile and run a Java class from the command line?",
+              "code_snippet": "javac Test.java\njava Test",
+              "expected_explanation": "You compile a `.java` file using `javac` and run the compiled `.class` file using `java`. If your class is in a package, you provide the path to the class file.",
+              "follow_up_questions": [
+                "How do you run a Java class in a package?",
+                "What is the purpose of `java -cp`?",
+                "What happens if the class has dependencies on external JARs?"
+              ]
+            },
+            {
+              "programming_language": "Java",
+              "question_type": "object-oriented",
+              "question": "How do you create an enum in Java?",
+              "code_snippet": "public enum ThreadStates {\n    START,\n    RUNNING,\n    WAITING,\n    DEAD;\n}",
+              "expected_explanation": "Enums in Java are a special class type that define a fixed set of constants. Enums implicitly extend `java.lang.Enum`.",
+              "follow_up_questions": [
+                "Can enums have methods and fields?",
+                "What are the advantages of using enums over constants?",
+                "How do you use enums in switch statements?"
+              ]
+            },
+            {
+              "programming_language": "Java",
+              "question_type": "collections",
+              "question": "How do you use the forEach() method in Java?",
+              "code_snippet": "List<String> list = new ArrayList<>();\nlist.forEach(System.out::println);",
+              "expected_explanation": "The `forEach()` method in Java allows you to perform an action on each element of a collection using lambda expressions.",
+              "follow_up_questions": [
+                "How does `forEach()` differ from using an iterator?",
+                "What are some potential pitfalls of using `forEach()` with mutable collections?",
+                "How can you use `forEach()` with a parallel stream?"
+              ]
+            },
+            {
+              "programming_language": "Java",
+              "question_type": "interfaces",
+              "question": "How do you write an interface with default and static methods in Java?",
+              "code_snippet": "public interface Interface1 {\n    void method1(String str);\n    default void log(String str) {\n        System.out.println(\"I1 logging::\" + str);\n    }\n    static boolean isNull(String str) {\n        return str == null || str.isEmpty();\n    }\n}",
+              "expected_explanation": "Java 8 introduced default methods to interfaces, allowing you to provide default behavior. Static methods can also be defined within interfaces.",
+              "follow_up_questions": [
+                "What is the difference between default and static methods in interfaces?",
+                "Can you override a default method in a class?",
+                "How do you use static methods in interfaces?"
+              ]
+            },
+            {
+              "programming_language": "Java",
+              "question_type": "functional programming",
+              "question": "How do you create a functional interface in Java?",
+              "code_snippet": "@FunctionalInterface\ninterface Foo {\n    void test();\n}",
+              "expected_explanation": "A functional interface has exactly one abstract method. It can be used with lambda expressions or method references.",
+              "follow_up_questions": [
+                "What is the advantage of using `@FunctionalInterface` annotation?",
+                "How do functional interfaces work with streams?",
+                "Can a functional interface have default or static methods?"
+              ]
+            },
+            {
+              "programming_language": "Java",
+              "question_type": "lambda expressions",
+              "question": "Show an example of using lambda expressions in Java.",
+              "code_snippet": "Runnable r1 = () -> System.out.println(\"My Runnable\");",
+              "expected_explanation": "Lambda expressions provide a clear and concise way to represent one-method interfaces (functional interfaces). In this case, it defines a `Runnable` and its `run()` method.",
+              "follow_up_questions": [
+                "How can lambda expressions be used with `Comparator`?",
+                "What is the difference between lambda expressions and anonymous classes?",
+                "Can you use lambda expressions in JavaFX event handling?"
+              ]
+            },
+           
+                {
+                  "programming_language": "C#",
+                  "question_type": "dictionary operations",
+                  "question": "How do you merge two dictionaries in C#?",
+                  "code_snippet": "Dictionary<string, string> dict1 = new Dictionary<string, string> { { \"Superman\", \"Flight\" } };\nDictionary<string, string> dict2 = new Dictionary<string, string> { { \"Batman\", \"Gadgets\" } };\n\n// Using LINQ\nvar merged = dict1.Concat(dict2).ToDictionary(x => x.Key, x => x.Value);\n\n// Using a foreach loop\nforeach (var item in dict2)\n{\n    dict1[item.Key] = item.Value;\n}\n\n// Using the Union extension method\nvar merged2 = dict1.Union(dict2).ToDictionary(x => x.Key, x => x.Value);",
+                  "expected_explanation": "The function merges two dictionaries using different approaches: LINQ's `Concat()`, a `foreach` loop, and `Union()`. If duplicate keys exist, the last one is retained.",
+                  "follow_up_questions": [
+                    "How would you handle duplicate keys differently?",
+                    "What happens if both dictionaries contain large datasets?",
+                    "Can you merge dictionaries with different value types?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "dictionary operations",
+                  "question": "How do you invert a dictionary in C#?",
+                  "code_snippet": "Dictionary<string, string> heroesAbilities = new Dictionary<string, string>\n{\n    { \"Flash\", \"Super Speed\" },\n    { \"Green Lantern\", \"Power Ring\" },\n    { \"Aquaman\", \"Atlantean Strength\" }\n};\n\n// Inverting the dictionary using LINQ\nvar inverted = heroesAbilities.ToDictionary(x => x.Value, x => x.Key);\n\n// Inverting the dictionary using a foreach loop\nDictionary<string, string> inverted2 = new Dictionary<string, string>();\nforeach (var item in heroesAbilities)\n{\n    inverted2[item.Value] = item.Key;\n}",
+                  "expected_explanation": "The function swaps keys and values using LINQ and a `foreach` loop. This works if values are unique; otherwise, an exception occurs.",
+                  "follow_up_questions": [
+                    "What happens if the dictionary contains duplicate values?",
+                    "Can you modify this function to handle non-unique values?",
+                    "How would you invert a dictionary with complex object values?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "dictionary operations",
+                  "question": "How do you perform a reverse dictionary lookup in C#?",
+                  "code_snippet": "Dictionary<string, int> dimensions = new Dictionary<string, int>\n{\n    { \"length\", 10 },\n    { \"width\", 20 },\n    { \"height\", 30 }\n};\n\nint valueToFind = 20;\n\n// Brute force solution -- single key\nforeach (var item in dimensions)\n{\n    if (item.Value == valueToFind)\n    {\n        Console.WriteLine($\"{item.Key}: {item.Value}\");\n        break;\n    }\n}\n\n// Using LINQ -- single key\nvar key = dimensions.FirstOrDefault(x => x.Value == valueToFind).Key;\nConsole.WriteLine($\"{key}: {valueToFind}\");",
+                  "expected_explanation": "The function finds a key based on a value using brute force and LINQ. If multiple keys share the same value, only the first found key is returned.",
+                  "follow_up_questions": [
+                    "How would you return all keys associated with a given value?",
+                    "What happens if the value does not exist in the dictionary?",
+                    "Can this method be optimized for large dictionaries?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "console operations",
+                  "question": "How do you write to the same line in the console in C#?",
+                  "code_snippet": "Console.Write(\"The Office\");\nConsole.Write(\" Parks and Recreation\");",
+                  "expected_explanation": "The `Console.Write()` method outputs text without adding a newline, allowing continuous text display on the same line.",
+                  "follow_up_questions": [
+                    "How can you update the same line dynamically, such as a progress bar?",
+                    "What is the difference between `Console.Write()` and `Console.WriteLine()`?",
+                    "Can you achieve the same effect in a GUI application?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "file operations",
+                  "question": "How do you check if a file exists in C#?",
+                  "code_snippet": "using System.IO;\n\n// Check if file exists using File.Exists method\nbool exists = File.Exists(\"/path/to/file\");",
+                  "expected_explanation": "The `File.Exists()` method checks whether a file exists at the specified path and returns `true` or `false`.",
+                  "follow_up_questions": [
+                    "What happens if the file path is invalid?",
+                    "How can you check for directory existence?",
+                    "What security considerations should you keep in mind when working with files?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "data parsing",
+                  "question": "How do you parse a CSV file in C#?",
+                  "code_snippet": "using System;\nusing System.IO;\n\n// Read all lines from the CSV file\nstring[] lines = File.ReadAllLines(\"/path/to/data.csv\");\n\n// Process each line\nforeach (string line in lines)\n{\n    // Split the line into fields\n    string[] fields = line.Split(',');\n    Console.WriteLine($\"{fields[0]} - {fields[1]} - {fields[2]}\");\n}",
+                  "expected_explanation": "The function reads a CSV file line by line, splits fields using `Split(',')`, and prints them. This assumes a simple CSV structure without quoted fields.",
+                  "follow_up_questions": [
+                    "How can you handle commas inside quoted fields?",
+                    "What are some alternatives to manually parsing CSV files?",
+                    "How can you optimize this function for large files?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "list operations",
+                  "question": "How do you append an element to a list in C#?",
+                  "code_snippet": "List<int> myList = new List<int> {2, 5, 6};\n\n// Appending using Add()\nmyList.Add(5);  // [2, 5, 6, 5]\n\n// Appending using AddRange()\nmyList.AddRange(new List<int> {9});  // [2, 5, 6, 5, 9]\n\n// Appending using Insert()\nmyList.Insert(myList.Count, -4);  // [2, 5, 6, 5, 9, -4]\n\n// Appending using InsertRange()\nmyList.InsertRange(myList.Count, new List<int> {3});  // [2, 5, 6, 5, 9, -4, 3]",
+                  "expected_explanation": "C# offers multiple ways to append items to a list, including `Add()`, `AddRange()`, `Insert()`, and `InsertRange()`. The choice depends on whether a single or multiple items are appended.",
+                  "follow_up_questions": [
+                    "What happens if you try to insert at an invalid index?",
+                    "How does inserting affect list performance?",
+                    "How do `AddRange()` and `InsertRange()` differ in behavior?"
+                  ]
+                }
+           ,
+            {
+              "programming_language": "C#",
+              "question_type": "string comparison",
+              "question": "How do you compare strings in C#?",
+              "code_snippet": "string player1 = \"Crosby\";\nstring player2 = \"Malkin\";\nstring player3 = \"Guentzel\";\n\n// Direct comparison\nbool isEqual = player1 == player3; // False\nbool isGreater = player1.CompareTo(player3) > 0; // False\nbool isLessOrEqual = player2.CompareTo(player2) <= 0; // True\n\n// Reference checking\nbool isSameReference = ReferenceEquals(player1, player1); // True\nbool isDifferentReference = ReferenceEquals(player2, player1); // False",
+              "expected_explanation": "Strings in C# can be compared using `==` for equality, `CompareTo()` for lexicographic order, and `ReferenceEquals()` to check reference identity.",
+              "follow_up_questions": [
+                "What is the difference between `==` and `Equals()` in C#?",
+                "How can you perform case-insensitive string comparison?",
+                "What happens if `CompareTo()` is used with `null`?"
+              ]
+            },
+            {
+              "programming_language": "C#",
+              "question_type": "substring search",
+              "question": "How do you check if a string contains a specific substring in C#?",
+              "code_snippet": "string[] addresses = {\n    \"123 Elm Street\",\n    \"531 Oak Street\",\n    \"678 Maple Street\"\n};\n\nstring street = \"Elm Street\";\n\n// The Contains() method (preferred)\nforeach (string address in addresses)\n{\n    if (address.Contains(street))\n    {\n        Console.WriteLine(address);\n    }\n}",
+              "expected_explanation": "The `Contains()` method efficiently checks if a substring exists within a string. It returns `true` if found, `false` otherwise.",
+              "follow_up_questions": [
+                "How does `IndexOf()` differ from `Contains()`?",
+                "Can you perform a case-insensitive substring search?",
+                "What happens if `Contains()` is used with an empty string?"
+              ]
+            },
+            {
+              "programming_language": "C#",
+              "question_type": "string formatting",
+              "question": "How do you format a string in C#?",
+              "code_snippet": "string name = \"John\";\nint age = 25;\n\n// String formatting using interpolation (C# 6.0+)\nConsole.WriteLine($\"My name is {name}, and I am {age} years old\");",
+              "expected_explanation": "String interpolation (introduced in C# 6.0) allows embedding variables within strings using `$\"\"` syntax for readability and efficiency.",
+              "follow_up_questions": [
+                "What is the difference between string concatenation and interpolation?",
+                "How do you format numbers with decimal places?",
+                "What is the alternative using `String.Format()`?"
+              ]
+            },
+            {
+              "programming_language": "C#",
+              "question_type": "string manipulation",
+              "question": "How do you convert a string to lowercase in C#?",
+              "code_snippet": "string hero = \"All Might\";\n\n// Using ToLower() method\nstring output = hero.ToLower();",
+              "expected_explanation": "The `ToLower()` method converts all characters in a string to lowercase, useful for case-insensitive comparisons.",
+              "follow_up_questions": [
+                "How does `ToLowerInvariant()` differ from `ToLower()`?",
+                "What happens if the string contains special characters?",
+                "Can you modify a string in-place in C#?"
+              ]
+            },
+            {
+              "programming_language": "C#",
+              "question_type": "string splitting",
+              "question": "How do you split a string by whitespace in C#?",
+              "code_snippet": "string myString = \"Hi, fam!\";\n\n// Using the built-in Split() method\nstring[] words = myString.Split();\nforeach (string word in words)\n{\n    Console.WriteLine(word);\n}",
+              "expected_explanation": "The `Split()` method divides a string into an array of substrings based on whitespace by default.",
+              "follow_up_questions": [
+                "How can you split a string by multiple delimiters?",
+                "How do you handle cases where multiple spaces exist between words?",
+                "Can you limit the number of splits performed?"
+              ]
+            },
+            {
+              "programming_language": "C#",
+              "question_type": "file operations",
+              "question": "How do you read a text file in C#?",
+              "code_snippet": "using System.IO;\n\nstring filePath = \"example.txt\";\nstring fileContent = File.ReadAllText(filePath);\nConsole.WriteLine(fileContent);",
+              "expected_explanation": "The `File.ReadAllText()` method reads the entire contents of a file as a string and returns it.",
+              "follow_up_questions": [
+                "What happens if the file does not exist?",
+                "How can you read a file line by line?",
+                "What is an alternative for reading large files efficiently?"
+              ]
+            },
+            {
+              "programming_language": "C#",
+              "question_type": "file operations",
+              "question": "How do you write a text file in C#?",
+              "code_snippet": "using System.IO;\n\nstring filePath = \"output.txt\";\nstring content = \"Hello, World!\";\nFile.WriteAllText(filePath, content);",
+              "expected_explanation": "The `File.WriteAllText()` method writes text to a file, overwriting it if it already exists.",
+              "follow_up_questions": [
+                "How can you append to a file instead of overwriting it?",
+                "What happens if the file is currently in use?",
+                "How do you write multiple lines to a file efficiently?"
+              ]
+            },
+            {
+              "programming_language": "C#",
+              "question_type": "file operations",
+              "question": "How do you append text to a file in C#?",
+              "code_snippet": "using System.IO;\n\nstring filePath = \"log.txt\";\nstring logEntry = \"New log entry\";\nFile.AppendAllText(filePath, logEntry);",
+              "expected_explanation": "The `File.AppendAllText()` method appends text to an existing file, creating it if it does not exist.",
+              "follow_up_questions": [
+                "How can you add a newline after each appended entry?",
+                "What happens if the file does not exist?",
+                "Can you append binary data instead of text?"
+              ]
+            },
+            {
+              "programming_language": "C#",
+              "question_type": "exception handling",
+              "question": "How do you handle exceptions using a try-catch block in C#?",
+              "code_snippet": "try\n{\n    // Code that may throw an exception\n}\ncatch (Exception ex)\n{\n    Console.WriteLine($\"Error: {ex.Message}\");\n}",
+              "expected_explanation": "The `try-catch` block is used to catch exceptions and prevent application crashes.",
+              "follow_up_questions": [
+                "How can you catch specific exception types?",
+                "What is the purpose of the `finally` block?",
+                "How do you log exceptions properly?"
+              ]
+            },
+            {
+              "programming_language": "C#",
+              "question_type": "exception handling",
+              "question": "How do you catch specific exceptions in C#?",
+              "code_snippet": "try\n{\n    // Code that may throw different exceptions\n}\ncatch (FileNotFoundException ex)\n{\n    Console.WriteLine($\"File not found: {ex.FileName}\");\n}\ncatch (IOException ex)\n{\n    Console.WriteLine($\"I/O error: {ex.Message}\");\n}\ncatch (Exception ex)\n{\n    Console.WriteLine($\"General error: {ex.Message}\");\n}",
+              "expected_explanation": "C# allows multiple `catch` blocks to handle different exception types with specific logic.",
+              "follow_up_questions": [
+                "What is the order of execution in multiple catch blocks?",
+                "How can you rethrow an exception after catching it?",
+                "What happens if an exception is not caught?"
+              ]
+            },
+            {
+                  "programming_language": "C#",
+                  "question_type": "null handling",
+                  "question": "What is the output of the short program below? Explain your answer.",
+                  "code_snippet": "class Program {\n  static String location;\n  static DateTime time;\n \n  static void Main() {\n    Console.WriteLine(location == null ? \"location is null\" : location);\n    Console.WriteLine(time == null ? \"time is null\" : time.ToString());\n  }\n}",
+                  "expected_explanation": "The output will be:\n```\nlocation is null\n01/01/0001 00:00:00\n```\n`location` is a `string` and defaults to `null`, so the conditional prints `location is null`. `time` is a `DateTime`, a value type, and cannot be `null`. Instead, it defaults to `DateTime.MinValue` (`01/01/0001 00:00:00`).",
+                  "follow_up_questions": [
+                    "How can you make `DateTime` nullable?",
+                    "What happens if you try to use `?.` on `time`?",
+                    "How would you initialize `location` and `time` safely?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "array operations",
+                  "question": "Given an array of ints, write a C# method to total all the values that are even numbers.",
+                  "code_snippet": "int SumEvenNumbers(int[] numbers) {\n    return numbers.Where(n => n % 2 == 0).Sum();\n}",
+                  "expected_explanation": "This function filters the array for even numbers using `Where(n => n % 2 == 0)`, then sums them using `Sum()`.",
+                  "follow_up_questions": [
+                    "How would you handle an empty or `null` array?",
+                    "What is the time complexity of this approach?",
+                    "Can you implement this without LINQ?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "null handling",
+                  "question": "Is the comparison of `time` and `null` in the if statement below valid or not? Why or why not?",
+                  "code_snippet": "static DateTime time;\n/* ... */\nif (time == null)\n{\n    /* do something */\n}",
+                  "expected_explanation": "No, the comparison is invalid because `DateTime` is a value type and cannot be `null`. Instead, it defaults to `DateTime.MinValue` (`01/01/0001 00:00:00`). To allow `null`, you must use `DateTime? time;`.",
+                  "follow_up_questions": [
+                    "How can you check if a `DateTime?` is null?",
+                    "What is the default value of `DateTime`?",
+                    "How would this behavior differ in reference types?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "functional programming",
+                  "question": "Given an instance `circle` of the following class, write code to calculate the circumference of the circle, without modifying the `Circle` class itself.",
+                  "code_snippet": "public sealed class Circle {\n  private double radius;\n  \n  public double Calculate(Func<double, double> op) {\n    return op(radius);\n  }\n}",
+                  "expected_explanation": "You can calculate the circumference using:\n```\ndouble circumference = circle.Calculate(r => 2 * Math.PI * r);\n```\nThis uses the `Calculate` method with a lambda function to compute `2 * π * radius`.",
+                  "follow_up_questions": [
+                    "How does the `Func<double, double>` delegate work?",
+                    "Can you use a method instead of a lambda?",
+                    "How would you modify this if `radius` were public?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "async programming",
+                  "question": "What is the output of the program below? Explain your answer.",
+                  "code_snippet": "class Program {\n  private static string result;\n\n  static void Main() {\n    SaySomething();\n    Console.WriteLine(result);\n  }\n\n  static async Task<string> SaySomething() {\n    await Task.Delay(5);\n    result = \"Hello world!\";\n    return \"Something\";\n  }\n}",
+                  "expected_explanation": "The output will be:\n```\n(null)\n```\nSince `SaySomething()` is `async`, it starts executing but does not complete before `Console.WriteLine(result)` runs, leaving `result` as `null`.",
+                  "follow_up_questions": [
+                    "How can you ensure `result` is updated before printing?",
+                    "What would happen if `await Task.Delay(5);` was replaced with `Thread.Sleep(5);`?",
+                    "How does `async` affect method execution?"
+                  ]
+                },
+                {
+                  "programming_language": "C#",
+                  "question_type": "closures",
+                  "question": "What is the output of the program below? Explain your answer.",
+                  "code_snippet": "delegate void Printer();\n\nstatic void Main()\n{\n    List<Printer> printers = new List<Printer>();\n    int i=0;\n    for(; i < 10; i++)\n    {\n        printers.Add(delegate { Console.WriteLine(i); });\n    }\n\n    foreach (var printer in printers)\n    {\n        printer();\n    }\n}",
+                  "expected_explanation": "The output will be:\n```\n10\n10\n10\n10\n10\n10\n10\n10\n10\n10\n```\nEach delegate captures `i` by reference, and by the time they execute, `i` has reached `10`.",
+                  "follow_up_questions": [
+                    "How can you modify the code so each delegate captures a unique value of `i`?",
+                    "What is the difference between capturing by reference and capturing by value?",
+                    "How does this behavior compare in other languages?"
+                  ]
+                },
+                
+  {
+    "programming_language": "PHP",
+    "question_type": "date handling",
+    "question": "How do you get the current date and time in PHP?",
+    "code_snippet": "<?php\necho date(\"Y-m-d H:i:s\");",
+    "expected_explanation": "The `date()` function formats the current timestamp according to the provided format string.",
+    "follow_up_questions": [
+      "How can you get the current timestamp instead of a formatted date?",
+      "How do you get the date in a different timezone?",
+      "How can you parse a custom date string into a timestamp?"
+    ]
+  },
+  {
+    "programming_language": "PHP",
+    "question_type": "OOP",
+    "question": "What is the difference between an interface and an abstract class in PHP?",
+    "code_snippet": "<?php\ninterface Animal {\n    public function makeSound();\n}\nclass Dog implements Animal {\n    public function makeSound() {\n        echo \"Bark\";\n    }\n}",
+    "expected_explanation": "An interface defines method signatures that a class must implement. An abstract class can define both methods and concrete implementations.",
+    "follow_up_questions": [
+      "Can a class implement multiple interfaces?",
+      "How does an abstract class differ from an interface?",
+      "Can an interface contain properties?"
+    ]
+  },
+
+  {
+    "programming_language": "PHP",
+    "question_type": "string manipulation",
+    "question": "How do you remove whitespace from both ends of a string in PHP?",
+    "code_snippet": "<?php\n$string = \"  Hello World!  \";\necho trim($string);",
+    "expected_explanation": "The `trim()` function removes whitespace (including spaces, tabs, and newlines) from both ends of a string.",
+    "follow_up_questions": [
+      "What functions exist for removing only leading or trailing whitespace?",
+      "How can you remove specific characters instead of just whitespace?",
+      "What happens if the string contains non-breaking spaces?"
+    ]
+  },
+  {
+    "programming_language": "PHP",
+    "question_type": "string manipulation",
+    "question": "How do you replace all occurrences of a substring in PHP?",
+    "code_snippet": "<?php\n$string = \"Hello world!\";\n$newString = str_replace(\"world\", \"PHP\", $string);\necho $newString;",
+    "expected_explanation": "The `str_replace()` function replaces all occurrences of `world` with `PHP` in the given string.",
+    "follow_up_questions": [
+      "How does `str_ireplace()` differ from `str_replace()`?",
+      "What happens if the substring is not found?",
+      "Can you replace multiple substrings at once?"
+    ]
+  },
+  {
+    "programming_language": "PHP",
+    "question_type": "math operations",
+    "question": "How do you round a floating-point number to two decimal places in PHP?",
+    "code_snippet": "<?php\n$number = 3.14159;\necho round($number, 2);",
+    "expected_explanation": "The `round()` function rounds a floating-point number to the specified number of decimal places.",
+    "follow_up_questions": [
+      "How does `ceil()` differ from `round()`?",
+      "What is the difference between `round()`, `floor()`, and `ceil()`?",
+      "How do you format a number for currency output?"
+    ]
+  },
+  {
+    "programming_language": "PHP",
+    "question_type": "math operations",
+    "question": "How do you generate a random integer between 1 and 100 in PHP?",
+    "code_snippet": "<?php\necho rand(1, 100);",
+    "expected_explanation": "The `rand(min, max)` function generates a random integer between `min` and `max`.",
+    "follow_up_questions": [
+      "How does `mt_rand()` compare to `rand()`?",
+      "What function should be used for cryptographically secure random numbers?",
+      "Can you generate random floating-point numbers in PHP?"
+    ]
+  },
+  {
+    "programming_language": "PHP",
+    "question_type": "json handling",
+    "question": "How do you decode a JSON string into a PHP array?",
+    "code_snippet": "<?php\n$json = '{\"name\":\"Alice\",\"age\":25}';\n$data = json_decode($json, true);\nprint_r($data);",
+    "expected_explanation": "The `json_decode()` function converts a JSON string into a PHP array when `true` is passed as the second argument.",
+    "follow_up_questions": [
+      "What happens if the JSON string is invalid?",
+      "How do you decode JSON into an object instead of an array?",
+      "What function can check if a string is valid JSON?"
+    ]
+  },
+  {
+    "programming_language": "PHP",
+    "question_type": "database operations",
+    "question": "How do you connect to a MySQL database using PDO in PHP?",
+    "code_snippet": "<?php\n$dsn = 'mysql:host=localhost;dbname=testdb';\n$user = 'root';\n$pass = '';\ntry {\n    $pdo = new PDO($dsn, $user, $pass);\n    echo \"Connected successfully\";\n} catch (PDOException $e) {\n    echo \"Connection failed: \" . $e->getMessage();\n}",
+    "expected_explanation": "The `PDO` class provides a secure way to connect to a MySQL database, handling exceptions using `try-catch` blocks.",
+    "follow_up_questions": [
+      "What are the advantages of PDO over MySQLi?",
+      "How do you enable error reporting in PDO?",
+      "How do you execute a prepared statement using PDO?"
+    ]
+  },
+  {
+    "programming_language": "PHP",
+    "question_type": "security",
+    "question": "How do you hash a password in PHP?",
+    "code_snippet": "<?php\n$password = 'securepassword';\n$hash = password_hash($password, PASSWORD_DEFAULT);\necho $hash;",
+    "expected_explanation": "The `password_hash()` function generates a secure, salted hash for a password using a strong algorithm like bcrypt.",
+    "follow_up_questions": [
+      "How do you verify a password against a hash?",
+      "What is the advantage of using `PASSWORD_DEFAULT`?",
+      "How does hashing differ from encryption?"
+    ]
+  },
+  {
+    "programming_language": "PHP",
+    "question_type": "object-oriented programming",
+    "question": "What is the difference between public, private, and protected properties in PHP?",
+    "code_snippet": "<?php\nclass Example {\n    public $publicVar = \"Public\";\n    private $privateVar = \"Private\";\n    protected $protectedVar = \"Protected\";\n}",
+    "expected_explanation": "`public` properties are accessible everywhere, `private` properties are accessible only within the class, and `protected` properties are accessible within the class and its subclasses.",
+    "follow_up_questions": [
+      "Can a subclass access private properties of its parent?",
+      "What are the advantages of using encapsulation?",
+      "How can you access private properties outside the class?"
+    ]
+  },
+  {
+    "programming_language": "PHP",
+    "question_type": "object-oriented programming",
+    "question": "How do you implement a singleton class in PHP?",
+    "code_snippet": "<?php\nclass Singleton {\n    private static $instance;\n    private function __construct() {}\n    public static function getInstance() {\n        if (!self::$instance) {\n            self::$instance = new Singleton();\n        }\n        return self::$instance;\n    }\n}",
+    "expected_explanation": "A singleton pattern ensures only one instance of a class exists by using a private constructor and a static method to return a single instance.",
+    "follow_up_questions": [
+      "Why would you use a singleton in PHP?",
+      "What are the downsides of the singleton pattern?",
+      "Can you clone a singleton object?"
+    ]
+  },
+  {
+    "programming_language": "PHP",
+    "question_type": "performance",
+    "question": "How can you improve the performance of a PHP script?",
+    "expected_explanation": "Performance optimizations include caching, using prepared statements, minimizing database queries, and enabling opcode caching.",
+    "follow_up_questions": [
+      "How does OPCache improve PHP performance?",
+      "What is the impact of using `foreach` vs `for` on large arrays?",
+      "How can you measure script execution time?"
+    ]
+  },
+    {
+      "programming_language": "PHP",
+      "question_type": "array manipulation",
+      "question": "How do you check if a value exists in an array in PHP?",
+      "code_snippet": "<?php\n$numbers = [1, 2, 3, 4, 5];\nif (in_array(3, $numbers)) {\n    echo \"Value found!\";\n}",
+      "expected_explanation": "The `in_array()` function checks if a value exists in an array and returns `true` or `false`.",
+      "follow_up_questions": [
+        "How does `array_search()` differ from `in_array()`?",
+        "What happens if `in_array()` is used with a multidimensional array?",
+        "How do you perform a strict comparison using `in_array()`?"
+      ]
+    },
+    {
+      "programming_language": "PHP",
+      "question_type": "file handling",
+      "question": "How do you delete a file in PHP?",
+      "code_snippet": "<?php\nif (file_exists(\"test.txt\")) {\n    unlink(\"test.txt\");\n    echo \"File deleted\";\n} else {\n    echo \"File not found\";\n}",
+      "expected_explanation": "The `unlink()` function deletes a file if it exists. The `file_exists()` function ensures the file is present before attempting deletion.",
+      "follow_up_questions": [
+        "What happens if `unlink()` is used on a non-existent file?",
+        "How do you delete multiple files in a directory?",
+        "Can `unlink()` delete directories?"
+      ]
+    },
+    {
+      "programming_language": "PHP",
+      "question_type": "OOP",
+      "question": "What is method overloading in PHP?",
+      "code_snippet": "<?php\nclass Example {\n    public function __call($name, $arguments) {\n        echo \"Method $name does not exist!\";\n    }\n}\n\n$obj = new Example();\n$obj->nonExistentMethod();",
+      "expected_explanation": "PHP does not support true method overloading. Instead, the `__call()` magic method handles calls to undefined methods dynamically.",
+      "follow_up_questions": [
+        "How does `__callStatic()` differ from `__call()`?",
+        "Can PHP classes have multiple methods with the same name but different parameters?",
+        "What is a real-world use case for `__call()`?"
+      ]
+    },
+    {
+      "programming_language": "PHP",
+      "question_type": "superglobals",
+      "question": "What is the purpose of `$_SERVER` in PHP?",
+      "code_snippet": "<?php\necho $_SERVER['HTTP_USER_AGENT'];",
+      "expected_explanation": "`$_SERVER` is a superglobal array containing information about headers, paths, and script locations. `HTTP_USER_AGENT` retrieves the browser's user agent string.",
+      "follow_up_questions": [
+        "What other useful keys are available in `$_SERVER`?",
+        "How can you get the client's IP address?",
+        "How do you check if a request is using HTTPS?"
+      ]
+    },
+    {
+      "programming_language": "PHP",
+      "question_type": "security",
+      "question": "How do you protect against Cross-Site Scripting (XSS) in PHP?",
+      "code_snippet": "<?php\n$user_input = '<script>alert(\"Hacked!\");</script>';\necho htmlspecialchars($user_input, ENT_QUOTES, 'UTF-8');",
+      "expected_explanation": "Using `htmlspecialchars()` prevents XSS by converting special characters into HTML entities, making malicious scripts inactive.",
+      "follow_up_questions": [
+        "What is the difference between `htmlspecialchars()` and `htmlentities()`?",
+        "How do Content Security Policies (CSP) help prevent XSS?",
+        "How can you sanitize user input in forms?"
+      ]
+    },
+    {
+      "programming_language": "PHP",
+      "question_type": "form handling",
+      "question": "How do you handle form submissions in PHP?",
+      "code_snippet": "<?php\nif ($_SERVER['REQUEST_METHOD'] == 'POST') {\n    echo 'Form submitted with: ' . htmlspecialchars($_POST['name']);\n}",
+      "expected_explanation": "The `$_SERVER['REQUEST_METHOD']` variable checks if the form was submitted via `POST`, ensuring only POST requests are processed.",
+      "follow_up_questions": [
+        "How do you validate user input in form handling?",
+        "What are the security risks of using `$_POST` directly?",
+        "How can you prevent CSRF attacks in form submissions?"
+      ]
+    },
+    {
+      "programming_language": "PHP",
+      "question_type": "regular expressions",
+      "question": "How do you validate an email address using regex in PHP?",
+      "code_snippet": "<?php\n$email = 'test@example.com';\nif (preg_match('/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/', $email)) {\n    echo 'Valid email';\n} else {\n    echo 'Invalid email';\n}",
+      "expected_explanation": "The `preg_match()` function checks if the email matches the pattern of a valid email address.",
+      "follow_up_questions": [
+        "How does `filter_var()` compare to using regex for email validation?",
+        "What are some edge cases where this regex might fail?",
+        "How can you validate an email's domain?"
+      ]
+    },
+    {
+      "programming_language": "PHP",
+      "question_type": "performance",
+      "question": "How do you measure the execution time of a PHP script?",
+      "code_snippet": "<?php\n$start = microtime(true);\n// Some code execution\n$end = microtime(true);\necho 'Execution time: ' . ($end - $start) . ' seconds';",
+      "expected_explanation": "Using `microtime(true)` before and after execution allows measuring script runtime in seconds.",
+      "follow_up_questions": [
+        "How can you optimize a slow PHP script?",
+        "What PHP function provides memory usage statistics?",
+        "How does caching improve performance in PHP?"
+      ]
+    },
+    {
+      "programming_language": "PHP",
+      "question_type": "constants",
+      "question": "How do you define and use a constant in PHP?",
+      "code_snippet": "<?php\ndefine('SITE_NAME', 'MyWebsite');\necho SITE_NAME;",
+      "expected_explanation": "The `define()` function creates a constant that cannot be changed after declaration.",
+      "follow_up_questions": [
+        "How do constants differ from variables?",
+        "What is the difference between `define()` and `const`?",
+        "Can constants be defined inside classes?"
+      ]
+    },
+    {
+      "programming_language": "PHP",
+      "question_type": "error handling",
+      "question": "How do you log errors instead of displaying them in PHP?",
+      "code_snippet": "<?php\nini_set('log_errors', 1);\nini_set('error_log', 'errors.log');\ntrigger_error('Test error', E_USER_WARNING);",
+      "expected_explanation": "By setting `log_errors` to `1` and specifying an error log file, errors are logged instead of displayed.",
+      "follow_up_questions": [
+        "How do you change the default error reporting level?",
+        "Where can you find the PHP error log on a web server?",
+        "How do you handle fatal errors in PHP?"
+      ]
+    }
+  
+]
+
+
+              
+              
+          
+          
+            
+  
+ 
+  

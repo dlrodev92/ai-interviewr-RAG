@@ -1,0 +1,1054 @@
+[
+    {
+      "question": "What is the difference between `var`, `let`, and `const` in JavaScript?",
+      "programming_language": "JavaScript",
+      "expected_explanation": "`var` is function-scoped and can be redeclared, `let` is block-scoped and can be reassigned, `const` is block-scoped and cannot be reassigned.",
+      "follow_up_questions": [
+        "What happens if you declare a variable with `var` inside a function but try to access it outside?",
+        "Can you modify an object declared with `const`?",
+        "How does hoisting affect `var`, `let`, and `const`?"
+      ]
+    },
+    {
+      "question": "What is the difference between shallow copy and deep copy in JavaScript?",
+      "programming_language": "JavaScript",
+      "expected_explanation": "A shallow copy only copies references to objects, meaning changes in the copied object affect the original. A deep copy creates a completely new object, independent of the original.",
+      "follow_up_questions": [
+        "How can you create a deep copy of an object in JavaScript?",
+        "What are the risks of using JSON.parse(JSON.stringify(obj)) for deep copying?",
+        "What is the difference between structured cloning and a deep copy?"
+      ]
+    },
+    {
+      "question": "Explain the concept of closures in JavaScript.",
+      "programming_language": "JavaScript",
+      "expected_explanation": "A closure is a function that retains access to variables from its outer lexical scope even after the outer function has finished executing.",
+      "follow_up_questions": [
+        "Can you give a real-world use case for closures?",
+        "How do closures help in creating private variables in JavaScript?",
+        "What are some common issues that arise due to closures?"
+      ]
+    },
+    {
+      "question": "What is the difference between synchronous and asynchronous programming?",
+      "programming_language": "JavaScript",
+      "expected_explanation": "Synchronous code executes sequentially, blocking the program until a task is completed. Asynchronous code allows tasks to run in the background and executes the next lines of code without waiting.",
+      "follow_up_questions": [
+        "What are common ways to handle asynchronous code in JavaScript?",
+        "What is the difference between a callback function and a Promise?",
+        "How does async/await improve readability in JavaScript?"
+      ]
+    },
+    {
+      "question": "What is the difference between `==` and `===` in JavaScript?",
+      "programming_language": "JavaScript",
+      "expected_explanation": "`==` performs type coercion before comparing, meaning values of different types can be considered equal. `===` checks both value and type, meaning they must be strictly the same.",
+      "follow_up_questions": [
+        "Can you provide an example where `==` and `===` return different results?",
+        "Why is it generally recommended to use `===` instead of `==`?",
+        "What are some pitfalls of using type coercion in JavaScript?"
+      ]
+    },
+    {
+      "question": "What is the scope of a variable in Java?",
+      "programming_language": "Java",
+      "expected_explanation": "A variable’s scope in Java determines where it can be accessed. Java has local, instance, and static (class-level) variables.",
+      "follow_up_questions": [
+        "What is the difference between instance variables and class variables in Java?",
+        "How do access modifiers (public, private, protected) affect scope?",
+        "Can you override a static variable in Java?"
+      ]
+    },
+    {
+      "question": "What are the differences between abstract classes and interfaces in Java?",
+      "programming_language": "Java",
+      "expected_explanation": "Abstract classes can have both defined and undefined methods, while interfaces contain only method signatures (until Java 8, which introduced default methods). A class can implement multiple interfaces but extend only one abstract class.",
+      "follow_up_questions": [
+        "When should you use an abstract class instead of an interface?",
+        "Can an interface have instance variables?",
+        "How did Java 8 change how interfaces work?"
+      ]
+    },
+    {
+      "question": "Explain the difference between pass-by-value and pass-by-reference.",
+      "programming_language": "PHP",
+      "expected_explanation": "In pass-by-value, a copy of the variable is passed, so changes don’t affect the original. In pass-by-reference, the memory address is passed, meaning changes affect the original object.",
+      "follow_up_questions": [
+        "Is PHP pass-by-value or pass-by-reference?",
+        "Why are PHP primitive types passed by value but objects behave as if passed by reference?",
+        "Can you modify an object passed into a function in PHP?"
+      ]
+    },
+    {
+      "question": "What is the difference between heap and stack memory?",
+      "programming_language": "Java",
+      "expected_explanation": "Stack memory is used for storing function call frames and primitive data types, while heap memory is used for dynamically allocated objects.",
+      "follow_up_questions": [
+        "What happens when you allocate a large object inside a function?",
+        "Why is stack memory faster than heap memory?",
+        "What memory management techniques does Java use?"
+      ]
+    },
+    {
+      "question": "What is a race condition in concurrent programming?",
+      "programming_language": "PHP",
+      "expected_explanation": "A race condition occurs when multiple threads or processes access shared data and the final outcome depends on the timing of their execution.",
+      "follow_up_questions": [
+        "How can you prevent race conditions in PHP?",
+        "What are some common strategies for handling concurrency issues?",
+        "What is the purpose of locks and mutexes in concurrent programming?"
+      ]
+    },
+        {
+          "question": "What are the possible ways to create objects in JavaScript?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "Objects in JavaScript can be created using object literals, constructor functions, `Object.create()`, ES6 classes, and factory functions.",
+          "follow_up_questions": [
+            "What are the advantages of using `Object.create()`?",
+            "How does using classes compare to constructor functions?",
+            "What is the difference between a factory function and a constructor function?"
+          ]
+        },
+        {
+          "question": "What is a prototype chain?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "A prototype chain is a mechanism in JavaScript where objects inherit properties and methods from other objects via their prototype, allowing for prototype-based inheritance.",
+          "follow_up_questions": [
+            "How does the prototype chain affect performance?",
+            "What happens when a property is not found in an object?",
+            "How can you extend an object's prototype?"
+          ]
+        },
+        {
+          "question": "What is the difference between Call, Apply, and Bind?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "`call()` and `apply()` execute a function immediately with a specified `this` value, while `bind()` returns a new function with `this` bound to a specified value.",
+          "follow_up_questions": [
+            "When should you use `apply()` instead of `call()`?",
+            "What happens when you use `bind()` on an arrow function?",
+            "How can you implement function borrowing using `call()`?"
+          ]
+        },
+        {
+          "question": "What is JSON and its common operations?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "JSON (JavaScript Object Notation) is a lightweight format for data exchange. Common operations include `JSON.stringify()` for converting objects to JSON and `JSON.parse()` for parsing JSON strings into objects.",
+          "follow_up_questions": [
+            "What are the limitations of JSON?",
+            "Can JSON store functions?",
+            "How does JSON differ from JavaScript objects?"
+          ]
+        },
+        {
+          "question": "What is the purpose of the array slice method?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "The `slice()` method returns a shallow copy of a portion of an array without modifying the original array.",
+          "follow_up_questions": [
+            "What happens if no arguments are passed to `slice()`?",
+            "How does `slice()` handle negative indexes?",
+            "Can `slice()` be used on strings?"
+          ]
+        },
+        {
+          "question": "What is the purpose of the array splice method?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "`splice()` is used to add, remove, or replace elements in an array, modifying the original array.",
+          "follow_up_questions": [
+            "What does `splice()` return?",
+            "How do you use `splice()` to insert elements without removing any?",
+            "Can `splice()` be used to remove multiple elements?"
+          ]
+        },
+        {
+          "question": "What is the difference between slice and splice?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "`slice()` returns a new array with selected elements without modifying the original array, whereas `splice()` modifies the original array by adding, removing, or replacing elements.",
+          "follow_up_questions": [
+            "When should you prefer `slice()` over `splice()`?",
+            "What happens when you use `splice()` without arguments?",
+            "Can `splice()` be used to return a new array?"
+          ]
+        },
+        {
+          "question": "How do you compare Object and Map?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "`Map` maintains the insertion order and allows any type of key, while `Object` only supports string keys and does not guarantee order.",
+          "follow_up_questions": [
+            "When should you prefer `Map` over `Object`?",
+            "How does performance differ between `Object` and `Map`?",
+            "How can you convert an `Object` into a `Map`?"
+          ]
+        },
+        {
+          "question": "What is the difference between == and === operators?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "`==` checks for value equality with type coercion, while `===` checks for both value and type equality.",
+          "follow_up_questions": [
+            "Why is `===` preferred in most cases?",
+            "What happens when comparing `null` and `undefined` using `==`?",
+            "Are there any cases where `==` is useful?"
+          ]
+        },
+        {
+          "question": "What are lambda expressions or arrow functions?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "Arrow functions (`=>`) provide a concise syntax for defining functions and automatically bind `this` from the surrounding context.",
+          "follow_up_questions": [
+            "How do arrow functions handle `this` differently than regular functions?",
+            "Can you use `bind()` with an arrow function?",
+            "What are the limitations of arrow functions?"
+          ]
+        },
+        {
+          "question": "What is a first-class function?",
+          "programming_language": "JavaScript",
+          "expected_explanation": "A first-class function is a function that can be treated like any other variable, meaning it can be assigned to variables, passed as arguments, and returned from other functions.",
+          "follow_up_questions": [
+            "How does JavaScript's support for first-class functions enable functional programming?",
+            "Can you store a function inside an object property?",
+            "How can you use a function as a callback?"
+          ]
+        },
+        {
+              "question": "What is a first-order function?",
+              "programming_language": "JavaScript",
+              "expected_explanation": "A first-order function is a function that does not take another function as an argument or return a function as its output. It operates on data but does not manipulate functions.",
+              "follow_up_questions": [
+                "How do first-order functions differ from higher-order functions?",
+                "Can a first-order function be assigned to a variable?",
+                "What are some real-world use cases for first-order functions?"
+              ]
+            },
+            {
+              "question": "What is a higher-order function?",
+              "programming_language": "JavaScript",
+              "expected_explanation": "A higher-order function is a function that either takes another function as an argument or returns a function as its result. It enables functional programming patterns like map, filter, and reduce.",
+              "follow_up_questions": [
+                "How do higher-order functions improve code reusability?",
+                "What are some built-in higher-order functions in JavaScript?",
+                "Can you create your own higher-order function?"
+              ]
+            },
+            {
+              "question": "What is a unary function?",
+              "programming_language": "JavaScript",
+              "expected_explanation": "A unary function is a function that takes exactly one argument. It follows the mathematical concept of a single-parameter function.",
+              "follow_up_questions": [
+                "Why are unary functions commonly used in functional programming?",
+                "Can a unary function return another function?",
+                "What happens if more than one argument is passed to a unary function?"
+              ]
+            },
+            {
+              "question": "What is the currying function?",
+              "programming_language": "JavaScript",
+              "expected_explanation": "Currying is a functional programming technique where a function with multiple parameters is transformed into a sequence of functions, each taking a single argument.",
+              "follow_up_questions": [
+                "How does currying improve function composition?",
+                "What is the difference between partial application and currying?",
+                "Can you implement a curried function in JavaScript?"
+              ]
+            },
+            {
+              "question": "What is a pure function?",
+              "programming_language": "JavaScript",
+              "expected_explanation": "A pure function is a function that always produces the same output for the same input and has no side effects. It does not modify external state.",
+              "follow_up_questions": [
+                "How do pure functions improve testability?",
+                "What are some examples of impure functions?",
+                "How can you refactor an impure function into a pure function?"
+              ]
+            },
+            {
+              "question": "What is the purpose of the `let` keyword?",
+              "programming_language": "JavaScript",
+              "expected_explanation": "The `let` keyword is used to declare variables that are block-scoped, meaning they are only accessible within the block they are declared in.",
+              "follow_up_questions": [
+                "How does `let` differ from `var`?",
+                "What happens if you declare a `let` variable inside a loop?",
+                "Can a `let` variable be reassigned?"
+              ]
+            },
+            {
+              "question": "What is the difference between `let` and `var`?",
+              "programming_language": "JavaScript",
+              "expected_explanation": "`let` is block-scoped and cannot be redeclared in the same scope, while `var` is function-scoped and allows redeclaration.",
+              "follow_up_questions": [
+                "What happens if you use `var` inside an `if` block?",
+                "How does `let` help prevent accidental variable overwrites?",
+                "When should you use `const` instead of `let`?"
+              ]
+            },
+            {
+              "question": "What is the reason for choosing the name `let` as a keyword?",
+              "programming_language": "JavaScript",
+              "expected_explanation": "The `let` keyword was chosen based on its historical use in languages like Scheme, where it is used to declare variables with local scope.",
+              "follow_up_questions": [
+                "How does `let` compare to `var` in other programming languages?",
+                "Why was `let` introduced in ES6?",
+                "What other alternatives were considered for declaring block-scoped variables?"
+              ]
+            },
+            {
+              "question": "How do you redeclare variables in a switch block without an error?",
+              "programming_language": "JavaScript",
+              "expected_explanation": "To avoid redeclaration errors in a `switch` block, enclose each `case` in its own block using `{}` to create a new scope.",
+              "follow_up_questions": [
+                "Why does `switch` treat all `case` blocks as part of the same scope?",
+                "How does using `{}` help prevent variable redeclaration?",
+                "Are there any alternative ways to prevent this error?"
+              ]
+},{
+    "questions": [
+      {
+        "question": "How do you redeclare variables in a switch block without an error?",
+        "programming_language": "JavaScript",
+        "expected_explanation": "To avoid redeclaration errors in a `switch` block, enclose each `case` in its own block using `{}` to create a new scope.",
+        "follow_up_questions": [
+          "Why does `switch` treat all `case` blocks as part of the same scope?",
+          "How does using `{}` help prevent variable redeclaration?",
+          "Are there any alternative ways to prevent this error?"
+        ]
+      },
+      {
+        "question": "What is __init__?",
+        "programming_language": "Python",
+        "expected_explanation": "The `__init__` method in Python is a constructor that gets called when an object is instantiated. It initializes the instance attributes.",
+        "follow_up_questions": [
+          "Why is `__init__` important in Python classes?",
+          "Can a class function without `__init__`?",
+          "How do you call the parent class `__init__` method?"
+        ]
+      },
+      {
+        "question": "What is the difference between Python Arrays and lists?",
+        "programming_language": "Python",
+        "expected_explanation": "Lists in Python can store mixed data types and are more flexible, while arrays (from the `array` module) are more efficient for numerical operations as they store only a single data type.",
+        "follow_up_questions": [
+          "Why would you use an array over a list in Python?",
+          "What is the benefit of using NumPy arrays over lists?",
+          "How do you convert a list to an array?"
+        ]
+      },
+      {
+        "question": "Explain how can you make a Python Script executable on Unix?",
+        "programming_language": "Python",
+        "expected_explanation": "To make a Python script executable on Unix, add a shebang (`#!/usr/bin/env python3`) at the top of the script and give it execution permissions using `chmod +x script.py`.",
+        "follow_up_questions": [
+          "What does the shebang (`#!`) do in a script?",
+          "How do you set environment-specific interpreters in a shebang?",
+          "How can you run a Python script without specifying `python`?"
+        ]
+      },
+      {
+        "question": "What is slicing in Python?",
+        "programming_language": "Python",
+        "expected_explanation": "Slicing in Python allows extracting a subset of a sequence (lists, tuples, strings) using the `[start:stop:step]` syntax.",
+        "follow_up_questions": [
+          "How does negative indexing work in slicing?",
+          "What happens if you omit `start`, `stop`, or `step` in slicing?",
+          "Can you modify a list using slicing?"
+        ]
+      },
+      {
+        "question": "What is docstring in Python?",
+        "programming_language": "Python",
+        "expected_explanation": "A docstring is a string literal used to document a module, class, function, or method in Python. It is written as a triple-quoted string at the beginning of the definition.",
+        "follow_up_questions": [
+          "Why is using docstrings important?",
+          "How can you access a function's docstring?",
+          "What tools can be used to generate documentation from docstrings?"
+        ]
+      },
+      {
+        "question": "What are unit tests in Python?",
+        "programming_language": "Python",
+        "expected_explanation": "Unit tests are automated tests that check the correctness of individual units of code, typically functions or methods, using frameworks like `unittest` or `pytest`.",
+        "follow_up_questions": [
+          "How do you write a simple unit test in Python?",
+          "What is the difference between `unittest` and `pytest`?",
+          "How do you mock dependencies in unit tests?"
+        ]
+      },
+      {
+        "question": "What is break, continue and pass in Python?",
+        "programming_language": "Python",
+        "expected_explanation": "`break` exits a loop, `continue` skips to the next iteration, and `pass` is a placeholder that does nothing.",
+        "follow_up_questions": [
+          "When should you use `break` in loops?",
+          "What is the difference between `continue` and `pass`?",
+          "Can `break` be used in nested loops?"
+        ]
+      },
+      {
+        "question": "What is the use of self in Python?",
+        "programming_language": "Python",
+        "expected_explanation": "The `self` keyword represents the instance of a class and is used to access instance attributes and methods within class methods.",
+        "follow_up_questions": [
+          "Why do we need `self` in class methods?",
+          "Can you use a different name instead of `self`?",
+          "How is `self` different from a regular variable?"
+        ]
+      },
+      {
+        "question": "What are global, protected and private attributes in Python?",
+        "programming_language": "Python",
+        "expected_explanation": "Global attributes are accessible anywhere, protected attributes (prefix `_`) are intended for internal use, and private attributes (prefix `__`) have name-mangling to limit access.",
+        "follow_up_questions": [
+          "How does Python enforce private attributes?",
+          "Can private attributes be accessed outside a class?",
+          "What is name-mangling in Python?"
+        ]
+      },
+      {
+        "question": "What are modules and packages in Python?",
+        "programming_language": "Python",
+        "expected_explanation": "A module is a single Python file containing reusable code, while a package is a collection of modules organized in a directory with an `__init__.py` file.",
+        "follow_up_questions": [
+          "How do you import a module in Python?",
+          "What is the purpose of `__init__.py` in a package?",
+          "What is the difference between `import` and `from ... import`?"
+        ]
+      },
+      {
+        "question": "What is pass in Python?",
+        "programming_language": "Python",
+        "expected_explanation": "The `pass` statement is a placeholder that does nothing and is used where syntactically required, such as empty loops or function definitions.",
+        "follow_up_questions": [
+          "When should you use `pass` in Python?",
+          "What happens if you remove `pass` from a function?",
+          "Is `pass` necessary in a function stub?"
+        ]
+      },
+      {
+        "question": "What are the common built-in data types in Python?",
+        "programming_language": "Python",
+        "expected_explanation": "Python has built-in data types such as `int`, `float`, `str`, `list`, `tuple`, `dict`, `set`, and `bool`.",
+        "follow_up_questions": [
+          "How do you check the data type of a variable in Python?",
+          "What is the difference between `list` and `tuple`?",
+          "What are mutable and immutable data types?"
+        ]
+      },
+      {
+        "question": "What is Python?",
+        "programming_language": "Python",
+        "expected_explanation": "Python is a high-level, interpreted, dynamically typed programming language known for its simplicity and versatility.",
+        "follow_up_questions": [
+          "Why is Python considered an interpreted language?",
+          "What are the advantages of Python over other languages?",
+          "What are some real-world applications of Python?"
+        ]
+      },
+     
+          {
+            "question": "Differentiate between deep and shallow copies.",
+            "programming_language": "Python",
+            "expected_explanation": "A shallow copy creates a new object but copies references to nested objects, while a deep copy creates a new object and recursively copies all objects inside.",
+            "follow_up_questions": [
+              "How does the `copy` module in Python handle deep and shallow copies?",
+              "When would you use a shallow copy instead of a deep copy?",
+              "What are the performance trade-offs between deep and shallow copies?"
+            ]
+          },
+          {
+            "question": "What is the main function in Python? How do you invoke it?",
+            "programming_language": "Python",
+            "expected_explanation": "The `main` function in Python is a convention, not a built-in feature. It is invoked using `if __name__ == '__main__':` to execute code when the script is run directly.",
+            "follow_up_questions": [
+              "Why do we use `if __name__ == '__main__':` in Python scripts?",
+              "What happens if you don't include a main function?",
+              "Can Python scripts work without `if __name__ == '__main__':`?"
+            ]
+          },
+          {
+            "question": "Are there any tools for identifying bugs and performing static analysis in Python?",
+            "programming_language": "Python",
+            "expected_explanation": "Yes, tools like `pylint`, `flake8`, and `mypy` are used for static analysis and identifying bugs in Python code.",
+            "follow_up_questions": [
+              "How does `mypy` differ from `pylint`?",
+              "What are the advantages of static analysis over runtime debugging?",
+              "Can static analysis tools detect all types of Python errors?"
+            ]
+          },
+          {
+            "question": "Define PIP.",
+            "programming_language": "Python",
+            "expected_explanation": "PIP (Package Installer for Python) is a package manager used to install and manage Python libraries from the Python Package Index (PyPI).",
+            "follow_up_questions": [
+              "How do you install a package using PIP?",
+              "How can you check installed packages with PIP?",
+              "What command updates PIP to the latest version?"
+            ]
+          },
+          {
+            "question": "Define PYTHONPATH.",
+            "programming_language": "Python",
+            "expected_explanation": "PYTHONPATH is an environment variable that specifies additional directories for Python to search for modules.",
+            "follow_up_questions": [
+              "How do you set the PYTHONPATH environment variable?",
+              "What happens if PYTHONPATH is not set?",
+              "How does PYTHONPATH differ from sys.path?"
+            ]
+          },
+          {
+            "question": "Define GIL.",
+            "programming_language": "Python",
+            "expected_explanation": "The Global Interpreter Lock (GIL) is a mutex in CPython that prevents multiple threads from executing Python bytecode simultaneously.",
+            "follow_up_questions": [
+              "How does GIL affect Python's multithreading performance?",
+              "Why does CPython use GIL?",
+              "What are ways to bypass the GIL for parallel execution?"
+            ]
+          },
+          {
+            "question": "What are the differences between pickling and unpickling?",
+            "programming_language": "Python",
+            "expected_explanation": "Pickling serializes a Python object into a byte stream, while unpickling deserializes the byte stream back into a Python object.",
+            "follow_up_questions": [
+              "What module is used for pickling in Python?",
+              "Is pickling secure for data storage?",
+              "How do you pickle and unpickle objects?"
+            ]
+          },
+          {
+            "question": "Can you easily check if all characters in the given string are alphanumeric?",
+            "programming_language": "Python",
+            "expected_explanation": "Yes, Python provides the `.isalnum()` method for strings, which returns `True` if all characters are alphanumeric.",
+            "follow_up_questions": [
+              "What happens if the string contains spaces or special characters?",
+              "How do you check if a string contains only digits?",
+              "Can `.isalnum()` be used with Unicode characters?"
+            ]
+          },
+          {
+            "question": "How can you generate random numbers?",
+            "programming_language": "Python",
+            "expected_explanation": "You can generate random numbers using the `random` module, such as `random.randint(a, b)` for integers or `random.random()` for floating-point numbers.",
+            "follow_up_questions": [
+              "How do you generate a random number within a specific range?",
+              "What is the difference between `random.randint()` and `random.uniform()`?",
+              "Can you generate cryptographically secure random numbers in Python?"
+            ]
+          },
+          {
+            "question": "What are lambda functions?",
+            "programming_language": "Python",
+            "expected_explanation": "Lambda functions are anonymous, single-expression functions in Python, defined using the `lambda` keyword.",
+            "follow_up_questions": [
+              "How do lambda functions differ from regular functions?",
+              "Can lambda functions have multiple statements?",
+              "When should you use lambda functions?"
+            ]
+          },
+          {
+            "question": "What are some of the most commonly used built-in modules in Python?",
+            "programming_language": "Python",
+            "expected_explanation": "Common built-in Python modules include `os`, `sys`, `math`, `random`, `datetime`, and `re` for various utilities.",
+            "follow_up_questions": [
+              "How do you import built-in modules in Python?",
+              "What is the purpose of the `os` module?",
+              "How do you check available built-in modules in Python?"
+            ]
+          },
+          {
+            "question": "Differentiate between a package and a module in Python.",
+            "programming_language": "Python",
+            "expected_explanation": "A module is a single Python file containing reusable code, whereas a package is a collection of modules organized in a directory with an `__init__.py` file.",
+            "follow_up_questions": [
+              "How do you import a module from a package?",
+              "What is the purpose of `__init__.py`?",
+              "Can a package exist without `__init__.py`?"
+            ]
+          }
+        ]
+      },
+      {
+        "questions": [
+          {
+            "question": "Can you get items of series A that are not available in another series B?",
+            "programming_language": "Python",
+            "expected_explanation": "Yes, you can use `Series.isin()` with negation (`~`) or set operations like `set(A) - set(B)` to filter elements that are in A but not in B.",
+            "follow_up_questions": [
+              "How does `Series.isin()` help in filtering elements?",
+              "What is the difference between `set(A) - set(B)` and using Pandas methods?",
+              "Are there any performance considerations when working with large datasets?"
+            ]
+          },
+          {
+            "question": "While importing data from different sources, can the pandas library recognize dates?",
+            "programming_language": "Python",
+            "expected_explanation": "Yes, Pandas can recognize dates using `parse_dates` in `read_csv()` or by explicitly converting columns using `pd.to_datetime()`.",
+            "follow_up_questions": [
+              "How does `parse_dates` in `read_csv()` work?",
+              "What issues can arise when parsing dates automatically?",
+              "How can you ensure consistent date formats across different sources?"
+            ]
+          },
+          {
+            "question": "How will you get the items that are not common to both the given series A and B?",
+            "programming_language": "Python",
+            "expected_explanation": "You can use symmetric difference: `A[~A.isin(B)]` and `B[~B.isin(A)]` to get items unique to either series.",
+            "follow_up_questions": [
+              "How does `isin()` with negation work in Pandas?",
+              "What is the difference between symmetric difference and set difference?",
+              "Can you perform this operation efficiently on large datasets?"
+            ]
+          },
+          {
+            "question": "How will you delete indices, rows and columns from a dataframe?",
+            "programming_language": "Python",
+            "expected_explanation": "Use `df.drop(index, axis=0)` for rows, `df.drop(columns, axis=1)` for columns, and `df.reset_index(drop=True)` to remove an index.",
+            "follow_up_questions": [
+              "How does `drop()` handle missing labels?",
+              "What happens when you drop rows or columns in-place?",
+              "How can you remove multiple rows or columns at once?"
+            ]
+          },
+          {
+            "question": "How to add a new column to a pandas dataframe?",
+            "programming_language": "Python",
+            "expected_explanation": "You can add a new column using `df['new_col'] = values` or `df.assign(new_col=values)` for flexibility.",
+            "follow_up_questions": [
+              "What happens if you assign a column with mismatched length?",
+              "How does `assign()` differ from direct column assignment?",
+              "Can you add multiple columns simultaneously?"
+            ]
+          },
+          {
+            "question": "What do you understand by reindexing in pandas?",
+            "programming_language": "Python",
+            "expected_explanation": "Reindexing changes the order or labels of rows/columns using `df.reindex()`, filling missing values with NaN by default.",
+            "follow_up_questions": [
+              "How does `reindex()` differ from sorting?",
+              "What happens if you provide a non-existing index?",
+              "How can you fill missing values while reindexing?"
+            ]
+          },
+          {
+            "question": "How will you identify and deal with missing values in a dataframe?",
+            "programming_language": "Python",
+            "expected_explanation": "Use `df.isnull().sum()` to detect missing values and handle them using `fillna()`, `dropna()`, or interpolation methods.",
+            "follow_up_questions": [
+              "How do you differentiate between `None` and `NaN` in Pandas?",
+              "When should you use `dropna()` vs `fillna()`?",
+              "What interpolation techniques can be used for missing values?"
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Is Java Platform Independent? If so, how?",
+        "programming_language": "Java",
+        "expected_explanation": "Yes, Java is platform independent because the `javac` compiler converts the source code into bytecode (`.class` file), which can run on any system with a Java Virtual Machine (JVM). The JVM is platform dependent, but the bytecode remains the same across all systems.",
+        "follow_up_questions": [
+          "Why is JVM considered platform dependent?",
+          "What makes Java different from languages like C++ in terms of platform independence?",
+          "Can Java programs run without JVM?"
+        ]
+      },
+      {
+        "question": "What are the top Java features?",
+        "programming_language": "Java",
+        "expected_explanation": "Java is widely used due to features like platform independence, object-oriented programming, robustness (garbage collection, exception handling), high performance (JIT compiler), security, multithreading, and dynamic class loading.",
+        "follow_up_questions": [
+          "What is the significance of the Just-in-Time (JIT) compiler in Java?",
+          "How does Java ensure security compared to C++?",
+          "What makes Java a high-performance language?"
+        ]
+      },
+      {
+        "question": "What is JVM?",
+        "programming_language": "Java",
+        "expected_explanation": "JVM (Java Virtual Machine) is responsible for executing Java bytecode. It loads, verifies, and runs Java programs, making Java platform independent.",
+        "follow_up_questions": [
+          "How does JVM convert bytecode into machine code?",
+          "What are the different memory areas managed by JVM?",
+          "What are the main responsibilities of JVM?"
+        ]
+      },
+      {
+        "question": "What is JIT?",
+        "programming_language": "Java",
+        "expected_explanation": "JIT (Just-in-Time) compiler is a part of JVM that converts bytecode into native machine code at runtime to improve performance.",
+        "follow_up_questions": [
+          "How does JIT improve performance in Java?",
+          "What is the difference between an interpreter and JIT compiler?",
+          "Can Java run without JIT?"
+        ]
+      },
+      {
+        "question": "What are the memory storage areas available in JVM?",
+        "programming_language": "Java",
+        "expected_explanation": "JVM consists of several memory areas, including Method Area (stores class metadata), Heap (stores objects), Stack (stores method calls and local variables), Program Counter Register (stores instruction addresses), and Native Method Stack (stores native method information).",
+        "follow_up_questions": [
+          "How does Java garbage collection manage heap memory?",
+          "What is the difference between stack and heap memory?",
+          "Why is the Method Area also called the Class Area?"
+        ]
+      },
+      {
+        "question": "What is a ClassLoader?",
+        "programming_language": "Java",
+        "expected_explanation": "A ClassLoader is a part of JVM responsible for loading Java classes dynamically during runtime.",
+        "follow_up_questions": [
+          "What are the types of ClassLoaders in Java?",
+          "How does ClassLoader impact memory management?",
+          "Can we create a custom ClassLoader in Java?"
+        ]
+      },
+      {
+        "question": "Difference between JVM, JRE, and JDK?",
+        "programming_language": "Java",
+        "expected_explanation": "JVM (Java Virtual Machine) executes Java programs, JRE (Java Runtime Environment) includes JVM and libraries needed to run Java programs, and JDK (Java Development Kit) contains JRE plus development tools like compiler and debugger.",
+        "follow_up_questions": [
+          "Why do we need JDK if JRE includes JVM?",
+          "Can we run Java programs without JDK?",
+          "What are the differences between OpenJDK and Oracle JDK?"
+        ]
+      },
+      {
+        "question": "What are the differences between Java and C++?",
+        "programming_language": "Java",
+        "expected_explanation": "Java is platform independent, has automatic memory management, does not support multiple inheritance (uses interfaces instead), and does not support pointers, whereas C++ is platform dependent and supports pointers, multiple inheritance, and manual memory management.",
+        "follow_up_questions": [
+          "Why does Java not support multiple inheritance?",
+          "How does Java handle memory differently from C++?",
+          "What is the equivalent of pointers in Java?"
+        ]
+      },
+      {
+        "question": "Explain `public static void main(String args[])` in Java.",
+        "programming_language": "Java",
+        "expected_explanation": "`public` makes the method accessible globally, `static` allows it to run without instantiating a class, `void` means it does not return anything, and `main` is the entry point of the program.",
+        "follow_up_questions": [
+          "Why is `main` static in Java?",
+          "What happens if we change `void` to `int` in `main`?",
+          "Can we overload the `main` method in Java?"
+        ]
+      },
+      {
+        "question": "What is Java String Pool?",
+        "programming_language": "Java",
+        "expected_explanation": "Java String Pool is a special area in the heap memory where string literals are stored to optimize memory usage.",
+        "follow_up_questions": [
+          "How does Java optimize memory using the String Pool?",
+          "What is the difference between `new String()` and string literals?",
+          "Can we manually clear the String Pool?"
+        ]
+      },
+      {
+        "question": "What are Packages in Java?",
+        "programming_language": "Java",
+        "expected_explanation": "Packages are used to group related classes and interfaces together to prevent naming conflicts and manage access control.",
+        "follow_up_questions": [
+          "How do packages help in namespace management?",
+          "What is the difference between built-in and user-defined packages?",
+          "How do we import classes from another package?"
+        ]
+      },
+      {
+        "question": "Explain different data types in Java.",
+        "programming_language": "Java",
+        "expected_explanation": "Java has two types of data types: Primitive (int, float, char, boolean, etc.) and Non-Primitive (String, Array, Class, Object, Interface).",
+        "follow_up_questions": [
+          "What is the difference between primitive and non-primitive data types?",
+          "What is the default value of each primitive data type?",
+          "How does Java handle memory allocation for different data types?"
+        ]
+      },
+      {
+        "question": "What is the Wrapper class in Java?",
+        "programming_language": "Java",
+        "expected_explanation": "Wrapper classes in Java (Integer, Double, Boolean, etc.) allow primitive data types to be used as objects.",
+        "follow_up_questions": [
+          "What is autoboxing and unboxing in Java?",
+          "Why do we need wrapper classes in Java?",
+          "How do wrapper classes impact performance?"
+        ]
+      },
+      {
+        "question": "Differentiate between instance and local variables.",
+        "programming_language": "Java",
+        "expected_explanation": "Instance variables are declared inside a class but outside methods, have a default value, and belong to objects. Local variables are declared inside methods, have no default value, and exist only within the method scope.",
+        "follow_up_questions": [
+          "What happens if we try to access an uninitialized local variable?",
+          "How does Java handle variable scope?",
+          "Can local variables be declared as `static`?"
+        ]
+      },
+      {
+        "question": "What is a Class Variable?",
+        "programming_language": "Java",
+        "expected_explanation": "A class variable (or static variable) is a variable declared with the `static` keyword that is shared across all instances of the class.",
+        "follow_up_questions": [
+          "What is the difference between class and instance variables?",
+          "How does memory allocation work for static variables?",
+          "Can we override static variables in Java?"
+        ]
+      },
+      {
+        "question": "What is C#?",
+        "programming_language": "C#",
+        "expected_explanation": "C# is an object-oriented programming language developed by Microsoft as part of the .NET framework. It is compiled into Microsoft Intermediate Language (MSIL) and executed in the Common Language Runtime (CLR).",
+        "follow_up_questions": [
+          "How does C# differ from Java?",
+          "Why is C# considered a managed language?",
+          "What are the key features of C#?"
+        ]
+      },
+      {
+        "question": "Can multiple catch blocks be executed?",
+        "programming_language": "C#",
+        "expected_explanation": "No, only one catch block is executed per try statement, and it is the first one that matches the thrown exception type.",
+        "follow_up_questions": [
+          "How does exception handling work in C#?",
+          "Can we have multiple finally blocks?",
+          "What happens if an exception is not caught?"
+        ]
+      },
+      {
+        "question": "What is the difference between static, public, and void?",
+        "programming_language": "C#",
+        "expected_explanation": "- `public` allows access from anywhere.\n- `static` means the method or variable belongs to the class rather than an instance.\n- `void` specifies that a method does not return a value.",
+        "follow_up_questions": [
+          "Can static methods access instance variables?",
+          "What are the use cases of static classes?",
+          "How does `void` differ from other return types?"
+        ]
+      },
+      {
+        "question": "What is an object?",
+        "programming_language": "C#",
+        "expected_explanation": "An object is an instance of a class that encapsulates data and behavior. Objects are created using the `new` keyword.",
+        "follow_up_questions": [
+          "How does memory allocation work for objects?",
+          "What is the difference between value types and reference types?",
+          "Can we create an object without using `new`?"
+        ]
+      },
+      {
+        "question": "Define Constructors.",
+        "programming_language": "C#",
+        "expected_explanation": "A constructor is a special method that initializes an object when it is created. It has the same name as the class and does not have a return type.",
+        "follow_up_questions": [
+          "What are the different types of constructors in C#?",
+          "Can constructors be overloaded?",
+          "What is a private constructor?"
+        ]
+      },
+      {
+        "question": "What are Jagged Arrays?",
+        "programming_language": "C#",
+        "expected_explanation": "A jagged array is an array of arrays where each sub-array can have a different length.",
+        "follow_up_questions": [
+          "How is a jagged array different from a multi-dimensional array?",
+          "How do you initialize a jagged array?",
+          "What are the use cases of jagged arrays?"
+        ]
+      },
+      {
+        "question": "What is the difference between out and ref parameters?",
+        "programming_language": "C#",
+        "expected_explanation": "- `ref`: The parameter must be initialized before being passed.\n- `out`: The parameter does not need to be initialized before being passed; it must be assigned inside the method.",
+        "follow_up_questions": [
+          "Can `out` and `ref` be used together?",
+          "What happens if an `out` parameter is not assigned?",
+          "When should you use `out` vs `ref`?"
+        ]
+      },
+      {
+        "question": "What is the benefit of the `using` statement in C#?",
+        "programming_language": "C#",
+        "expected_explanation": "The `using` statement ensures that IDisposable objects, such as file streams, are disposed of automatically after use.",
+        "follow_up_questions": [
+          "How does `using` improve resource management?",
+          "Can `using` be used without IDisposable?",
+          "What is the difference between `using` and `Dispose()`?"
+        ]
+      },
+      {
+        "question": "What is serialization?",
+        "programming_language": "C#",
+        "expected_explanation": "Serialization converts an object into a byte stream for storage or transmission. It is used in data persistence and communication.",
+        "follow_up_questions": [
+          "What are the different types of serialization in C#?",
+          "How do you serialize an object in C#?",
+          "What are the security concerns of serialization?"
+        ]
+      },
+      {
+        "question": "Can `this` be used within a static method?",
+        "programming_language": "C#",
+        "expected_explanation": "No, because `this` refers to an instance of the class, and static methods do not operate on instances.",
+        "follow_up_questions": [
+          "Why are static methods restricted from using `this`?",
+          "Can static methods access non-static members?",
+          "How can you access instance members in a static context?"
+        ]
+      },
+      {
+        "question": "Differentiate between `break` and `continue` statements.",
+        "programming_language": "C#",
+        "expected_explanation": "- `break`: Exits the loop immediately.\n- `continue`: Skips the current iteration and proceeds to the next iteration.",
+        "follow_up_questions": [
+          "Can `break` and `continue` be used in switch statements?",
+          "What happens if `break` is used outside a loop?",
+          "How does `continue` behave in nested loops?"
+        ]
+      },
+      {
+        "question": "What are sealed classes in C#?",
+        "programming_language": "C#",
+        "expected_explanation": "A sealed class is a class that cannot be inherited. It is used to prevent further derivation and modifications.",
+        "follow_up_questions": [
+          "What are the use cases of sealed classes?",
+          "Can a sealed class have methods that are overridden?",
+          "How does a sealed class improve security?"
+        ]
+      },
+      {
+        "question": "What is method overloading?",
+        "programming_language": "C#",
+        "expected_explanation": "Method overloading allows multiple methods in the same class to have the same name but different parameter lists.",
+        "follow_up_questions": [
+          "Can method overloading be done with different return types?",
+          "How does method overloading differ from method overriding?",
+          "What are the advantages of method overloading?"
+        ]
+      },
+      {
+        "question": "What is the difference between `ArrayList` and `Array`?",
+        "programming_language": "C#",
+        "expected_explanation": "- `Array`: Fixed size and stores only one data type.\n- `ArrayList`: Dynamic size and can store multiple data types.",
+        "follow_up_questions": [
+          "How does memory allocation differ between `Array` and `ArrayList`?",
+          "Which is more performance-efficient: `Array` or `ArrayList`?",
+          "Can `ArrayList` store value types directly?"
+        ]
+      },
+      {
+        "question": "What are the differences between `System.String` and `System.Text.StringBuilder`?",
+        "programming_language": "C#",
+        "expected_explanation": "`System.String` is immutable, while `StringBuilder` allows modification without creating new memory allocations.",
+        "follow_up_questions": [
+          "When should you use `StringBuilder` over `String`?",
+          "How does `StringBuilder` improve performance?",
+          "What are the methods available in `StringBuilder`?"
+        ]
+      },
+      {
+        "question": "What’s the difference between `System.Array.CopyTo()` and `System.Array.Clone()`?",
+        "programming_language": "C#",
+        "expected_explanation": "- `CopyTo()`: Copies the elements into another existing array.\n- `Clone()`: Creates a new array with the same elements.",
+        "follow_up_questions": [
+          "How does `Clone()` handle deep vs shallow copies?",
+          "Can `CopyTo()` copy elements to an array of a different type?",
+          "Which method should be used for performance optimization?"
+        ]
+      },
+      {
+      "question": "What is PHP?",
+      "programming_language": "PHP",
+      "expected_explanation": "PHP is a general-purpose, server-side scripting language designed for web development. It is embedded within HTML and is used to create dynamic web pages. It was created by Rasmus Lerdorf in 1994.",
+      "follow_up_questions": [
+        "How does PHP differ from other server-side scripting languages?",
+        "What are the main use cases of PHP?",
+        "Can PHP be used for command-line scripting?"
+      ]
+    },
+    {
+      "question": "How do you redirect a page in PHP?",
+      "programming_language": "PHP",
+      "expected_explanation": "You can redirect a page using the `header()` function in PHP, followed by `exit();` to stop further script execution.",
+      "follow_up_questions": [
+        "Why should you use `exit()` after a header redirect?",
+        "What are the common mistakes when using `header()`?",
+        "Can you use JavaScript for redirection instead of PHP?"
+      ]
+    },
+    {
+      "question": "What is the difference between `session_unset()` and `session_destroy()`?",
+      "programming_language": "PHP",
+      "expected_explanation": "- `session_unset()`: Clears all session variables but keeps the session ID active.\n- `session_destroy()`: Completely terminates the session and deletes session data on the server.",
+      "follow_up_questions": [
+        "When should you use `session_unset()` over `session_destroy()`?",
+        "How do you properly start and manage sessions in PHP?",
+        "Can you manually set a session ID in PHP?"
+      ]
+    },
+    {
+      "question": "Is PHP a case-sensitive language?",
+      "programming_language": "PHP",
+      "expected_explanation": "PHP is case-sensitive for variable names but not for function names, class names, and keywords.",
+      "follow_up_questions": [
+        "How does case sensitivity affect variable declarations?",
+        "Can function names be case-sensitive in some configurations?",
+        "Why is PHP partially case-sensitive?"
+      ]
+    },
+    {
+      "question": "What is the difference between PHP and ASP.NET?",
+      "programming_language": "PHP",
+      "expected_explanation": "- PHP: Open-source, runs on multiple platforms, interpreted.\n- ASP.NET: Developed by Microsoft, mainly runs on Windows, compiled.",
+      "follow_up_questions": [
+        "Which is better for enterprise applications, PHP or ASP.NET?",
+        "How does performance compare between PHP and ASP.NET?",
+        "Can PHP run on Windows, and can ASP.NET run on Linux?"
+      ]
+    },
+    {
+      "question": "How does PHP handle form data?",
+      "programming_language": "PHP",
+      "expected_explanation": "PHP processes form data using superglobals like `$_GET` for URL parameters and `$_POST` for securely handling user input.",
+      "follow_up_questions": [
+        "When should you use `$_GET` vs `$_POST`?",
+        "How can you validate and sanitize user input in PHP?",
+        "What is CSRF, and how does PHP protect against it?"
+      ]
+    },
+    {
+      "question": "What is the full form of PHP?",
+      "programming_language": "PHP",
+      "expected_explanation": "PHP stands for Hypertext Preprocessor. Previously, it was known as Personal Home Page.",
+      "follow_up_questions": [
+        "Why was PHP originally called Personal Home Page?",
+        "When was PHP first released?",
+        "What are some major PHP versions and their differences?"
+      ]
+    },
+    {
+      "question": "What is PEAR in PHP?",
+      "programming_language": "PHP",
+      "expected_explanation": "PEAR (PHP Extension and Application Repository) is a framework and distribution system for reusable PHP components.",
+      "follow_up_questions": [
+        "How does PEAR differ from Composer?",
+        "What are the benefits of using PEAR?",
+        "Can PEAR be used for modern PHP applications?"
+      ]
+    },
+    {
+      "question": "What is the difference between static and dynamic websites?",
+      "programming_language": "PHP",
+      "expected_explanation": "- Static websites: Pre-built HTML pages, fixed content.\n- Dynamic websites: Content changes dynamically based on user input or database queries.",
+      "follow_up_questions": [
+        "How does PHP enable dynamic content generation?",
+        "What are some examples of dynamic websites?",
+        "Can a static website include some dynamic elements?"
+      ]
+    },
+    {
+      "question": "What are the rules for naming a PHP variable?",
+      "programming_language": "PHP",
+      "expected_explanation": "PHP variable names must start with a `$`, followed by a letter or underscore, and can only contain letters, numbers, and underscores.",
+      "follow_up_questions": [
+        "Are PHP variable names case-sensitive?",
+        "Can PHP variables start with numbers?",
+        "What are some best practices for naming PHP variables?"
+      ]
+    }
+]
+    
+   
+  
+  

@@ -1,0 +1,1229 @@
+[
+      {
+        "question": "How would you design a social media app?",
+        "system_scenario": "A startup wants to build a social media platform where users can create profiles, post content (text, images, videos), follow other users, like and comment on posts, and receive real-time notifications.",
+        "expected_discussion_points": [
+          {
+            "topic": "User Profile and Authentication",
+            "details": "Implement user accounts with authentication (OAuth, JWT), profile creation, and role-based access control."
+          },
+          {
+            "topic": "Content Storage & Retrieval",
+            "details": "Design a scalable architecture for storing user posts, media files (images, videos), and handling large traffic loads."
+          },
+          {
+            "topic": "News Feed Algorithm",
+            "details": "Develop an algorithm to rank and display content based on user engagement, preferences, and recency."
+          },
+          {
+            "topic": "Real-Time Features",
+            "details": "Implement WebSockets for real-time notifications, likes, and comments."
+          },
+          {
+            "topic": "Moderation & Security",
+            "details": "Include features like content moderation, spam detection, and privacy settings."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "How can we efficiently serve personalized feeds to millions of users?",
+            "considerations": [
+              "Use caching and precomputed timelines for fast retrieval.",
+              "Leverage graph databases for better friend/follower relationships."
+            ]
+          },
+          {
+            "question": "How should we handle media uploads and storage efficiently?",
+            "considerations": [
+              "Use cloud-based storage (S3, GCP Storage) with CDN integration.",
+              "Implement background processing for image/video compression."
+            ]
+          }
+        ]
+      },{
+        "question": "How would you design a ride-hailing/delivery app?",
+        "system_scenario": "A startup wants to create a ride-hailing or delivery platform similar to Uber or DoorDash. Users should be able to request rides/deliveries, match with drivers, track their rides in real-time, and complete transactions within the app.",
+        "expected_discussion_points": [
+          {
+            "topic": "Real-Time Matching System",
+            "details": "Implement a system that efficiently matches users with nearby drivers based on location and availability."
+          },
+          {
+            "topic": "GPS & Routing",
+            "details": "Utilize mapping services (Google Maps API, OpenStreetMap) for real-time navigation and estimated time of arrival calculations."
+          },
+          {
+            "topic": "Payment & Pricing",
+            "details": "Support secure payments with dynamic pricing models (base fares, surge pricing, promo discounts)."
+          },
+          {
+            "topic": "Driver & Rider Ratings",
+            "details": "Build a review and rating system to maintain service quality."
+          },
+          {
+            "topic": "Scalability & Reliability",
+            "details": "Ensure high availability and reliability with distributed services and load balancing."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "How do we handle real-time GPS tracking efficiently?",
+            "considerations": [
+              "Use WebSockets for continuous location updates.",
+              "Optimize location updates to reduce battery consumption."
+            ]
+          },
+          {
+            "question": "How should we balance demand and supply dynamically?",
+            "considerations": [
+              "Implement dynamic pricing (surge pricing) based on demand.",
+              "Use predictive algorithms to adjust driver dispatching."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "How would you design an e-commerce store?",
+        "system_scenario": "An online marketplace needs a scalable e-commerce platform where users can browse products, add items to a cart, and complete secure transactions.",
+        "expected_discussion_points": [
+          {
+            "topic": "Product Catalog & Search",
+            "details": "Efficiently store and index products with search and filter functionality."
+          },
+          {
+            "topic": "Shopping Cart & Checkout",
+            "details": "Design a shopping cart system with order management and inventory updates."
+          },
+          {
+            "topic": "Payment Gateway Integration",
+            "details": "Support secure payments via multiple methods (credit card, PayPal, Apple Pay, etc.)."
+          },
+          {
+            "topic": "Order Fulfillment & Logistics",
+            "details": "Implement order tracking and fulfillment using third-party logistics."
+          },
+          {
+            "topic": "Recommendations & Personalization",
+            "details": "Use AI-based recommendations based on user behavior and purchase history."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "How do we ensure high availability during peak sales (e.g., Black Friday)?",
+            "considerations": [
+              "Use auto-scaling cloud infrastructure.",
+              "Implement queueing mechanisms to handle order spikes."
+            ]
+          },
+          {
+            "question": "How do we prevent fraudulent transactions?",
+            "considerations": [
+              "Implement fraud detection algorithms.",
+              "Use multi-factor authentication for high-value purchases."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "How would you design a messaging app?",
+        "system_scenario": "A startup wants to develop a messaging platform like WhatsApp or Signal, supporting text messaging, multimedia sharing, and group chats.",
+        "expected_discussion_points": [
+          {
+            "topic": "Real-Time Messaging Protocol",
+            "details": "Use WebSockets, MQTT, or XMPP for real-time message delivery."
+          },
+          {
+            "topic": "Message Storage & Syncing",
+            "details": "Decide on storing messages on the server or enabling end-to-end encryption for privacy."
+          },
+          {
+            "topic": "End-to-End Encryption",
+            "details": "Implement encryption using protocols like Signal Protocol or AES-GCM."
+          },
+          {
+            "topic": "Multimedia Support",
+            "details": "Handle images, videos, and voice notes efficiently with cloud storage."
+          },
+          {
+            "topic": "Scalability & Performance",
+            "details": "Distribute message queues and use load balancers to manage spikes in user activity."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "Should messages be stored on the server for backup?",
+            "considerations": [
+              "Privacy concerns vs. user convenience.",
+              "Option to allow users to opt-in for cloud backups."
+            ]
+          },
+          {
+            "question": "How can we reduce latency in real-time messaging?",
+            "considerations": [
+              "Use WebSockets for persistent connections.",
+              "Implement edge caching for frequently accessed content."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "How would you design an API?",
+        "system_scenario": "A company needs to design a robust, scalable API that can handle multiple clients (mobile, web, third-party integrations) efficiently.",
+        "expected_discussion_points": [
+          {
+            "topic": "REST vs GraphQL",
+            "details": "Choose between RESTful APIs for simplicity or GraphQL for flexibility."
+          },
+          {
+            "topic": "Authentication & Authorization",
+            "details": "Use OAuth, JWT, or API keys to secure access to the API."
+          },
+          {
+            "topic": "Rate Limiting & Throttling",
+            "details": "Prevent abuse by implementing request limits per user or IP."
+          },
+          {
+            "topic": "Versioning Strategy",
+            "details": "Decide on API versioning (e.g., URL-based `/v1/`, header-based, or query parameter-based)."
+          },
+          {
+            "topic": "Logging & Monitoring",
+            "details": "Use tools like ELK stack, Prometheus, or API gateways for tracking API usage."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "Should we use REST or GraphQL?",
+            "considerations": [
+              "REST: Simple and widely adopted, but over-fetching issues.",
+              "GraphQL: Flexible queries but requires more complex infrastructure."
+            ]
+          },
+          {
+            "question": "How do we handle backward compatibility when updating APIs?",
+            "considerations": [
+              "Use versioning (`/v1/`, `/v2/`).",
+              "Ensure older versions are supported for a deprecation period."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "How would you design autocomplete for a search engine?",
+        "system_scenario": "A search engine needs an autocomplete feature that provides relevant suggestions as users type their queries. The system should return real-time, ranked suggestions based on popularity, user history, and contextual relevance.",
+        "expected_discussion_points": [
+          {
+            "topic": "Efficient Data Structures",
+            "details": "Use Trie, TST (Ternary Search Tree), or Bloom Filters for fast prefix-based lookups."
+          },
+          {
+            "topic": "Ranking & Relevance",
+            "details": "Rank suggestions based on query frequency, recency, user history, and personalization."
+          },
+          {
+            "topic": "Indexing & Storage",
+            "details": "Precompute query suggestions and store them in an optimized data structure for fast retrieval."
+          },
+          {
+            "topic": "Real-Time Updates",
+            "details": "Continuously update autocomplete suggestions as search trends evolve."
+          },
+          {
+            "topic": "Scalability",
+            "details": "Use distributed systems and caching (Redis, Memcached) for low-latency results."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "Should we prioritize globally trending searches or user-specific history?",
+            "considerations": [
+              "Globally trending queries provide more generic results.",
+              "User-specific history improves personalization but requires more storage."
+            ]
+          },
+          {
+            "question": "How do we handle typos and spelling corrections in autocomplete?",
+            "considerations": [
+              "Use fuzzy matching (Levenshtein distance).",
+              "Apply phonetic algorithms like Soundex or Metaphone."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "How would you design an API?",
+        "system_scenario": "A company wants to develop a robust API for multiple clients (mobile, web, third-party integrations) that is scalable, secure, and versioned properly.",
+        "expected_discussion_points": [
+          {
+            "topic": "REST vs GraphQL",
+            "details": "Decide between RESTful APIs for simplicity or GraphQL for flexible data fetching."
+          },
+          {
+            "topic": "Authentication & Authorization",
+            "details": "Implement OAuth 2.0, JWT, or API keys to secure access."
+          },
+          {
+            "topic": "Rate Limiting & Throttling",
+            "details": "Prevent abuse by enforcing request limits per user or IP."
+          },
+          {
+            "topic": "Versioning Strategy",
+            "details": "Use URL-based (`/v1/`), header-based, or query parameter-based versioning."
+          },
+          {
+            "topic": "Monitoring & Logging",
+            "details": "Use API gateways, Prometheus, or ELK Stack for tracking API usage."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "Should we use REST or GraphQL?",
+            "considerations": [
+              "REST: Simple and widely adopted, but may result in over-fetching.",
+              "GraphQL: More flexible but requires additional query complexity."
+            ]
+          },
+          {
+            "question": "How do we ensure backward compatibility when updating APIs?",
+            "considerations": [
+              "Use versioning (`/v1/`, `/v2/`).",
+              "Support older versions for a deprecation period."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "How would you design a messaging app?",
+        "system_scenario": "A startup wants to develop a real-time messaging application similar to WhatsApp or Signal, supporting text, multimedia sharing, and group chats.",
+        "expected_discussion_points": [
+          {
+            "topic": "Real-Time Messaging Protocol",
+            "details": "Use WebSockets, MQTT, or XMPP for real-time message delivery."
+          },
+          {
+            "topic": "Message Storage & Syncing",
+            "details": "Decide on cloud storage vs. local storage, and end-to-end encryption for privacy."
+          },
+          {
+            "topic": "End-to-End Encryption",
+            "details": "Implement encryption using Signal Protocol or AES-GCM."
+          },
+          {
+            "topic": "Multimedia Support",
+            "details": "Efficiently handle images, videos, and voice notes with cloud storage."
+          },
+          {
+            "topic": "Scalability & Performance",
+            "details": "Use message queues and load balancers to handle high user loads."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "Should messages be stored on the server for backup?",
+            "considerations": [
+              "Privacy concerns vs. user convenience.",
+              "Allow users to opt-in for cloud backups."
+            ]
+          },
+          {
+            "question": "How can we ensure low-latency messaging at scale?",
+            "considerations": [
+              "Use WebSockets for persistent connections.",
+              "Implement edge caching for frequently accessed content."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "How would you design an online file-sharing system?",
+        "system_scenario": "A company wants to build a secure and scalable online file-sharing platform where users can upload, download, and share files with access controls.",
+        "expected_discussion_points": [
+          {
+            "topic": "File Storage Architecture",
+            "details": "Use cloud storage (AWS S3, Google Cloud Storage) or a distributed file system."
+          },
+          {
+            "topic": "Access Control & Permissions",
+            "details": "Implement role-based access controls and encryption for secure sharing."
+          },
+          {
+            "topic": "Scalability & Performance",
+            "details": "Use CDN caching for faster downloads and efficient load balancing."
+          },
+          {
+            "topic": "File Synchronization & Versioning",
+            "details": "Allow users to track and restore previous versions of files."
+          },
+          {
+            "topic": "Security Measures",
+            "details": "Implement data encryption, virus scanning, and secure access links."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "Should files be stored in a relational or NoSQL database?",
+            "considerations": [
+              "Relational databases offer structured metadata storage.",
+              "NoSQL databases provide better horizontal scalability."
+            ]
+          },
+          {
+            "question": "How do we handle large file uploads efficiently?",
+            "considerations": [
+              "Use chunked uploads to reduce network failures.",
+              "Implement resumable uploads for interrupted transfers."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "How would you design an e-commerce store?",
+        "system_scenario": "An online marketplace needs a scalable e-commerce platform where users can browse products, add items to a cart, and complete secure transactions.",
+        "expected_discussion_points": [
+          {
+            "topic": "Product Catalog & Search",
+            "details": "Efficiently store and index products with search and filter functionality."
+          },
+          {
+            "topic": "Shopping Cart & Checkout",
+            "details": "Design a shopping cart system with order management and inventory updates."
+          },
+          {
+            "topic": "Payment Gateway Integration",
+            "details": "Support secure payments via multiple methods (credit card, PayPal, Apple Pay, etc.)."
+          },
+          {
+            "topic": "Order Fulfillment & Logistics",
+            "details": "Implement order tracking and fulfillment using third-party logistics."
+          },
+          {
+            "topic": "Recommendations & Personalization",
+            "details": "Use AI-based recommendations based on user behavior and purchase history."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "How do we ensure high availability during peak sales (e.g., Black Friday)?",
+            "considerations": [
+              "Use auto-scaling cloud infrastructure.",
+              "Implement queueing mechanisms to handle order spikes."
+            ]
+          },
+          {
+            "question": "How do we prevent fraudulent transactions?",
+            "considerations": [
+              "Implement fraud detection algorithms.",
+              "Use multi-factor authentication for high-value purchases."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "How would you design a ride-hailing/delivery app?",
+        "system_scenario": "A startup wants to create a ride-hailing or delivery platform similar to Uber or DoorDash. Users should be able to request rides/deliveries, match with drivers, track their rides in real-time, and complete transactions within the app.",
+        "expected_discussion_points": [
+          {
+            "topic": "Real-Time Matching System",
+            "details": "Implement a system that efficiently matches users with nearby drivers based on location and availability."
+          },
+          {
+            "topic": "GPS & Routing",
+            "details": "Utilize mapping services (Google Maps API, OpenStreetMap) for real-time navigation."
+          }
+        ],
+        "trade_off_questions": [
+          {
+            "question": "How do we handle real-time GPS tracking efficiently?",
+            "considerations": [
+              "Use WebSockets for continuous location updates.",
+              "Optimize location updates to reduce battery consumption."
+            ]
+          }
+        ]
+      },
+      
+          {
+            "question": "How do you design a web crawler?",
+            "system_scenario": "A search engine company wants to build a scalable web crawler that continuously fetches, parses, and indexes web pages while respecting robots.txt rules and efficiently handling duplicate content.",
+            "expected_discussion_points": [
+              {
+                "topic": "Crawling Strategy",
+                "details": "Decide between breadth-first search (BFS) or depth-first search (DFS) for crawling web pages efficiently."
+              },
+              {
+                "topic": "Politeness & Rate Limiting",
+                "details": "Respect robots.txt, avoid overloading websites, and implement rate-limiting strategies."
+              },
+              {
+                "topic": "Content Deduplication",
+                "details": "Use fingerprinting techniques (e.g., SimHash) to avoid storing duplicate pages."
+              },
+              {
+                "topic": "Scalability & Parallelism",
+                "details": "Distribute crawling tasks across multiple servers and use message queues for task management."
+              },
+              {
+                "topic": "Storage & Indexing",
+                "details": "Use a NoSQL database or distributed file system to store and retrieve crawled content efficiently."
+              }
+            ],
+            "trade_off_questions": [
+              {
+                "question": "How do we ensure fresh content is crawled without overwhelming websites?",
+                "considerations": [
+                  "Use incremental crawling based on page change frequency.",
+                  "Prioritize popular websites while ensuring fairness across domains."
+                ]
+              },
+              {
+                "question": "How can we detect and handle infinite loops in crawling?",
+                "considerations": [
+                  "Track visited URLs using bloom filters or hash sets.",
+                  "Implement depth limits to prevent unnecessary recursion."
+                ]
+              }
+            ]
+          },
+          {
+            "question": "What is the difference between a Load Balancer and an API Gateway?",
+            "system_scenario": "A company is designing a cloud-based distributed system and needs to understand the roles of load balancers and API gateways in managing traffic and ensuring reliability.",
+            "expected_discussion_points": [
+              {
+                "topic": "Functionality",
+                "details": "Load balancers distribute network traffic across multiple servers, whereas API gateways manage API requests, authentication, and routing."
+              },
+              {
+                "topic": "Security",
+                "details": "API gateways enforce authentication, authorization, and request validation, while load balancers primarily focus on traffic distribution."
+              },
+              {
+                "topic": "Traffic Handling",
+                "details": "Load balancers operate at Layer 4 (TCP) or Layer 7 (HTTP), while API gateways work at Layer 7 to route and process API requests."
+              },
+              {
+                "topic": "Caching & Optimization",
+                "details": "API gateways can cache responses and modify requests, while load balancers focus on distributing load without modifying data."
+              }
+            ],
+            "trade_off_questions": [
+              {
+                "question": "When should we use a load balancer vs an API gateway?",
+                "considerations": [
+                  "Use a load balancer for distributing incoming traffic efficiently.",
+                  "Use an API gateway for routing API calls, handling authentication, and enforcing policies."
+                ]
+              },
+              {
+                "question": "Can both load balancers and API gateways coexist?",
+                "considerations": [
+                  "Yes, API gateways often sit behind load balancers in distributed architectures.",
+                  "Load balancers distribute traffic across multiple API gateway instances."
+                ]
+              }
+            ]
+          },
+          {
+            "question": "What is the difference between a Forward Proxy and a Reverse Proxy? When do you use them in system design?",
+            "system_scenario": "A company wants to improve security and performance by introducing proxies but needs to understand the differences between forward and reverse proxies and their use cases.",
+            "expected_discussion_points": [
+              {
+                "topic": "Forward Proxy",
+                "details": "Acts on behalf of clients, forwarding requests to external servers. Commonly used for internet filtering, security, and caching."
+              },
+              {
+                "topic": "Reverse Proxy",
+                "details": "Sits in front of backend servers, handling client requests and improving performance, security, and load balancing."
+              },
+              {
+                "topic": "Security & Performance",
+                "details": "Forward proxies help anonymize client traffic, while reverse proxies protect backend servers from direct exposure."
+              },
+              {
+                "topic": "Use Cases",
+                "details": "Forward proxies are used in corporate networks for content filtering, while reverse proxies improve scalability and security in web applications."
+              }
+            ],
+            "trade_off_questions": [
+              {
+                "question": "When should we use a forward proxy vs. a reverse proxy?",
+                "considerations": [
+                  "Forward proxies help clients access external content securely.",
+                  "Reverse proxies optimize server performance and security."
+                ]
+              },
+              {
+                "question": "Can a single proxy server act as both a forward and reverse proxy?",
+                "considerations": [
+                  "Yes, some proxy solutions can handle both roles based on configuration.",
+                  "However, separating concerns is recommended for better security."
+                ]
+              }
+            ]
+          },
+          {
+            "question": "How do you design YouTube?",
+            "system_scenario": "A video streaming platform needs to support massive uploads, storage, transcoding, content delivery, and efficient search and recommendation systems.",
+            "expected_discussion_points": [
+              {
+                "topic": "Video Upload & Storage",
+                "details": "Handle user-generated content with cloud storage solutions (e.g., AWS S3, Google Cloud Storage)."
+              },
+              {
+                "topic": "Transcoding & Adaptive Streaming",
+                "details": "Convert videos into multiple formats and resolutions for different network conditions and devices."
+              },
+              {
+                "topic": "Content Delivery Network (CDN)",
+                "details": "Distribute video content globally using CDNs for low-latency playback."
+              },
+              {
+                "topic": "Search & Recommendation",
+                "details": "Use indexing, metadata tagging, and machine learning algorithms for personalized recommendations."
+              },
+              {
+                "topic": "Scalability & Load Handling",
+                "details": "Use distributed databases, caching, and microservices to handle millions of concurrent users."
+              }
+            ],
+            "trade_off_questions": [
+              {
+                "question": "How do we ensure seamless video playback at different network speeds?",
+                "considerations": [
+                  "Use adaptive bitrate streaming (HLS, DASH).",
+                  "Cache popular videos closer to users using CDNs."
+                ]
+              },
+              {
+                "question": "How do we prevent copyright infringement and handle content moderation?",
+                "considerations": [
+                  "Implement automated content fingerprinting (e.g., Content ID).",
+                  "Use a mix of AI and manual moderation for policy enforcement."
+                ]
+              }
+            ]
+          },
+          {
+            "question": "In the system design process, what is ‘Requirements Determination’?",
+            "system_scenario": "Before designing a scalable system, engineers must define clear functional and non-functional requirements to ensure the system meets business needs.",
+            "expected_discussion_points": [
+              {
+                "topic": "Functional Requirements",
+                "details": "Define key features, such as authentication, data storage, APIs, and UI interactions."
+              },
+              {
+                "topic": "Non-Functional Requirements",
+                "details": "Consider scalability, performance, security, availability, and maintainability."
+              },
+              {
+                "topic": "User & Business Needs",
+                "details": "Gather insights from stakeholders to align technical decisions with business objectives."
+              },
+              {
+                "topic": "Defining Constraints",
+                "details": "Identify technical, regulatory, and budget constraints affecting the system design."
+              },
+              {
+                "topic": "Trade-Off Analysis",
+                "details": "Evaluate different approaches to achieve an optimal balance between cost, speed, and efficiency."
+              }
+            ],
+            "trade_off_questions": [
+              {
+                "question": "How do we balance functional and non-functional requirements?",
+                "considerations": [
+                  "Prioritize core features first before optimizing for scalability and performance.",
+                  "Use iterative development to refine requirements over time."
+                ]
+              },
+              {
+                "question": "How do we handle changing requirements in an evolving system?",
+                "considerations": [
+                  "Adopt agile methodologies for continuous iteration.",
+                  "Design loosely coupled architectures to accommodate changes."
+                ]
+              }
+            ]
+          },
+              {
+                "question": "How can you design autocomplete functionality?",
+                "system_scenario": "A search engine wants to implement an autocomplete feature that suggests queries as users type, optimizing for speed and relevance.",
+                "expected_discussion_points": [
+                  {
+                    "topic": "Efficient Data Structures",
+                    "details": "Use Trie, Ternary Search Trees (TST), or Bloom Filters for fast prefix-based lookups."
+                  },
+                  {
+                    "topic": "Ranking & Relevance",
+                    "details": "Rank suggestions based on query frequency, recency, user preferences, and contextual relevance."
+                  },
+                  {
+                    "topic": "Storage & Indexing",
+                    "details": "Precompute query suggestions and store them in an optimized database or key-value store."
+                  },
+                  {
+                    "topic": "Real-Time Updates",
+                    "details": "Continuously update autocomplete suggestions as search trends change."
+                  },
+                  {
+                    "topic": "Scalability & Performance",
+                    "details": "Use distributed caching (Redis, Memcached) and sharded databases for low-latency responses."
+                  }
+                ],
+                "trade_off_questions": [
+                  {
+                    "question": "Should we prioritize global trending searches or user-specific history?",
+                    "considerations": [
+                      "Global trends provide generic suggestions for all users.",
+                      "User-specific history improves personalization but requires more storage."
+                    ]
+                  },
+                  {
+                    "question": "How can we handle typos and spelling corrections in autocomplete?",
+                    "considerations": [
+                      "Use fuzzy matching (Levenshtein distance).",
+                      "Apply phonetic algorithms like Soundex or Metaphone."
+                    ]
+                  }
+                ]
+              },
+              {
+                "question": "What are the types of documentation in system design?",
+                "system_scenario": "A company is designing a new software system and wants to create comprehensive documentation for developers, operators, and business stakeholders.",
+                "expected_discussion_points": [
+                  {
+                    "topic": "Functional Documentation",
+                    "details": "Describes system features, user workflows, and functional requirements."
+                  },
+                  {
+                    "topic": "Technical Documentation",
+                    "details": "Includes API documentation, system architecture, and database schemas."
+                  },
+                  {
+                    "topic": "Operational Documentation",
+                    "details": "Covers deployment processes, system monitoring, and troubleshooting guides."
+                  },
+                  {
+                    "topic": "User Documentation",
+                    "details": "Provides end-user manuals, FAQs, and onboarding guides."
+                  },
+                  {
+                    "topic": "Code Documentation",
+                    "details": "Includes inline comments, README files, and style guides for maintainability."
+                  }
+                ],
+                "trade_off_questions": [
+                  {
+                    "question": "How do we balance comprehensive documentation with developer productivity?",
+                    "considerations": [
+                      "Too much documentation can slow down development.",
+                      "Well-structured, concise documentation improves onboarding and maintenance."
+                    ]
+                  },
+                  {
+                    "question": "How can documentation be kept up to date as the system evolves?",
+                    "considerations": [
+                      "Automate documentation generation where possible.",
+                      "Use version control to track changes in system design."
+                    ]
+                  }
+                ]
+              },
+              {
+                "question": "How is Horizontal Scaling different from Vertical Scaling?",
+                "system_scenario": "A cloud-based application needs to scale its infrastructure to handle increased user demand and must decide between horizontal and vertical scaling.",
+                "expected_discussion_points": [
+                  {
+                    "topic": "Horizontal Scaling",
+                    "details": "Involves adding more machines or instances to distribute the load."
+                  },
+                  {
+                    "topic": "Vertical Scaling",
+                    "details": "Involves upgrading a single machine's CPU, RAM, or storage."
+                  },
+                  {
+                    "topic": "Scalability & Cost Considerations",
+                    "details": "Horizontal scaling offers better fault tolerance, while vertical scaling may be simpler but limited by hardware."
+                  },
+                  {
+                    "topic": "Use Cases",
+                    "details": "Web applications with distributed workloads often prefer horizontal scaling, while database-heavy applications may initially rely on vertical scaling."
+                  }
+                ],
+                "trade_off_questions": [
+                  {
+                    "question": "When should we use horizontal scaling vs. vertical scaling?",
+                    "considerations": [
+                      "Use horizontal scaling for distributed, stateless applications.",
+                      "Use vertical scaling when database performance needs a quick boost."
+                    ]
+                  },
+                  {
+                    "question": "What are the challenges of horizontal scaling?",
+                    "considerations": [
+                      "Requires load balancing and distributed data storage.",
+                      "Session management can be complex in a multi-node environment."
+                    ]
+                  }
+                ]
+              },
+              {
+                "question": "What do you understand by Load Balancing? Why is it important in system design?",
+                "system_scenario": "A high-traffic web application needs to distribute incoming requests efficiently across multiple servers to ensure reliability and performance.",
+                "expected_discussion_points": [
+                  {
+                    "topic": "Types of Load Balancers",
+                    "details": "Use Layer 4 (TCP-based) or Layer 7 (HTTP-based) load balancers."
+                  },
+                  {
+                    "topic": "Load Balancing Algorithms",
+                    "details": "Common strategies include round-robin, least connections, and weighted distribution."
+                  },
+                  {
+                    "topic": "Fault Tolerance & Failover",
+                    "details": "Ensures high availability by rerouting traffic if a server fails."
+                  },
+                  {
+                    "topic": "Scalability & Performance",
+                    "details": "Load balancers prevent bottlenecks and enable horizontal scaling."
+                  },
+                  {
+                    "topic": "Traffic Optimization",
+                    "details": "Some load balancers offer SSL termination, caching, and request routing."
+                  }
+                ],
+                "trade_off_questions": [
+                  {
+                    "question": "How do we decide between software-based and hardware-based load balancing?",
+                    "considerations": [
+                      "Software-based solutions (e.g., Nginx, HAProxy) offer flexibility.",
+                      "Hardware-based solutions provide dedicated performance but are expensive."
+                    ]
+                  },
+                  {
+                    "question": "What are the challenges of implementing load balancing?",
+                    "considerations": [
+                      "Stateful applications may require sticky sessions.",
+                      "Load balancer failures can become a single point of failure if not managed properly."
+                    ]
+                  }
+                ]
+              },
+              {
+                "question": "What is Sharding? What do you understand about Database Sharding?",
+                "system_scenario": "A company is designing a large-scale database system and needs to distribute data across multiple servers to improve performance and scalability.",
+                "expected_discussion_points": [
+                  {
+                    "topic": "Definition of Sharding",
+                    "details": "Sharding is the process of splitting a database into smaller, independent pieces to distribute workload."
+                  },
+                  {
+                    "topic": "Shard Key Selection",
+                    "details": "Choosing an appropriate shard key (e.g., user ID, geographic region) is critical for balanced distribution."
+                  },
+                  {
+                    "topic": "Types of Sharding",
+                    "details": "Range-based sharding, hash-based sharding, and directory-based sharding."
+                  },
+                  {
+                    "topic": "Challenges of Sharding",
+                    "details": "Rebalancing shards, ensuring ACID compliance, and handling cross-shard queries."
+                  },
+                  {
+                    "topic": "Scalability & Performance",
+                    "details": "Sharding enables horizontal scaling, reducing load on individual servers."
+                  }
+                ],
+                "trade_off_questions": [
+                  {
+                    "question": "When should we consider sharding a database?",
+                    "considerations": [
+                      "When a single database server cannot handle the read/write load.",
+                      "When data growth exceeds the storage capacity of a single machine."
+                    ]
+                  },
+                  {
+                    "question": "What are the challenges of implementing sharding?",
+                    "considerations": [
+                      "Complexity in managing multiple shards.",
+                      "Cross-shard joins can be expensive and slow."
+                    ]
+                  }
+                ]
+              },
+                  {
+                    "question": "What are the various consistency patterns available in system design?",
+                    "system_scenario": "A distributed database system needs to ensure data consistency across multiple nodes while balancing availability and performance.",
+                    "expected_discussion_points": [
+                      {
+                        "topic": "Strong Consistency",
+                        "details": "Ensures all nodes always return the latest committed value, commonly used in financial systems."
+                      },
+                      {
+                        "topic": "Eventual Consistency",
+                        "details": "Allows temporary inconsistencies but guarantees that all replicas will converge to the latest value over time (e.g., DNS, NoSQL databases)."
+                      },
+                      {
+                        "topic": "Causal Consistency",
+                        "details": "Ensures that operations are seen in a causally correct order but may allow some inconsistencies across unrelated transactions."
+                      },
+                      {
+                        "topic": "Read-Your-Writes Consistency",
+                        "details": "Ensures that after a client updates data, they will always see their latest writes."
+                      },
+                      {
+                        "topic": "Monotonic Reads & Writes",
+                        "details": "Ensures that once a client reads a value, they will not see an older value later."
+                      }
+                    ],
+                    "trade_off_questions": [
+                      {
+                        "question": "When should we use strong consistency over eventual consistency?",
+                        "considerations": [
+                          "Strong consistency is required for critical transactions (e.g., banking systems).",
+                          "Eventual consistency improves availability and performance in large-scale distributed systems."
+                        ]
+                      },
+                      {
+                        "question": "How do consistency patterns impact system performance?",
+                        "considerations": [
+                          "Strong consistency requires synchronization, increasing latency.",
+                          "Eventual consistency reduces latency but can lead to temporary stale reads."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "question": "What are the most important aspects of the System Study?",
+                    "system_scenario": "Before designing a new software system, an organization wants to conduct a thorough system study to ensure all functional and non-functional requirements are met.",
+                    "expected_discussion_points": [
+                      {
+                        "topic": "Requirement Analysis",
+                        "details": "Understanding business needs, user requirements, and system constraints."
+                      },
+                      {
+                        "topic": "Feasibility Study",
+                        "details": "Evaluating technical, economic, legal, and operational feasibility before proceeding with system development."
+                      },
+                      {
+                        "topic": "System Modeling",
+                        "details": "Creating data flow diagrams (DFDs), entity-relationship (ER) models, and process flow diagrams."
+                      },
+                      {
+                        "topic": "Cost-Benefit Analysis",
+                        "details": "Assessing potential return on investment (ROI) and the total cost of ownership (TCO)."
+                      },
+                      {
+                        "topic": "Risk Assessment",
+                        "details": "Identifying potential risks, including security threats, technical failures, and scalability limitations."
+                      }
+                    ],
+                    "trade_off_questions": [
+                      {
+                        "question": "How do we balance system study depth with project timelines?",
+                        "considerations": [
+                          "A detailed study reduces project risks but can slow down development.",
+                          "A lean system study may accelerate execution but increase uncertainty."
+                        ]
+                      },
+                      {
+                        "question": "What are the trade-offs between different feasibility study approaches?",
+                        "considerations": [
+                          "A deep feasibility study ensures long-term viability.",
+                          "A quick feasibility check accelerates decision-making but may overlook critical risks."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "question": "As a system designer, how can you design universal file-sharing and storage apps like Google Drive or Dropbox?",
+                    "system_scenario": "A company wants to build a scalable, secure, and user-friendly cloud file-sharing system similar to Google Drive or Dropbox.",
+                    "expected_discussion_points": [
+                      {
+                        "topic": "File Storage Architecture",
+                        "details": "Use distributed object storage (e.g., AWS S3, Google Cloud Storage) for scalability and redundancy."
+                      },
+                      {
+                        "topic": "File Synchronization & Versioning",
+                        "details": "Implement delta synchronization to reduce bandwidth usage and store file versions for rollback."
+                      },
+                      {
+                        "topic": "Access Control & Sharing",
+                        "details": "Enable granular access permissions (public, private, shared links) and role-based access control (RBAC)."
+                      },
+                      {
+                        "topic": "Security & Encryption",
+                        "details": "Use end-to-end encryption and secure storage techniques to protect user files."
+                      },
+                      {
+                        "topic": "Scalability & Performance",
+                        "details": "Utilize CDN caching for fast access and implement background processing for large file uploads."
+                      }
+                    ],
+                    "trade_off_questions": [
+                      {
+                        "question": "How do we optimize storage costs while maintaining performance?",
+                        "considerations": [
+                          "Use tiered storage (hot, warm, cold storage).",
+                          "Deduplicate identical files to reduce storage footprint."
+                        ]
+                      },
+                      {
+                        "question": "How can we ensure seamless cross-platform synchronization?",
+                        "considerations": [
+                          "Implement efficient conflict resolution mechanisms.",
+                          "Use event-driven architecture to trigger sync updates."
+                        ]
+                      }
+                    ]
+                  },
+
+                  {
+                    "question": "What feature allows one class to derive features from another class?",
+                    "system_scenario": "In object-oriented programming, developers want to reuse and extend existing class functionality rather than writing new code from scratch.",
+                    "expected_discussion_points": [
+                      {
+                        "topic": "Inheritance",
+                        "details": "A class (subclass/child class) can inherit attributes and methods from another class (superclass/parent class)."
+                      },
+                      {
+                        "topic": "Types of Inheritance",
+                        "details": "Single inheritance, multiple inheritance, hierarchical inheritance, multilevel inheritance."
+                      },
+                      {
+                        "topic": "Method Overriding",
+                        "details": "Child classes can override parent class methods to provide specialized behavior."
+                      },
+                      {
+                        "topic": "Encapsulation & Access Modifiers",
+                        "details": "Protect inherited members using public, private, and protected access control."
+                      },
+                      {
+                        "topic": "Composition vs. Inheritance",
+                        "details": "Favor composition over inheritance when code reuse without hierarchy is preferable."
+                      }
+                    ],
+                    "trade_off_questions": [
+                      {
+                        "question": "When should we use inheritance vs composition?",
+                        "considerations": [
+                          "Use inheritance for ‘is-a’ relationships (e.g., Dog extends Animal).",
+                          "Use composition for ‘has-a’ relationships (e.g., Car has an Engine)."
+                        ]
+                      },
+                      {
+                        "question": "What are the drawbacks of deep inheritance hierarchies?",
+                        "considerations": [
+                          "Leads to tight coupling and reduced maintainability.",
+                          "Makes debugging and changes more complex due to dependency chains."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "question": "Which language was the first to be developed as a purely object-oriented programming language?",
+                    "system_scenario": "A software engineering team is researching object-oriented programming (OOP) history to understand its evolution and impact on modern programming languages.",
+                    "expected_discussion_points": [
+                      {
+                        "topic": "History of Object-Oriented Programming",
+                        "details": "OOP was conceptualized to improve modularity, code reuse, and maintainability."
+                      },
+                      {
+                        "topic": "Smalltalk – The First Pure OOP Language",
+                        "details": "Developed in the 1970s at Xerox PARC, Smalltalk was the first purely object-oriented language."
+                      },
+                      {
+                        "topic": "Core OOP Principles in Smalltalk",
+                        "details": "Encapsulation, inheritance, and polymorphism were fully implemented in Smalltalk."
+                      },
+                      {
+                        "topic": "Influence on Modern OOP Languages",
+                        "details": "Smalltalk influenced languages like Java, Python, Ruby, and C#."
+                      }
+                    ],
+                    "trade_off_questions": [
+                      {
+                        "question": "Why was Smalltalk not widely adopted despite being the first OOP language?",
+                        "considerations": [
+                          "Limited hardware capabilities in the 1970s made it difficult to run efficiently.",
+                          "Other languages (e.g., C++) offered a mix of OOP and procedural paradigms, making them more flexible."
+                        ]
+                      },
+                      {
+                        "question": "What are the advantages and disadvantages of a pure OOP language?",
+                        "considerations": [
+                          "Pure OOP ensures modularity and reusability but can introduce performance overhead.",
+                          "Hybrid languages (e.g., Python, Java) offer more flexibility in programming paradigms."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "question": "How do you design a Trade Position Aggregator or Portfolio Manager?",
+                    "system_scenario": "A financial institution needs a system that can aggregate trade positions across multiple asset classes, calculate real-time portfolio value, and manage risk exposure.",
+                    "expected_discussion_points": [
+                      {
+                        "topic": "Trade Data Ingestion",
+                        "details": "Implement a robust pipeline to ingest trade data from multiple exchanges, brokers, and internal systems."
+                      },
+                      {
+                        "topic": "Real-Time Position Calculation",
+                        "details": "Use event-driven architecture and in-memory databases to update portfolio positions in real-time."
+                      },
+                      {
+                        "topic": "Risk Management",
+                        "details": "Monitor exposure to market risks using VaR (Value at Risk) and other risk assessment metrics."
+                      },
+                      {
+                        "topic": "Data Storage & Querying",
+                        "details": "Use time-series databases (e.g., TimescaleDB, InfluxDB) for storing historical trade and position data."
+                      },
+                      {
+                        "topic": "Scalability & Fault Tolerance",
+                        "details": "Implement redundancy, failover mechanisms, and horizontal scaling to handle market spikes."
+                      }
+                    ],
+                    "trade_off_questions": [
+                      {
+                        "question": "How do we ensure low-latency updates for real-time trade aggregation?",
+                        "considerations": [
+                          "Use in-memory caching (Redis, Memcached) to store frequent updates.",
+                          "Employ streaming technologies (Apache Kafka, Pulsar) for event-driven processing."
+                        ]
+                      },
+                      {
+                        "question": "What are the trade-offs between batch and real-time processing in a portfolio manager?",
+                        "considerations": [
+                          "Batch processing ensures consistency but introduces latency.",
+                          "Real-time processing allows instant insights but requires complex event-handling mechanisms."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "question": "What considerations would you take into account when designing a scalable video streaming service?",
+                    "system_scenario": "A startup wants to build a video streaming platform similar to Netflix or YouTube, capable of handling millions of concurrent users while ensuring high-quality playback.",
+                    "expected_discussion_points": [
+                      {
+                        "topic": "Content Storage & Distribution",
+                        "details": "Use cloud storage with Content Delivery Networks (CDNs) to reduce latency."
+                      },
+                      {
+                        "topic": "Adaptive Bitrate Streaming",
+                        "details": "Implement HLS (HTTP Live Streaming) or MPEG-DASH to adjust video quality based on network conditions."
+                      },
+                      {
+                        "topic": "Load Balancing & Scalability",
+                        "details": "Distribute traffic across multiple servers using load balancers and geo-redundancy."
+                      },
+                      {
+                        "topic": "Efficient Video Encoding & Transcoding",
+                        "details": "Convert videos into multiple resolutions and formats for seamless playback on different devices."
+                      },
+                      {
+                        "topic": "Real-Time Analytics & Monitoring",
+                        "details": "Track playback performance, buffering issues, and user engagement metrics."
+                      }
+                    ],
+                    "trade_off_questions": [
+                      {
+                        "question": "How do we handle peak traffic spikes efficiently?",
+                        "considerations": [
+                          "Use autoscaling cloud infrastructure to dynamically allocate resources.",
+                          "Cache frequently accessed videos in edge locations to minimize load."
+                        ]
+                      },
+                      {
+                        "question": "How do we balance storage costs with performance?",
+                        "considerations": [
+                          "Use multi-tiered storage (hot, warm, cold) to optimize cost and access speed.",
+                          "Implement deduplication and compression to reduce storage footprint."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "question": "How would you design a system for processing and analyzing large-scale data in real time?",
+                    "system_scenario": "A company needs a real-time analytics pipeline to process and analyze terabytes of data per second for fraud detection, stock trading, or user behavior insights.",
+                    "expected_discussion_points": [
+                      {
+                        "topic": "Data Ingestion",
+                        "details": "Use streaming platforms like Apache Kafka, Pulsar, or AWS Kinesis to ingest high-velocity data."
+                      },
+                      {
+                        "topic": "Real-Time Data Processing",
+                        "details": "Leverage frameworks like Apache Flink, Apache Spark Streaming, or Apache Storm to process and transform data on the fly."
+                      },
+                      {
+                        "topic": "Storage & Indexing",
+                        "details": "Store processed data in time-series databases (e.g., InfluxDB) or data warehouses (e.g., Snowflake, BigQuery)."
+                      },
+                      {
+                        "topic": "Event-Driven Architecture",
+                        "details": "Use event-driven processing to trigger alerts, anomaly detection, or business decisions in real-time."
+                      },
+                      {
+                        "topic": "Scalability & Fault Tolerance",
+                        "details": "Implement redundancy, sharding, and distributed processing to ensure high availability."
+                      }
+                    ],
+                    "trade_off_questions": [
+                      {
+                        "question": "How do we ensure low-latency processing at scale?",
+                        "considerations": [
+                          "Use in-memory computation engines (e.g., Apache Ignite) to minimize I/O overhead.",
+                          "Optimize data partitioning strategies to reduce processing time."
+                        ]
+                      },
+                      {
+                        "question": "How do we handle late-arriving data in real-time analytics?",
+                        "considerations": [
+                          "Implement windowing techniques (sliding, tumbling, session windows).",
+                          "Use watermarking and event-time processing to manage out-of-order events."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "question": "What is RAID?",
+                    "system_scenario": "A company wants to implement a reliable and high-performance storage solution for its database servers and file storage systems.",
+                    "expected_discussion_points": [
+                      {
+                        "topic": "Definition of RAID",
+                        "details": "RAID (Redundant Array of Independent Disks) is a data storage virtualization technology that combines multiple physical drives for performance, redundancy, or both."
+                      },
+                      {
+                        "topic": "RAID Levels",
+                        "details": "Common levels include RAID 0 (striping), RAID 1 (mirroring), RAID 5 (striping with parity), RAID 6 (dual parity), and RAID 10 (striping + mirroring)."
+                      },
+                      {
+                        "topic": "Performance vs. Fault Tolerance",
+                        "details": "RAID 0 improves performance but lacks redundancy, while RAID 1 and RAID 5 provide fault tolerance at the cost of storage efficiency."
+                      },
+                      {
+                        "topic": "Hardware vs. Software RAID",
+                        "details": "Hardware RAID uses dedicated controllers, while software RAID is managed by the operating system."
+                      },
+                      {
+                        "topic": "Use Cases",
+                        "details": "Databases, high-performance computing, and enterprise storage solutions benefit from RAID implementations."
+                      }
+                    ],
+                    "trade_off_questions": [
+                      {
+                        "question": "When should we use RAID 5 vs. RAID 10?",
+                        "considerations": [
+                          "RAID 5 offers better storage efficiency but has slower write performance.",
+                          "RAID 10 provides better performance and redundancy but requires more disks."
+                        ]
+                      },
+                      {
+                        "question": "What are the risks associated with RAID?",
+                        "considerations": [
+                          "RAID is not a substitute for backups; disk failures can still result in data loss.",
+                          "Rebuilding RAID arrays after disk failure can be time-consuming and resource-intensive."
+                        ]
+                      }
+                    ]
+                  }      
+       
+]
